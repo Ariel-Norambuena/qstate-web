@@ -336,7 +336,7 @@ export default function App() {
 
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/qstate_usm/"
               target="_blank"
               rel="noreferrer"
               className="rounded-full bg-white px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-100"
