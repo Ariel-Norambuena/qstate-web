@@ -42,6 +42,65 @@ const projects = [
   },
 ];
 
+const publications = [
+  {
+    title: "Memory effects in pulsed optomechanical systems",
+    authors:
+      "Hachisko Tapia-Maureira, Bing He, Massimiliano Di Ventra, and Ariel Norambuena",
+    venue: "Physical Review Applied 25, 044083 (2026)",
+    type: "Artículo",
+    topic: "Optomecánica · Memoria · Tecnologías cuánticas",
+    url: "https://journals.aps.org/prapplied/abstract/10.1103/mxbn-15ry",
+  },
+  {
+    title: "Learning spectral density functions in open quantum systems",
+    authors:
+      "Felipe Peleteiro, João Victor Shiguetsugo Kawanami Lima, Pedro Marcelo Prado, Felipe Fernandes Fanchini, and Ariel Norambuena",
+    venue: "arXiv:2602.24056 (2026)",
+    type: "Preprint",
+    topic: "Sistemas abiertos · Inteligencia artificial",
+    url: "https://arxiv.org/abs/2602.24056",
+  },
+  {
+    title:
+      "Geometric control of maximal entanglement via bound states in the continuum",
+    authors:
+      "Alexis R. Legón, Mario Miranda Rojas, Pedro Orellana, and Ariel Norambuena",
+    venue: "arXiv:2602.23082 (2026)",
+    type: "Preprint",
+    topic: "Entrelazamiento · Giant atoms · BICs",
+    url: "https://arxiv.org/abs/2602.23082",
+  },
+  {
+    title: "Phonon-induced non-equilibrium dynamics in a single solid-state spin",
+    authors:
+      "Ariel Norambuena, Diego Tancara, Vicente F. Chomalí-Castro, and Daniel Castillo",
+    venue: "Quantum Science and Technology 10, 045001 (2025)",
+    type: "Artículo",
+    topic: "Sistemas abiertos · Fonones · Espines sólidos",
+    url: "https://iopscience.iop.org/article/10.1088/2058-9565/adf092/meta",
+  },
+  {
+    title: "Contact temporal network during motility-induced phase separation",
+    authors:
+      "Italo Salas, Francisca Guzmán-Lastra, Denisse Pastén, and Ariel Norambuena",
+    venue: "Physical Review E 112, 045409 (2025)",
+    type: "Artículo",
+    topic: "Materia activa · Redes complejas",
+    url: "https://journals.aps.org/pre/abstract/10.1103/t3k6-hcmr",
+  },
+  {
+    title:
+      "Entropy, entanglement, and susceptibility of three qubits near quantum criticality",
+    authors:
+      "Bastian Castorene, Francisco J. Peña, Ariel Norambuena, Sergio E. Ulloa, Cristobal Araya, and Patricio Vargas",
+    venue: "Physical Review E 111, 034118 (2025)",
+    type: "Artículo",
+    topic: "Entrelazamiento · Termodinámica cuántica",
+    url: "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.111.034118",
+  },
+];
+
 const members = [
   ["Alexis Legón", "Doctor en Física"],
   ["Diego Montero", "Estudiante de Magíster USM"],
@@ -56,10 +115,10 @@ const members = [
   ["Clemente Velasco", "Licenciado en Física"],
 ];
 
-function Logo({ className = "h-12 w-36" }) {
+function Logo({ className = "h-14 w-14" }) {
   return (
     <div
-      className={`${className} flex shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-cyan-300/30 bg-white px-3 py-2 shadow-lg shadow-cyan-900/40`}
+      className={`${className} flex shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-cyan-300/30 bg-white p-1 shadow-lg shadow-cyan-900/40`}
     >
       <img
         src={`${import.meta.env.BASE_URL}qstate-logo.png`}
@@ -79,6 +138,12 @@ export default function App() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <a href="#inicio" className="flex items-center gap-3">
             <Logo />
+            <div>
+              <p className="text-lg font-semibold text-white">QState</p>
+              <p className="text-xs uppercase tracking-[0.22em] text-slate-400">
+                Quantum Systems
+              </p>
+            </div>
           </a>
 
           <nav className="hidden gap-6 text-sm text-slate-300 md:flex">
@@ -93,6 +158,9 @@ export default function App() {
             </a>
             <a href="#proyectos" className="hover:text-cyan-200">
               Proyectos
+            </a>
+            <a href="#publicaciones" className="hover:text-cyan-200">
+              Publicaciones
             </a>
             <a href="#integrantes" className="hover:text-cyan-200">
               Integrantes
@@ -285,6 +353,66 @@ export default function App() {
                     ))}
                   </ul>
                 </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="publicaciones" className="px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300/80">
+              Publicaciones
+            </p>
+
+            <h2 className="text-3xl font-semibold tracking-tight text-white md:text-5xl">
+              Publicaciones científicas
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-slate-300">
+              Una selección de artículos y preprints asociados a las líneas de
+              investigación del grupo, incluyendo sistemas cuánticos abiertos,
+              control, simulación, tecnologías cuánticas, materia activa e
+              inteligencia artificial aplicada a problemas de física.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-6 lg:grid-cols-2">
+            {publications.map((paper) => (
+              <article
+                key={paper.title}
+                className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 shadow-xl shadow-slate-950/30 transition hover:-translate-y-1 hover:border-cyan-200/40 hover:bg-white/[0.07]"
+              >
+                <div className="mb-4 flex flex-wrap items-center gap-3">
+                  <span className="rounded-full border border-cyan-200/20 bg-cyan-200/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200">
+                    {paper.type}
+                  </span>
+                  <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">
+                    {paper.topic}
+                  </span>
+                </div>
+
+                <h3 className="text-2xl font-semibold leading-tight text-white">
+                  {paper.title}
+                </h3>
+
+                <p className="mt-4 leading-7 text-slate-300">
+                  {paper.authors}
+                </p>
+
+                <p className="mt-3 text-sm font-medium uppercase tracking-[0.16em] text-slate-400">
+                  {paper.venue}
+                </p>
+
+                <a
+                  href={paper.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-6 inline-flex rounded-full border border-cyan-200/30 px-5 py-2 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-200 hover:text-slate-950"
+                >
+                  Ver publicación
+                </a>
               </article>
             ))}
           </div>
