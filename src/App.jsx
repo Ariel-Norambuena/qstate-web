@@ -326,15 +326,15 @@ export default function App() {
               Instagram
             </a>
             <a
-              href="mailto:contacto@qstate.cl"
+              href="mailto:qstate.socials@gmail.com"
               className="rounded-full border border-white/15 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
             >
-              contacto@qstate.cl
+              qstate.socials@gmail.com
             </a>
           </div>
 
           <p className="mt-8 text-sm text-slate-500">
-            Universidad Técnica Federico Santa María · Departamento de Física
+            Universidad Técnica Federico Santa María · Departamento de Física · Campus San Joaquín
           </p>
         </div>
       </section>
@@ -346,12 +346,12 @@ export default function App() {
             <div>
               <p className="font-semibold text-white">QState</p>
               <p className="text-sm text-slate-500">
-                Quantum Systems Theory And Technology
+                Quantum Systems Theory And TEchnology
               </p>
             </div>
           </div>
           <p className="text-sm text-slate-500">
-            © 2026 QState · Universidad Técnica Federico Santa María
+            © 2026 QState · Universidad Técnica Federico Santa María · Campus San Joaquín
           </p>
         </div>
       </footer>
