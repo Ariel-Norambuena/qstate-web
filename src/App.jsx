@@ -56,13 +56,16 @@ const members = [
   ["Clemente Velasco", "Licenciado en Física"],
 ];
 
-function Logo() {
+function Logo({ className = "h-12 w-36" }) {
   return (
-    <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl border border-cyan-300/30 bg-slate-950 shadow-lg shadow-cyan-900/40">
-      <div className="absolute h-9 w-9 rounded-full border border-cyan-300/40" />
-      <div className="absolute h-9 w-9 rotate-60 rounded-full border border-violet-300/40" />
-      <div className="absolute h-9 w-9 -rotate-60 rounded-full border border-blue-300/40" />
-      <div className="h-2.5 w-2.5 rounded-full bg-cyan-200 shadow-lg shadow-cyan-300" />
+    <div
+      className={`${className} flex shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-cyan-300/30 bg-white px-3 py-2 shadow-lg shadow-cyan-900/40`}
+    >
+      <img
+        src={`${import.meta.env.BASE_URL}qstate-logo.png`}
+        alt="QState logo"
+        className="h-full w-full object-contain"
+      />
     </div>
   );
 }
@@ -76,12 +79,6 @@ export default function App() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <a href="#inicio" className="flex items-center gap-3">
             <Logo />
-            <div>
-              <p className="text-lg font-semibold text-white">QState</p>
-              <p className="text-xs uppercase tracking-[0.22em] text-slate-400">
-                Quantum Systems
-              </p>
-            </div>
           </a>
 
           <nav className="hidden gap-6 text-sm text-slate-300 md:flex">
@@ -90,6 +87,9 @@ export default function App() {
             </a>
             <a href="#investigacion" className="hover:text-cyan-200">
               Investigación
+            </a>
+            <a href="#logro" className="hover:text-cyan-200">
+              Logro
             </a>
             <a href="#proyectos" className="hover:text-cyan-200">
               Proyectos
@@ -143,13 +143,12 @@ export default function App() {
             </div>
           </div>
 
-          <div className="relative mx-auto flex aspect-square w-full max-w-md items-center justify-center rounded-full border border-cyan-200/20 bg-cyan-300/5 shadow-2xl shadow-cyan-950/40">
-            <div className="absolute inset-10 rounded-full border border-violet-200/20" />
-            <div className="absolute inset-20 rotate-45 rounded-full border border-blue-200/20" />
-            <div className="absolute h-40 w-40 rounded-full bg-cyan-300/20 blur-3xl" />
-            <div className="scale-150">
-              <Logo />
-            </div>
+          <div className="relative mx-auto flex w-full max-w-lg items-center justify-center rounded-[2.5rem] border border-cyan-200/20 bg-white p-8 shadow-2xl shadow-cyan-950/40">
+            <img
+              src={`${import.meta.env.BASE_URL}qstate-logo.png`}
+              alt="QState — Quantum Systems Theory And Technology"
+              className="w-full object-contain"
+            />
           </div>
         </div>
       </section>
@@ -176,11 +175,11 @@ export default function App() {
             </p>
 
             <p className="mt-6 text-lg leading-9 text-slate-300">
-              Desde la Universidad Técnica Federico Santa María, buscamos
-              contribuir al desarrollo de investigación científica de frontera y
-              a la formación de nuevas generaciones en física y tecnologías
-              cuánticas, promoviendo la colaboración, la docencia avanzada y la
-              divulgación científica.
+              Desde el Departamento de Física de la Universidad Técnica Federico
+              Santa María, Campus San Joaquín, buscamos contribuir al desarrollo
+              de investigación científica de frontera y a la formación de nuevas
+              generaciones en física y tecnologías cuánticas, promoviendo la
+              colaboración, la docencia avanzada y la divulgación científica.
             </p>
           </div>
         </div>
@@ -220,6 +219,25 @@ export default function App() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="logro" className="px-6 py-24">
+        <div className="mx-auto max-w-5xl rounded-[2.5rem] border border-cyan-200/20 bg-gradient-to-br from-cyan-300/10 via-white/[0.04] to-violet-300/10 p-8 text-center shadow-2xl shadow-cyan-950/30 md:p-14">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300/80">
+            Logro destacado
+          </p>
+
+          <h2 className="text-3xl font-semibold tracking-tight text-white md:text-5xl">
+            Consolidación de QState como grupo de investigación.
+          </h2>
+
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-9 text-slate-300">
+            QState articula líneas de investigación en tecnologías cuánticas,
+            sistemas abiertos, control, simulación e inteligencia artificial
+            aplicada a mecánica cuántica, con participación activa en proyectos
+            Fondecyt Regular, Fondecyt Exploración y Anillo Temático.
+          </p>
         </div>
       </section>
 
@@ -334,7 +352,8 @@ export default function App() {
           </div>
 
           <p className="mt-8 text-sm text-slate-500">
-            Universidad Técnica Federico Santa María · Departamento de Física · Campus San Joaquín
+            Universidad Técnica Federico Santa María · Departamento de Física ·
+            Campus San Joaquín
           </p>
         </div>
       </section>
@@ -346,12 +365,13 @@ export default function App() {
             <div>
               <p className="font-semibold text-white">QState</p>
               <p className="text-sm text-slate-500">
-                Quantum Systems Theory And TEchnology
+                Quantum Systems Theory And Technology
               </p>
             </div>
           </div>
           <p className="text-sm text-slate-500">
-            © 2026 QState · Universidad Técnica Federico Santa María · Campus San Joaquín
+            © 2026 QState · Universidad Técnica Federico Santa María ·
+            Departamento de Física · Campus San Joaquín
           </p>
         </div>
       </footer>
