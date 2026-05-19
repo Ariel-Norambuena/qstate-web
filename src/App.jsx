@@ -19,6 +19,29 @@ const researchLines = [
   },
 ];
 
+const projects = [
+  {
+    title: "Fondecyt Regular No. 1251131",
+    funding: "Proyecto de investigación",
+    members: ["Karime Cerón", "Francisco Ahumada"],
+  },
+  {
+    title: "Fondecyt Exploración No. 13250014",
+    funding: "Proyecto de investigación",
+    members: ["Diego Montero"],
+  },
+  {
+    title: "Anillo Temático ATE 250066",
+    funding: "Proyecto de investigación",
+    members: [
+      "Alexis Legón",
+      "Alonso Recabarren",
+      "Ignacio Reyes",
+      "Rafael Reveco",
+    ],
+  },
+];
+
 const members = [
   ["Alexis Legón", "Doctor en Física"],
   ["Diego Montero", "Estudiante de Magíster USM"],
@@ -62,10 +85,21 @@ export default function App() {
           </a>
 
           <nav className="hidden gap-6 text-sm text-slate-300 md:flex">
-            <a href="#grupo" className="hover:text-cyan-200">Grupo</a>
-            <a href="#investigacion" className="hover:text-cyan-200">Investigación</a>
-            <a href="#integrantes" className="hover:text-cyan-200">Integrantes</a>
-            <a href="#contacto" className="hover:text-cyan-200">Contacto</a>
+            <a href="#grupo" className="hover:text-cyan-200">
+              Grupo
+            </a>
+            <a href="#investigacion" className="hover:text-cyan-200">
+              Investigación
+            </a>
+            <a href="#proyectos" className="hover:text-cyan-200">
+              Proyectos
+            </a>
+            <a href="#integrantes" className="hover:text-cyan-200">
+              Integrantes
+            </a>
+            <a href="#contacto" className="hover:text-cyan-200">
+              Contacto
+            </a>
           </nav>
         </div>
       </header>
@@ -86,10 +120,11 @@ export default function App() {
 
             <p className="mt-8 max-w-2xl text-lg leading-9 text-slate-300 md:text-xl">
               Somos un grupo de investigación de la Universidad Técnica Federico
-              Santa María dedicado al estudio teórico y computacional de sistemas
-              cuánticos, con énfasis en tecnologías emergentes, sistemas abiertos,
-              control, simulación de dinámicas fuera del equilibrio y técnicas de
-              inteligencia artificial aplicadas a problemas de mecánica cuántica.
+              Santa María dedicado al estudio teórico y computacional de
+              sistemas cuánticos, con énfasis en tecnologías emergentes,
+              sistemas abiertos, control, simulación de dinámicas fuera del
+              equilibrio y técnicas de inteligencia artificial aplicadas a
+              problemas de mecánica cuántica.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -132,17 +167,20 @@ export default function App() {
 
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-2xl shadow-slate-950/40">
             <p className="text-lg leading-9 text-slate-300">
-              QState reúne estudiantes e investigadores interesados en
-              comprender y controlar la dinámica de sistemas cuánticos. Nuestro
-              trabajo combina herramientas de mecánica cuántica, física de
-              sistemas abiertos, simulación numérica, control cuántico e
-              inteligencia artificial.
+              QState reúne estudiantes e investigadores interesados en el
+              estudio de la dinámica, simulación y control de sistemas cuánticos
+              complejos. Nuestro trabajo combina herramientas de mecánica
+              cuántica, teoría de sistemas abiertos, métodos numéricos, control
+              e inteligencia artificial para abordar problemas fundamentales y
+              aplicaciones emergentes en tecnologías cuánticas.
             </p>
+
             <p className="mt-6 text-lg leading-9 text-slate-300">
-              Como grupo de investigación de la USM, buscamos contribuir al
-              desarrollo científico y a la formación de nuevas generaciones en
-              tecnologías cuánticas, manteniendo una conexión activa con la
-              docencia, la colaboración interdisciplinaria y la divulgación.
+              Desde la Universidad Técnica Federico Santa María, buscamos
+              contribuir al desarrollo de investigación científica de frontera y
+              a la formación de nuevas generaciones en física y tecnologías
+              cuánticas, promoviendo la colaboración, la docencia avanzada y la
+              divulgación científica.
             </p>
           </div>
         </div>
@@ -179,6 +217,56 @@ export default function App() {
                 <p className="mt-5 leading-8 text-slate-300">
                   {line.description}
                 </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="proyectos" className="px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300/80">
+              Proyectos
+            </p>
+
+            <h2 className="text-3xl font-semibold tracking-tight text-white md:text-5xl">
+              Proyectos de investigación
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-slate-300">
+              QState participa activamente en proyectos de investigación
+              financiados por agencias nacionales, abordando problemas en
+              tecnologías cuánticas, sistemas abiertos, control, simulación e
+              inteligencia artificial aplicada a mecánica cuántica.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {projects.map((project) => (
+              <article
+                key={project.title}
+                className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 shadow-xl shadow-slate-950/30 transition hover:-translate-y-1 hover:border-cyan-200/40 hover:bg-white/[0.07]"
+              >
+                <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-cyan-200/70">
+                  {project.funding}
+                </p>
+
+                <h3 className="text-2xl font-semibold text-white">
+                  {project.title}
+                </h3>
+
+                <div className="mt-6">
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
+                    Integrantes asociados
+                  </p>
+
+                  <ul className="mt-3 space-y-2 text-slate-300">
+                    {project.members.map((member) => (
+                      <li key={member}>• {member}</li>
+                    ))}
+                  </ul>
+                </div>
               </article>
             ))}
           </div>
