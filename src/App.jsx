@@ -101,6 +101,33 @@ const publications = [
   },
 ];
 
+const newsItems = [
+  {
+    date: "2026",
+    title: "Lanzamiento de QState",
+    description:
+      "QState abre sus canales oficiales para compartir investigación, formación, actividades académicas y divulgación científica.",
+  },
+  {
+    date: "2026",
+    title: "Proyectos activos de investigación",
+    description:
+      "El grupo participa en proyectos Fondecyt Regular, Fondecyt Exploración y Anillo Temático, fortaleciendo líneas en sistemas abiertos, control, simulación e inteligencia artificial.",
+  },
+  {
+    date: "2026",
+    title: "Comunidad QState",
+    description:
+      "Promovemos la formación de estudiantes y la vinculación científica desde el Departamento de Física USM, Campus San Joaquín.",
+  },
+];
+
+const outreachItems = [
+  "Divulgación científica en tecnologías cuánticas y mecánica cuántica moderna.",
+  "Charlas, seminarios y actividades para estudiantes interesados en física.",
+  "Comunicación científica responsable a través de redes sociales y actividades académicas.",
+];
+
 const members = [
   ["Alexis Legón", "Doctor en Física"],
   ["Diego Montero", "Estudiante de Magíster USM"],
@@ -129,6 +156,131 @@ function Logo({ className = "h-14 w-14" }) {
   );
 }
 
+function SectionHeading({ eyebrow, title, description }) {
+  return (
+    <div className="mx-auto max-w-3xl text-center">
+      <p className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300/80">
+        {eyebrow}
+      </p>
+      <h2 className="text-3xl font-semibold tracking-tight text-white md:text-5xl">
+        {title}
+      </h2>
+      {description && (
+        <p className="mt-5 text-lg leading-8 text-slate-300">{description}</p>
+      )}
+    </div>
+  );
+}
+
+function OpenQuantumAnimation() {
+  return (
+    <div className="relative mx-auto flex aspect-square w-full max-w-xl items-center justify-center overflow-hidden rounded-[2.75rem] border border-cyan-200/20 bg-slate-950/70 shadow-2xl shadow-cyan-950/50 backdrop-blur">
+      <style>{`
+        @keyframes qstate-rotate-slow {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        @keyframes qstate-rotate-reverse {
+          from { transform: rotate(360deg); }
+          to { transform: rotate(0deg); }
+        }
+        @keyframes qstate-breathe {
+          0%, 100% { opacity: 0.35; transform: scale(0.96); }
+          50% { opacity: 0.95; transform: scale(1.06); }
+        }
+        @keyframes qstate-drift {
+          0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.25; }
+          50% { transform: translate3d(18px, -22px, 0); opacity: 0.75; }
+        }
+        @keyframes qstate-pulse-flow {
+          0% { stroke-dashoffset: 220; opacity: 0.15; }
+          45% { opacity: 0.9; }
+          100% { stroke-dashoffset: 0; opacity: 0.15; }
+        }
+        .q-orbit-slow { animation: qstate-rotate-slow 24s linear infinite; }
+        .q-orbit-medium { animation: qstate-rotate-reverse 18s linear infinite; }
+        .q-orbit-fast { animation: qstate-rotate-slow 12s linear infinite; }
+        .q-breathe { animation: qstate-breathe 5.5s ease-in-out infinite; }
+        .q-drift { animation: qstate-drift 7s ease-in-out infinite; }
+        .q-flow { stroke-dasharray: 18 18; animation: qstate-pulse-flow 5s linear infinite; }
+      `}</style>
+
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,211,238,0.20),transparent_32%),radial-gradient(circle_at_70%_28%,rgba(168,85,247,0.20),transparent_24%),radial-gradient(circle_at_20%_78%,rgba(59,130,246,0.18),transparent_22%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:42px_42px]" />
+
+      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 500 500">
+        <defs>
+          <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#cffafe" stopOpacity="1" />
+            <stop offset="70%" stopColor="#22d3ee" stopOpacity="0.45" />
+            <stop offset="100%" stopColor="#22d3ee" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+
+        <path
+          className="q-flow"
+          d="M88 250 C 145 120, 340 110, 412 245 S 310 420, 130 350"
+          fill="none"
+          stroke="#67e8f9"
+          strokeWidth="1.6"
+          opacity="0.55"
+        />
+        <path
+          className="q-flow"
+          d="M110 150 C 210 215, 295 210, 405 150"
+          fill="none"
+          stroke="#c4b5fd"
+          strokeWidth="1.4"
+          opacity="0.45"
+          style={{ animationDelay: "-1.8s" }}
+        />
+        <path
+          className="q-flow"
+          d="M95 360 C 210 305, 285 305, 405 362"
+          fill="none"
+          stroke="#93c5fd"
+          strokeWidth="1.4"
+          opacity="0.45"
+          style={{ animationDelay: "-3s" }}
+        />
+
+        <circle cx="250" cy="250" r="118" fill="none" stroke="#67e8f9" strokeOpacity="0.18" />
+        <circle cx="250" cy="250" r="174" fill="none" stroke="#a78bfa" strokeOpacity="0.16" />
+        <circle cx="250" cy="250" r="213" fill="none" stroke="#60a5fa" strokeOpacity="0.10" />
+
+        <circle className="q-drift" cx="118" cy="175" r="6" fill="#67e8f9" opacity="0.75" />
+        <circle className="q-drift" cx="390" cy="165" r="5" fill="#c4b5fd" opacity="0.65" style={{ animationDelay: "-2s" }} />
+        <circle className="q-drift" cx="375" cy="355" r="5" fill="#93c5fd" opacity="0.65" style={{ animationDelay: "-4s" }} />
+        <circle className="q-drift" cx="135" cy="345" r="4" fill="#cffafe" opacity="0.70" style={{ animationDelay: "-5s" }} />
+      </svg>
+
+      <div className="absolute h-[78%] w-[78%] rounded-full border border-cyan-200/20 q-orbit-slow">
+        <span className="absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2 rounded-full bg-cyan-200 shadow-lg shadow-cyan-200" />
+      </div>
+      <div className="absolute h-[62%] w-[62%] rotate-45 rounded-full border border-violet-200/20 q-orbit-medium">
+        <span className="absolute bottom-8 right-4 h-2.5 w-2.5 rounded-full bg-violet-200 shadow-lg shadow-violet-200" />
+      </div>
+      <div className="absolute h-[46%] w-[46%] -rotate-12 rounded-full border border-blue-200/20 q-orbit-fast">
+        <span className="absolute left-5 top-8 h-2 w-2 rounded-full bg-blue-200 shadow-lg shadow-blue-200" />
+      </div>
+
+      <div className="absolute h-52 w-52 rounded-full bg-cyan-300/20 blur-3xl q-breathe" />
+      <div className="relative z-10 flex h-40 w-40 items-center justify-center rounded-[2.25rem] border border-white/15 bg-white p-5 shadow-2xl shadow-cyan-900/40">
+        <img
+          src={`${import.meta.env.BASE_URL}qstate-logo.png`}
+          alt="QState logo"
+          className="h-full w-full object-contain"
+        />
+      </div>
+
+      <div className="absolute bottom-6 left-6 rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-3 text-xs text-slate-300 backdrop-blur">
+        <p className="font-semibold text-cyan-100">open dynamics</p>
+        <p className="mt-1 text-slate-400">system · environment · control</p>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
@@ -138,7 +290,7 @@ export default function App() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <a href="#inicio" className="flex items-center gap-3">
             <Logo />
-            <div>
+            <div className="hidden sm:block">
               <p className="text-lg font-semibold text-white">QState</p>
               <p className="text-xs uppercase tracking-[0.22em] text-slate-400">
                 Quantum Systems
@@ -146,15 +298,12 @@ export default function App() {
             </div>
           </a>
 
-          <nav className="hidden gap-6 text-sm text-slate-300 md:flex">
+          <nav className="hidden gap-5 text-sm text-slate-300 lg:flex">
             <a href="#grupo" className="hover:text-cyan-200">
               Grupo
             </a>
             <a href="#investigacion" className="hover:text-cyan-200">
               Investigación
-            </a>
-            <a href="#logro" className="hover:text-cyan-200">
-              Logro
             </a>
             <a href="#proyectos" className="hover:text-cyan-200">
               Proyectos
@@ -162,8 +311,14 @@ export default function App() {
             <a href="#publicaciones" className="hover:text-cyan-200">
               Publicaciones
             </a>
+            <a href="#noticias" className="hover:text-cyan-200">
+              Noticias
+            </a>
+            <a href="#vinculacion" className="hover:text-cyan-200">
+              Vinculación
+            </a>
             <a href="#integrantes" className="hover:text-cyan-200">
-              Integrantes
+              Equipo
             </a>
             <a href="#contacto" className="hover:text-cyan-200">
               Contacto
@@ -172,8 +327,8 @@ export default function App() {
         </div>
       </header>
 
-      <section id="inicio" className="px-6 py-24 md:py-32">
-        <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
+      <section id="inicio" className="relative overflow-hidden px-6 py-24 md:py-32">
+        <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
             <p className="mb-6 inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm text-cyan-100">
               Grupo de investigación USM en tecnologías cuánticas
@@ -203,21 +358,15 @@ export default function App() {
                 Explorar investigación
               </a>
               <a
-                href="#contacto"
+                href="#publicaciones"
                 className="rounded-full border border-white/15 px-6 py-3 text-center font-semibold text-white transition hover:bg-white/10"
               >
-                Contactar al grupo
+                Ver publicaciones
               </a>
             </div>
           </div>
 
-          <div className="relative mx-auto flex w-full max-w-lg items-center justify-center rounded-[2.5rem] border border-cyan-200/20 bg-white p-8 shadow-2xl shadow-cyan-950/40">
-            <img
-              src={`${import.meta.env.BASE_URL}qstate-logo.png`}
-              alt="QState — Quantum Systems Theory And Technology"
-              className="w-full object-contain"
-            />
-          </div>
+          <OpenQuantumAnimation />
         </div>
       </section>
 
@@ -255,18 +404,11 @@ export default function App() {
 
       <section id="investigacion" className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300/80">
-              Líneas de investigación
-            </p>
-            <h2 className="text-3xl font-semibold tracking-tight text-white md:text-5xl">
-              Preguntas cuánticas, métodos modernos y plataformas emergentes.
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-slate-300">
-              Nuestro trabajo se organiza en tres líneas principales que
-              conectan teoría, simulación, control e inteligencia artificial.
-            </p>
-          </div>
+          <SectionHeading
+            eyebrow="Líneas de investigación"
+            title="Preguntas cuánticas, métodos modernos y plataformas emergentes."
+            description="Nuestro trabajo se organiza en tres líneas principales que conectan teoría, simulación, control e inteligencia artificial."
+          />
 
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {researchLines.map((line) => (
@@ -290,43 +432,13 @@ export default function App() {
         </div>
       </section>
 
-      <section id="logro" className="px-6 py-24">
-        <div className="mx-auto max-w-5xl rounded-[2.5rem] border border-cyan-200/20 bg-gradient-to-br from-cyan-300/10 via-white/[0.04] to-violet-300/10 p-8 text-center shadow-2xl shadow-cyan-950/30 md:p-14">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300/80">
-            Logro destacado
-          </p>
-
-          <h2 className="text-3xl font-semibold tracking-tight text-white md:text-5xl">
-            Consolidación de QState como grupo de investigación.
-          </h2>
-
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-9 text-slate-300">
-            QState articula líneas de investigación en tecnologías cuánticas,
-            sistemas abiertos, control, simulación e inteligencia artificial
-            aplicada a mecánica cuántica, con participación activa en proyectos
-            Fondecyt Regular, Fondecyt Exploración y Anillo Temático.
-          </p>
-        </div>
-      </section>
-
       <section id="proyectos" className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300/80">
-              Proyectos
-            </p>
-
-            <h2 className="text-3xl font-semibold tracking-tight text-white md:text-5xl">
-              Proyectos de investigación
-            </h2>
-
-            <p className="mt-5 text-lg leading-8 text-slate-300">
-              QState participa activamente en proyectos de investigación
-              financiados por agencias nacionales, abordando problemas en
-              tecnologías cuánticas, sistemas abiertos, control, simulación e
-              inteligencia artificial aplicada a mecánica cuántica.
-            </p>
-          </div>
+          <SectionHeading
+            eyebrow="Proyectos"
+            title="Proyectos de investigación"
+            description="QState participa activamente en proyectos de investigación financiados por agencias nacionales, abordando problemas en tecnologías cuánticas, sistemas abiertos, control, simulación e inteligencia artificial aplicada a mecánica cuántica."
+          />
 
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {projects.map((project) => (
@@ -361,22 +473,11 @@ export default function App() {
 
       <section id="publicaciones" className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300/80">
-              Publicaciones
-            </p>
-
-            <h2 className="text-3xl font-semibold tracking-tight text-white md:text-5xl">
-              Publicaciones científicas
-            </h2>
-
-            <p className="mt-5 text-lg leading-8 text-slate-300">
-              Una selección de artículos y preprints asociados a las líneas de
-              investigación del grupo, incluyendo sistemas cuánticos abiertos,
-              control, simulación, tecnologías cuánticas, materia activa e
-              inteligencia artificial aplicada a problemas de física.
-            </p>
-          </div>
+          <SectionHeading
+            eyebrow="Publicaciones"
+            title="Publicaciones científicas"
+            description="Una selección de artículos y preprints asociados a las líneas de investigación del grupo, incluyendo sistemas cuánticos abiertos, control, simulación, tecnologías cuánticas, materia activa e inteligencia artificial aplicada a problemas de física."
+          />
 
           <div className="mt-14 grid gap-6 lg:grid-cols-2">
             {publications.map((paper) => (
@@ -419,21 +520,71 @@ export default function App() {
         </div>
       </section>
 
-      <section id="integrantes" className="px-6 py-24">
+      <section id="noticias" className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
+          <SectionHeading
+            eyebrow="Noticias"
+            title="Actividades y novedades"
+            description="Un espacio para compartir avances del grupo, actividades académicas, seminarios, colaboraciones y oportunidades para estudiantes."
+          />
+
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {newsItems.map((item) => (
+              <article
+                key={item.title}
+                className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 shadow-xl shadow-slate-950/30"
+              >
+                <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200/70">
+                  {item.date}
+                </p>
+                <h3 className="text-2xl font-semibold text-white">
+                  {item.title}
+                </h3>
+                <p className="mt-5 leading-8 text-slate-300">
+                  {item.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="vinculacion" className="px-6 py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300/80">
-              Equipo
+              Vinculación y divulgación
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-white md:text-5xl">
-              Integrantes de QState
+              Acercar la ciencia cuántica a la comunidad.
             </h2>
-            <p className="mt-5 text-lg leading-8 text-slate-300">
-              Un grupo en crecimiento, compuesto por investigadores, estudiantes
-              y colaboradores con intereses en física cuántica, simulación y
-              tecnologías emergentes.
+            <p className="mt-6 text-lg leading-9 text-slate-300">
+              Buscamos comunicar investigación de frontera de manera rigurosa,
+              accesible y responsable, conectando la formación científica con la
+              comunidad universitaria y el público general.
             </p>
           </div>
+
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-2xl shadow-slate-950/40">
+            <ul className="space-y-5">
+              {outreachItems.map((item) => (
+                <li key={item} className="flex gap-4 text-lg leading-8 text-slate-300">
+                  <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-cyan-200 shadow-lg shadow-cyan-300" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="integrantes" className="px-6 py-24">
+        <div className="mx-auto max-w-7xl">
+          <SectionHeading
+            eyebrow="Equipo"
+            title="Integrantes de QState"
+            description="Un grupo en crecimiento, compuesto por investigadores, estudiantes y colaboradores con intereses en física cuántica, simulación y tecnologías emergentes."
+          />
 
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {members.map(([name, role]) => (
