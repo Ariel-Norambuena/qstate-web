@@ -497,7 +497,7 @@ function CollaboratorsSection() {
   aria-label="Mapa mundial digital de colaboradores QState"
   className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
   style={{
-    backgroundImage: `url("${assetPath("qstate-world-map.svg")}")`,
+    backgroundImage: `url("${assetPath("qstate-world-map.png")}")`,
     filter: "brightness(1.25) contrast(1.15) saturate(1.2)",
   }}
 />
