@@ -375,24 +375,6 @@ function HomeGroupSection({ onNavigate }) {
             />
           </div>
 
-          <p className="mt-8 max-w-2xl text-lg leading-9 text-slate-300 md:text-xl">
-            Somos un grupo de investigación de la Universidad Técnica Federico
-            Santa María dedicado al estudio teórico y computacional de sistemas
-            cuánticos, con énfasis en tecnologías emergentes, sistemas abiertos,
-            control, simulación de dinámicas fuera del equilibrio y técnicas de
-            inteligencia artificial aplicadas a problemas de mecánica cuántica.
-          </p>
-
-          <div className="mt-8 rounded-[2rem] border border-cyan-200/20 bg-cyan-300/10 p-6 shadow-xl shadow-cyan-950/20">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
-              Logro destacado
-            </p>
-            <p className="mt-3 text-lg leading-8 text-slate-200">
-              Consolidación de QState como grupo de investigación en
-              tecnologías cuánticas, con participación activa en proyectos
-              Fondecyt Regular, Fondecyt Exploración y Anillo Temático.
-            </p>
-          </div>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <button
