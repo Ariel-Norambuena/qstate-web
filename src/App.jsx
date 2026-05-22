@@ -4,10 +4,8 @@ const navItems = [
   { id: "inicio", label: "Inicio" },
   { id: "investigacion", label: "Investigación" },
   { id: "colaboradores", label: "Colaboradores" },
-  { id: "proyectos", label: "Proyectos y publicaciones" },
+  { id: "proyectos", label: "Proyectos" },
   { id: "noticias", label: "Noticias" },
-  { id: "vinculacion", label: "Vinculación" },
-  { id: "apoyo", label: "Apoyo" },
   { id: "integrantes", label: "Equipo" },
   { id: "contacto", label: "Contacto" },
 ];
@@ -363,25 +361,6 @@ function HomeGroupSection({ onNavigate }) {
             <img src={assetPath("qstate-logo.png")} alt="QState logo" className="w-full object-contain" />
           </div>
 
-          <p className="mt-8 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg md:text-xl md:leading-9">
-            Somos un grupo de investigación de la Universidad Técnica Federico
-            Santa María dedicado al estudio teórico y computacional de sistemas
-            cuánticos, con énfasis en tecnologías emergentes, sistemas abiertos,
-            control, simulación de dinámicas fuera del equilibrio y técnicas de
-            inteligencia artificial aplicadas a problemas de mecánica cuántica.
-          </p>
-
-          <div className="mt-8 rounded-[2rem] border border-cyan-200/20 bg-cyan-300/10 p-5 shadow-xl shadow-cyan-950/20 sm:p-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
-              Logro destacado
-            </p>
-            <p className="mt-3 text-base leading-8 text-slate-200 sm:text-lg">
-              Consolidación de QState como grupo de investigación en
-              tecnologías cuánticas, con participación activa en proyectos
-              Fondecyt Regular, Fondecyt Exploración y Anillo Temático.
-            </p>
-          </div>
-
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <button type="button" onClick={() => onNavigate("investigacion")} className="rounded-full bg-cyan-200 px-6 py-3 text-center font-semibold text-slate-950 transition hover:bg-white">
               Explorar investigación
@@ -401,9 +380,9 @@ function HomeGroupSection({ onNavigate }) {
           </h2>
 
           <p className="mt-8 text-base leading-8 text-slate-300 sm:text-lg sm:leading-9">
-            QState reúne estudiantes e investigadores interesados en el estudio
+            QState reúne a personas interesadas en el estudio
             de la dinámica, simulación y control de sistemas cuánticos
-            complejos. Nuestro trabajo combina herramientas de mecánica
+            abiertos. Nuestro trabajo combina herramientas teóricas de mecánica
             cuántica, teoría de sistemas abiertos, métodos numéricos, control e
             inteligencia artificial para abordar problemas fundamentales y
             aplicaciones emergentes en tecnologías cuánticas.
@@ -448,7 +427,9 @@ function ResearchSection() {
 }
 
 function CollaboratorsSection() {
-  const [selectedCollaborator, setSelectedCollaborator] = useState(collaborators[0]);
+  const [selectedCollaborator, setSelectedCollaborator] = useState(
+    collaborators[0]
+  );
 
   return (
     <section className="px-4 py-16 sm:px-6 md:py-28">
@@ -459,100 +440,128 @@ function CollaboratorsSection() {
           description="QState mantiene una red activa de colaboración científica con investigadoras e investigadores en Chile, Colombia, Brasil y Estados Unidos."
         />
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-[1.25fr_0.75fr]">
-          <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-950/80 p-3 shadow-2xl shadow-cyan-950/30 sm:p-5">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_28%_70%,rgba(34,211,238,0.16),transparent_25%),radial-gradient(circle_at_72%_35%,rgba(168,85,247,0.12),transparent_24%)]" />
+        <div className="mt-14 overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-950/80 p-3 shadow-2xl shadow-cyan-950/30 sm:p-5">
+          <div className="relative aspect-[1.25/1] overflow-hidden rounded-[2rem] border border-cyan-200/10 bg-slate-900/70 sm:aspect-[1.9/1] lg:aspect-[2.3/1]">
+            <div
+              aria-label="Mapa mundial digital de colaboradores QState"
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
+              style={{
+                backgroundImage: `url("${assetPath("qstate-world-map.png")}")`,
+                filter: "brightness(1.2) contrast(1.15) saturate(1.2)",
+              }}
+            />
 
-            <div className="relative aspect-[1.25/1] overflow-hidden rounded-[2rem] border border-cyan-200/10 bg-slate-900/70 sm:aspect-[1.9/1]">
-              <div
-                aria-label="Mapa mundial digital de colaboradores QState"
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
-                style={{
-                  backgroundImage: `url("${assetPath("qstate-world-map.png")}")`,
-                  filter: "brightness(1.2) contrast(1.15) saturate(1.2)",
-                }}
-              />
-
-              <svg viewBox="0 0 1000 520" className="pointer-events-none absolute inset-0 h-full w-full" aria-hidden="true">
-                {collaborators.map((collaborator) => {
-                  const from = mapPosition(-33.45, -70.66);
-                  const to = mapPosition(collaborator.lat, collaborator.lon);
-                  const x1 = parseFloat(from.left) * 10;
-                  const y1 = parseFloat(from.top) * 5.2;
-                  const x2 = parseFloat(to.left) * 10;
-                  const y2 = parseFloat(to.top) * 5.2;
-
-                  return (
-                    <path
-                      key={`${collaborator.name}-arc`}
-                      d={`M ${x1} ${y1} Q ${(x1 + x2) / 2} ${Math.min(y1, y2) - 90} ${x2} ${y2}`}
-                      fill="none"
-                      stroke="#67e8f9"
-                      strokeOpacity="0.28"
-                      strokeWidth="1.4"
-                      strokeDasharray="6 9"
-                    />
-                  );
-                })}
-              </svg>
-
-              {collaborators.map((collaborator, index) => {
-                const position = mapPosition(collaborator.lat, collaborator.lon);
-                const selected = selectedCollaborator.name === collaborator.name;
+            <svg
+              viewBox="0 0 1000 520"
+              className="pointer-events-none absolute inset-0 h-full w-full"
+              aria-hidden="true"
+            >
+              {collaborators.map((collaborator) => {
+                const from = mapPosition(-33.45, -70.66);
+                const to = mapPosition(collaborator.lat, collaborator.lon);
+                const x1 = parseFloat(from.left) * 10;
+                const y1 = parseFloat(from.top) * 5.2;
+                const x2 = parseFloat(to.left) * 10;
+                const y2 = parseFloat(to.top) * 5.2;
 
                 return (
-                  <button
-                    key={collaborator.name}
-                    type="button"
-                    onClick={() => setSelectedCollaborator(collaborator)}
-                    className={`group absolute -translate-x-1/2 -translate-y-1/2 rounded-full transition ${selected ? "scale-125" : "hover:scale-110"}`}
-                    style={{
-                      ...position,
-                      marginLeft: `${(index % 3) * 8}px`,
-                      marginTop: `${(index % 2) * 6}px`,
-                    }}
-                    aria-label={`Ver colaborador ${collaborator.name}`}
-                  >
-                    <span className={`block h-4 w-4 rounded-full border-2 border-slate-950 shadow-lg ${selected ? "bg-white shadow-cyan-200" : "bg-cyan-300 shadow-cyan-300/60"}`} />
-                    <span className="absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-300/20 opacity-0 blur-sm transition group-hover:opacity-100" />
-                  </button>
+                  <path
+                    key={`${collaborator.name}-arc`}
+                    d={`M ${x1} ${y1} Q ${(x1 + x2) / 2} ${
+                      Math.min(y1, y2) - 90
+                    } ${x2} ${y2}`}
+                    fill="none"
+                    stroke="#67e8f9"
+                    strokeOpacity="0.28"
+                    strokeWidth="1.4"
+                    strokeDasharray="6 9"
+                  />
                 );
               })}
+            </svg>
 
-              <div className="absolute bottom-4 left-4 rounded-2xl border border-white/10 bg-slate-950/75 px-3 py-2 text-[11px] text-slate-300 backdrop-blur sm:bottom-5 sm:left-5 sm:px-4 sm:py-3 sm:text-xs">
-                <p className="font-semibold text-cyan-100">QState collaboration network</p>
-                <p className="mt-1 text-slate-400">Chile · Colombia · Brasil · USA</p>
-              </div>
-            </div>
-          </div>
+            {collaborators.map((collaborator, index) => {
+              const position = mapPosition(collaborator.lat, collaborator.lon);
+              const selected =
+                selectedCollaborator.name === collaborator.name;
 
-          <div className="rounded-[2.5rem] border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-slate-950/40 sm:p-7">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-200/80">
-              Colaborador seleccionado
-            </p>
-
-            <h3 className="mt-4 text-3xl font-semibold text-white">{selectedCollaborator.name}</h3>
-            <p className="mt-3 text-lg text-slate-300">{selectedCollaborator.institution}</p>
-            <p className="mt-1 text-slate-400">{selectedCollaborator.city}, {selectedCollaborator.country}</p>
-
-            <div className="mt-8 grid gap-3">
-              {collaborators.map((collaborator) => (
+              return (
                 <button
                   key={collaborator.name}
                   type="button"
                   onClick={() => setSelectedCollaborator(collaborator)}
-                  className={`rounded-2xl border px-4 py-3 text-left transition ${
-                    selectedCollaborator.name === collaborator.name
-                      ? "border-cyan-200/40 bg-cyan-200/10 text-cyan-100"
-                      : "border-white/10 bg-white/[0.03] text-slate-300 hover:border-cyan-200/30 hover:bg-white/[0.06]"
+                  className={`group absolute -translate-x-1/2 -translate-y-1/2 rounded-full transition ${
+                    selected ? "scale-125" : "hover:scale-110"
                   }`}
+                  style={{
+                    ...position,
+                    marginLeft: `${(index % 3) * 8}px`,
+                    marginTop: `${(index % 2) * 6}px`,
+                  }}
+                  aria-label={`Ver colaborador ${collaborator.name}`}
                 >
-                  <span className="block font-semibold">{collaborator.name}</span>
-                  <span className="block text-sm text-slate-400">{collaborator.institution} · {collaborator.country}</span>
+                  <span
+                    className={`block h-4 w-4 rounded-full border-2 border-slate-950 shadow-lg ${
+                      selected
+                        ? "bg-white shadow-cyan-200"
+                        : "bg-cyan-300 shadow-cyan-300/60"
+                    }`}
+                  />
+                  <span className="absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-300/20 opacity-0 blur-sm transition group-hover:opacity-100" />
                 </button>
-              ))}
+              );
+            })}
+
+            <div className="absolute bottom-4 left-4 rounded-2xl border border-white/10 bg-slate-950/75 px-3 py-2 text-[11px] text-slate-300 backdrop-blur sm:bottom-5 sm:left-5 sm:px-4 sm:py-3 sm:text-xs">
+              <p className="font-semibold text-cyan-100">
+                QState collaboration network
+              </p>
+              <p className="mt-1 text-slate-400">
+                Chile · Colombia · Brasil · USA
+              </p>
             </div>
           </div>
+        </div>
+
+        <div className="mt-8 rounded-[2.5rem] border border-cyan-200/20 bg-cyan-300/10 p-7 shadow-2xl shadow-cyan-950/30">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-200/80">
+            Colaborador seleccionado
+          </p>
+
+          <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <h3 className="text-3xl font-semibold text-white">
+                {selectedCollaborator.name}
+              </h3>
+              <p className="mt-2 text-lg text-slate-300">
+                {selectedCollaborator.institution}
+              </p>
+            </div>
+
+            <p className="text-slate-400">
+              {selectedCollaborator.city}, {selectedCollaborator.country}
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {collaborators.map((collaborator) => (
+            <button
+              key={collaborator.name}
+              type="button"
+              onClick={() => setSelectedCollaborator(collaborator)}
+              className={`rounded-2xl border px-5 py-4 text-left transition ${
+                selectedCollaborator.name === collaborator.name
+                  ? "border-cyan-200/40 bg-cyan-200/10 text-cyan-100"
+                  : "border-white/10 bg-white/[0.03] text-slate-300 hover:border-cyan-200/30 hover:bg-white/[0.06]"
+              }`}
+            >
+              <span className="block font-semibold">{collaborator.name}</span>
+              <span className="mt-1 block text-sm text-slate-400">
+                {collaborator.institution} · {collaborator.country}
+              </span>
+            </button>
+          ))}
         </div>
       </div>
     </section>
