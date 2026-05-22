@@ -111,7 +111,7 @@ const translations = {
           image: "laporta-talk.jpg",
         },
         {
-          date: "Hace 6 días · Instagram",
+          date: "15 de mayo de 2026 · Instagram",
           title: "Lanzamiento de QState en Instagram",
           speaker: "Comunidad QState",
           location: "QState · Departamento de Física USM",
@@ -263,7 +263,7 @@ const translations = {
           image: "laporta-talk.jpg",
         },
         {
-          date: "6 days ago · Instagram",
+          date: "May 15, 2026 · Instagram",
           title: "QState launch on Instagram",
           speaker: "QState community",
           location: "QState · USM Department of Physics",
@@ -656,16 +656,9 @@ function OpenQuantumAnimation({ text }) {
           45% { opacity: 0.9; }
           100% { stroke-dashoffset: 0; opacity: 0.15; }
         }
-        @keyframes qstate-density-matrix {
-          0%, 100% { transform: translate3d(-210px, -46px, 0) rotate(-4deg); opacity: 0.20; }
-          35% { opacity: 0.95; }
-          50% { transform: translate3d(0px, 28px, 0) rotate(3deg); opacity: 0.90; }
-          100% { transform: translate3d(220px, -52px, 0) rotate(-5deg); opacity: 0.20; }
-        }
         .q-breathe { animation: qstate-breathe 5.5s ease-in-out infinite; }
         .q-drift { animation: qstate-drift 7s ease-in-out infinite; }
         .q-flow { stroke-dasharray: 18 18; animation: qstate-pulse-flow 5s linear infinite; }
-        .q-density-matrix { animation: qstate-density-matrix 9s ease-in-out infinite; }
       `}</style>
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,211,238,0.20),transparent_32%),radial-gradient(circle_at_70%_28%,rgba(168,85,247,0.20),transparent_24%),radial-gradient(circle_at_20%_78%,rgba(59,130,246,0.18),transparent_22%)]" />
@@ -728,22 +721,72 @@ function OpenQuantumAnimation({ text }) {
         />
 
         <circle className="q-drift" cx="145" cy="95" r="6" fill="#67e8f9" opacity="0.75" />
+        <text
+          className="q-drift"
+          x="145"
+          y="76"
+          textAnchor="middle"
+          fill="#cffafe"
+          fontSize="23"
+          fontFamily="serif"
+          fontStyle="italic"
+          opacity="0.92"
+        >
+          ρ₁
+        </text>
+
         <circle className="q-drift" cx="845" cy="120" r="5" fill="#c4b5fd" opacity="0.65" style={{ animationDelay: "-2s" }} />
+        <text
+          className="q-drift"
+          x="845"
+          y="101"
+          textAnchor="middle"
+          fill="#ddd6fe"
+          fontSize="23"
+          fontFamily="serif"
+          fontStyle="italic"
+          opacity="0.90"
+          style={{ animationDelay: "-2s" }}
+        >
+          ρ₂
+        </text>
+
         <circle className="q-drift" cx="790" cy="260" r="5" fill="#93c5fd" opacity="0.65" style={{ animationDelay: "-4s" }} />
+        <text
+          className="q-drift"
+          x="790"
+          y="241"
+          textAnchor="middle"
+          fill="#bfdbfe"
+          fontSize="23"
+          fontFamily="serif"
+          fontStyle="italic"
+          opacity="0.90"
+          style={{ animationDelay: "-4s" }}
+        >
+          ρ₃
+        </text>
+
         <circle className="q-drift" cx="235" cy="250" r="4" fill="#cffafe" opacity="0.70" style={{ animationDelay: "-5s" }} />
+        <text
+          className="q-drift"
+          x="235"
+          y="231"
+          textAnchor="middle"
+          fill="#cffafe"
+          fontSize="23"
+          fontFamily="serif"
+          fontStyle="italic"
+          opacity="0.92"
+          style={{ animationDelay: "-5s" }}
+        >
+          ρ₄
+        </text>
       </svg>
 
       <div className="absolute h-40 w-40 rounded-full bg-cyan-300/20 blur-3xl q-breathe" />
-      <div className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full border border-cyan-100/50 bg-cyan-100/80 text-4xl font-semibold text-slate-950 shadow-2xl shadow-cyan-300/50 md:h-24 md:w-24 md:text-5xl">
-        𝓗
-      </div>
-
-      <div className="q-density-matrix pointer-events-none absolute left-1/2 top-1/2 z-20 hidden -translate-x-1/2 -translate-y-1/2 rounded-2xl border border-cyan-200/30 bg-slate-950/80 px-4 py-3 font-mono text-xs leading-5 text-cyan-100 shadow-xl shadow-cyan-950/40 backdrop-blur sm:block">
-        <p className="mb-1 text-[10px] uppercase tracking-[0.25em] text-cyan-300/80">
-          density matrix
-        </p>
-        <p>ρ(t) = [ ρ₀₀&nbsp;&nbsp;ρ₀₁ ]</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ ρ₁₀&nbsp;&nbsp;ρ₁₁ ]</p>
+      <div className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full border border-cyan-100/50 bg-cyan-100/80 font-serif text-3xl font-light italic text-slate-950/75 shadow-2xl shadow-cyan-300/50 md:h-24 md:w-24 md:text-4xl">
+        ℋ
       </div>
 
       <div className="absolute bottom-4 left-4 rounded-2xl border border-white/10 bg-slate-950/70 px-3 py-2 text-[11px] text-slate-300 backdrop-blur sm:bottom-6 sm:left-6 sm:px-4 sm:py-3 sm:text-xs">
