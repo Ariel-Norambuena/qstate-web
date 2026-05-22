@@ -4,271 +4,431 @@ const navItems = [
   { id: "inicio", labelKey: "home" },
   { id: "investigacion", labelKey: "research" },
   { id: "colaboradores", labelKey: "collaborators" },
-  { id: "proyectos", labelKey: "projectsPublications" },
+  { id: "proyectos", labelKey: "projects" },
   { id: "noticias", labelKey: "news" },
   { id: "integrantes", labelKey: "team" },
   { id: "contacto", labelKey: "contact" },
 ];
 
-const copy = {
+const translations = {
   es: {
+    languageLabel: "ES",
     nav: {
       home: "Inicio",
       research: "Investigación",
       collaborators: "Colaboradores",
-      projectsPublications: "Proyectos",
+      projects: "Proyectos",
       news: "Noticias",
       team: "Equipo",
       contact: "Contacto",
     },
     common: {
+      seePublication: "Ver publicación",
+      associatedMembers: "Integrantes asociados",
       selectedCollaborator: "Colaborador seleccionado",
       collaborationNetwork: "QState collaboration network",
       collaborationCountries: "Chile · Colombia · Brasil · USA",
-      seePublication: "Ver publicación",
-      associatedMembers: "Integrantes asociados",
       leader: "Líder",
       instagram: "Instagram",
+      readMore: "Ver publicación",
     },
     home: {
       badge: "Grupo de investigación USM en tecnologías cuánticas",
       title: "QState",
       subtitle: "Quantum Systems Theory And Technology",
-      description:
-        "Somos un grupo de investigación de la Universidad Técnica Federico Santa María dedicado al estudio teórico y computacional de sistemas cuánticos, con énfasis en tecnologías emergentes, sistemas abiertos, control, simulación de dinámicas fuera del equilibrio y técnicas de inteligencia artificial aplicadas a problemas de mecánica cuántica.",
-      achievementEyebrow: "Logro destacado",
-      achievement:
-        "Consolidación de QState como grupo de investigación en tecnologías cuánticas, con participación activa en proyectos Fondecyt Regular, Fondecyt Exploración y Anillo Temático.",
-      ctaResearch: "Explorar investigación",
-      ctaPublications: "Ver publicaciones",
       aboutEyebrow: "Quiénes somos",
       aboutTitle:
         "Ciencia cuántica con visión teórica, computacional y tecnológica.",
       aboutParagraph1:
-        "QState reúne estudiantes e investigadores interesados en el estudio de la dinámica, simulación y control de sistemas cuánticos complejos. Nuestro trabajo combina herramientas de mecánica cuántica, teoría de sistemas abiertos, métodos numéricos, control e inteligencia artificial para abordar problemas fundamentales y aplicaciones emergentes en tecnologías cuánticas.",
+        "QState reúne a personas interesadas en el estudio de la dinámica, simulación y control de sistemas cuánticos abiertos. Nuestro trabajo combina herramientas teóricas de mecánica cuántica, teoría de sistemas abiertos, métodos numéricos, control e inteligencia artificial para abordar problemas fundamentales y aplicaciones emergentes en tecnologías cuánticas.",
       aboutParagraph2:
         "Desde el Departamento de Física de la Universidad Técnica Federico Santa María, Campus San Joaquín, buscamos contribuir al desarrollo de investigación científica de frontera y a la formación de nuevas generaciones en física y tecnologías cuánticas, promoviendo la colaboración, la docencia avanzada y la divulgación científica.",
+      exploreResearch: "Explorar investigación",
+      seePublications: "Ver publicaciones",
+      animationTitle: "open quantum dynamics",
+      animationSubtitle: "system · environment · control",
     },
     research: {
       eyebrow: "Líneas de investigación",
       title: "Preguntas cuánticas, métodos modernos y plataformas emergentes.",
       description:
         "Nuestro trabajo se organiza en tres líneas principales que conectan teoría, simulación, control e inteligencia artificial.",
+      lines: [
+        {
+          title: "Sistemas cuánticos abiertos",
+          subtitle: "Teoría y simulación",
+          description:
+            "Estudiamos la dinámica de sistemas cuánticos en interacción con su entorno, incluyendo decoherencia, disipación, no-Markovianidad y simulación de procesos cuánticos.",
+        },
+        {
+          title: "Control cuántico",
+          subtitle: "Plataformas cuánticas",
+          description:
+            "Diseñamos estrategias para manipular, proteger y optimizar estados cuánticos en plataformas físicas relevantes para tecnologías cuánticas.",
+        },
+        {
+          title: "Inteligencia artificial",
+          subtitle: "Mecánica cuántica",
+          description:
+            "Exploramos métodos de aprendizaje automático, optimización y modelos híbridos para resolver problemas en dinámica, control y simulación cuántica.",
+        },
+      ],
     },
     collaborators: {
       eyebrow: "Colaboradores",
       title: "Red internacional de colaboración",
       description:
         "QState mantiene una red activa de colaboración científica con investigadoras e investigadores en Chile, Colombia, Brasil y Estados Unidos.",
+      mapLabel: "Mapa mundial digital de colaboradores QState",
     },
-    projectsPublications: {
+    projects: {
       eyebrow: "Proyectos y publicaciones",
       title: "Financiamiento, resultados y producción científica",
       description:
         "Una visión conjunta de los proyectos activos del grupo y una selección de publicaciones asociadas a nuestras líneas de investigación.",
-      publicationsEyebrow: "Publicaciones",
-      publicationsTitle: "Publicaciones científicas",
-      publicationsDescription:
+      publicationEyebrow: "Publicaciones",
+      publicationTitle: "Publicaciones científicas",
+      publicationDescription:
         "Artículos y preprints asociados a sistemas cuánticos abiertos, control, simulación, tecnologías cuánticas, materia activa e inteligencia artificial aplicada a problemas de física.",
+      projectFunding: "Proyecto de investigación",
+      article: "Artículo",
+      preprint: "Preprint",
     },
     news: {
       eyebrow: "Noticias",
       title: "Actividades y novedades",
       description:
         "Un espacio para compartir avances del grupo, actividades académicas, seminarios, colaboraciones y oportunidades para estudiantes.",
+      items: [
+        {
+          date: "Miércoles 27 de mayo · 16:10 hrs",
+          title:
+            "Charla regular QState: Implementación del algoritmo de Laporta para la reducción de integrales multiloop",
+          speaker: "Presenta: Diego Montero",
+          location: "Sala de reuniones DFIS",
+          description:
+            "La charla abordará una implementación del algoritmo de Laporta para la reducción de integrales multiloop. Se introducirá el rol de estas integrales en procesos de dispersión de partículas, la relación con diagramas de Feynman y el uso de relaciones IBP.",
+          image: "laporta-talk.jpg",
+        },
+        {
+          date: "Hace 6 días · Instagram",
+          title: "Lanzamiento de QState en Instagram",
+          speaker: "Comunidad QState",
+          location: "QState · Departamento de Física USM",
+          description:
+            "QState inició su presencia en redes sociales para compartir investigación, formación, actividades académicas y divulgación científica con la comunidad.",
+          url: "https://www.instagram.com/p/DYXWJ8UxcZp/",
+        },
+        {
+          date: "2026",
+          title: "Proyectos activos de investigación",
+          speaker: "QState",
+          location: "USM",
+          description:
+            "El grupo participa en proyectos Fondecyt Regular, Fondecyt Exploración y Anillo Temático, fortaleciendo líneas en sistemas abiertos, control, simulación e inteligencia artificial.",
+        },
+      ],
     },
     team: {
       eyebrow: "Equipo",
       title: "Integrantes de QState",
       description:
         "Un grupo en crecimiento, compuesto por investigadores, estudiantes y colaboradores con intereses en física cuántica, simulación y tecnologías emergentes.",
+      members: [
+        ["Ariel Norambuena", "Doctor en Física · Líder de QState"],
+        ["Alexis Legón", "Doctor en Física"],
+        ["Diego Montero", "Estudiante de Magíster USM"],
+        ["Karime Cerón", "Estudiante de Licenciatura en Física"],
+        ["Alonso Recabarren", "Estudiante de Licenciatura en Física"],
+        ["Francisco Ahumada", "Estudiante de Licenciatura en Física"],
+        ["Iñaki Bermeo", "Estudiante de Licenciatura en Astrofísica"],
+        ["Ignacio Reyes", "Estudiante de Ingeniería Civil Física"],
+        ["Rafael Reveco", "Estudiante de Licenciatura en Física"],
+        ["Eduardo Novoa", "Ingeniero Civil Telemático"],
+        ["Ignacio Farías", "Estudiante de Ingeniería Civil Física"],
+        ["Clemente Velasco", "Licenciado en Física"],
+      ],
     },
     contact: {
       eyebrow: "Conecta con QState",
       title: "Síguenos y participa de nuestra comunidad cuántica.",
       description:
         "Compartiremos avances de investigación, actividades académicas, oportunidades para estudiantes y contenido de divulgación científica.",
+      email: "qstate.socials@gmail.com",
       affiliation:
         "Universidad Técnica Federico Santa María · Departamento de Física · Campus San Joaquín",
     },
     footer: {
-      support: "Con el apoyo de ANID Chile y colaboración de CoreDevX.",
+      support: "Con el apoyo de ANID Chile y CoreDevX.",
     },
   },
+
   en: {
+    languageLabel: "EN",
     nav: {
       home: "Home",
       research: "Research",
       collaborators: "Collaborators",
-      projectsPublications: "Projects",
+      projects: "Projects",
       news: "News",
       team: "Team",
       contact: "Contact",
     },
     common: {
+      seePublication: "View publication",
+      associatedMembers: "Associated members",
       selectedCollaborator: "Selected collaborator",
       collaborationNetwork: "QState collaboration network",
       collaborationCountries: "Chile · Colombia · Brazil · USA",
-      seePublication: "View publication",
-      associatedMembers: "Associated members",
       leader: "Leader",
       instagram: "Instagram",
+      readMore: "View post",
     },
     home: {
       badge: "USM research group in quantum technologies",
       title: "QState",
       subtitle: "Quantum Systems Theory And Technology",
-      description:
-        "We are a research group at Universidad Técnica Federico Santa María devoted to the theoretical and computational study of quantum systems, with emphasis on emerging technologies, open systems, control, simulation of nonequilibrium dynamics, and artificial-intelligence techniques applied to problems in quantum mechanics.",
-      achievementEyebrow: "Featured milestone",
-      achievement:
-        "Consolidation of QState as a research group in quantum technologies, with active participation in Fondecyt Regular, Fondecyt Exploración, and Anillo Temático projects.",
-      ctaResearch: "Explore research",
-      ctaPublications: "View publications",
       aboutEyebrow: "About us",
       aboutTitle:
         "Quantum science with theoretical, computational, and technological vision.",
       aboutParagraph1:
-        "QState brings together students and researchers interested in the dynamics, simulation, and control of complex quantum systems. Our work combines quantum mechanics, open-system theory, numerical methods, control, and artificial intelligence to address fundamental problems and emerging applications in quantum technologies.",
+        "QState brings together people interested in the dynamics, simulation, and control of open quantum systems. Our work combines tools from quantum mechanics, open-system theory, numerical methods, control, and artificial intelligence to address fundamental problems and emerging applications in quantum technologies.",
       aboutParagraph2:
         "From the Department of Physics at Universidad Técnica Federico Santa María, San Joaquín Campus, we aim to contribute to frontier scientific research and to the training of new generations in physics and quantum technologies, promoting collaboration, advanced teaching, and scientific outreach.",
+      exploreResearch: "Explore research",
+      seePublications: "View publications",
+      animationTitle: "open quantum dynamics",
+      animationSubtitle: "system · environment · control",
     },
     research: {
       eyebrow: "Research lines",
       title: "Quantum questions, modern methods, and emerging platforms.",
       description:
-        "Our work is organized around three main lines connecting theory, simulation, control, and artificial intelligence.",
+        "Our work is organized around three main research lines connecting theory, simulation, control, and artificial intelligence.",
+      lines: [
+        {
+          title: "Open quantum systems",
+          subtitle: "Theory and simulation",
+          description:
+            "We study the dynamics of quantum systems interacting with their environment, including decoherence, dissipation, non-Markovianity, and simulation of quantum processes.",
+        },
+        {
+          title: "Quantum control",
+          subtitle: "Quantum platforms",
+          description:
+            "We design strategies to manipulate, protect, and optimize quantum states in physical platforms relevant for quantum technologies.",
+        },
+        {
+          title: "Artificial intelligence",
+          subtitle: "Quantum mechanics",
+          description:
+            "We explore machine learning, optimization, and hybrid models to solve problems in quantum dynamics, control, and simulation.",
+        },
+      ],
     },
     collaborators: {
       eyebrow: "Collaborators",
       title: "International collaboration network",
       description:
         "QState maintains an active scientific collaboration network with researchers in Chile, Colombia, Brazil, and the United States.",
+      mapLabel: "Digital world map of QState collaborators",
     },
-    projectsPublications: {
+    projects: {
       eyebrow: "Projects and publications",
-      title: "Funding, outcomes, and scientific production",
+      title: "Funding, results, and scientific production",
       description:
-        "A joint view of the group's active projects and selected publications associated with our research lines.",
-      publicationsEyebrow: "Publications",
-      publicationsTitle: "Scientific publications",
-      publicationsDescription:
+        "A joint view of the group's active research projects and a selection of publications associated with our research lines.",
+      publicationEyebrow: "Publications",
+      publicationTitle: "Scientific publications",
+      publicationDescription:
         "Articles and preprints associated with open quantum systems, control, simulation, quantum technologies, active matter, and artificial intelligence applied to physics problems.",
+      projectFunding: "Research project",
+      article: "Article",
+      preprint: "Preprint",
     },
     news: {
       eyebrow: "News",
       title: "Activities and updates",
       description:
-        "A space to share group progress, academic activities, seminars, collaborations, and opportunities for students.",
+        "A space to share group updates, academic activities, seminars, collaborations, and opportunities for students.",
+      items: [
+        {
+          date: "Wednesday, May 27 · 16:10",
+          title:
+            "QState regular talk: Implementation of the Laporta algorithm for multiloop integral reduction",
+          speaker: "Speaker: Diego Montero",
+          location: "DFIS meeting room",
+          description:
+            "The talk will address an implementation of the Laporta algorithm for reducing multiloop integrals. It will introduce the role of these integrals in particle scattering processes, their connection with Feynman diagrams, and the use of IBP relations.",
+          image: "laporta-talk.jpg",
+        },
+        {
+          date: "6 days ago · Instagram",
+          title: "QState launch on Instagram",
+          speaker: "QState community",
+          location: "QState · USM Department of Physics",
+          description:
+            "QState launched its social media presence to share research, training, academic activities, and scientific outreach with the community.",
+          url: "https://www.instagram.com/p/DYXWJ8UxcZp/",
+        },
+        {
+          date: "2026",
+          title: "Active research projects",
+          speaker: "QState",
+          location: "USM",
+          description:
+            "The group participates in Fondecyt Regular, Fondecyt Exploración, and Anillo Temático projects, strengthening research lines in open systems, control, simulation, and artificial intelligence.",
+        },
+      ],
     },
     team: {
       eyebrow: "Team",
       title: "QState members",
       description:
         "A growing group of researchers, students, and collaborators interested in quantum physics, simulation, and emerging technologies.",
+      members: [
+        ["Ariel Norambuena", "PhD in Physics · QState leader"],
+        ["Alexis Legón", "PhD in Physics"],
+        ["Diego Montero", "MSc student at USM"],
+        ["Karime Cerón", "BSc Physics student"],
+        ["Alonso Recabarren", "BSc Physics student"],
+        ["Francisco Ahumada", "BSc Physics student"],
+        ["Iñaki Bermeo", "BSc Astrophysics student"],
+        ["Ignacio Reyes", "Engineering Physics student"],
+        ["Rafael Reveco", "BSc Physics student"],
+        ["Eduardo Novoa", "Telematics Civil Engineer"],
+        ["Ignacio Farías", "Engineering Physics student"],
+        ["Clemente Velasco", "BSc in Physics"],
+      ],
     },
     contact: {
       eyebrow: "Connect with QState",
       title: "Follow us and join our quantum community.",
       description:
-        "We will share research updates, academic activities, student opportunities, and scientific outreach content.",
+        "We will share research progress, academic activities, opportunities for students, and scientific outreach content.",
+      email: "qstate.socials@gmail.com",
       affiliation:
         "Universidad Técnica Federico Santa María · Department of Physics · San Joaquín Campus",
     },
     footer: {
-      support: "Supported by ANID Chile and in collaboration with CoreDevX.",
+      support: "Supported by ANID Chile and CoreDevX.",
     },
   },
 };
 
-const researchLines = [
-  {
-    title: {
-      es: "Sistemas cuánticos abiertos",
-      en: "Open quantum systems",
-    },
-    subtitle: {
-      es: "Teoría y simulación",
-      en: "Theory and simulation",
-    },
-    description: {
-      es:
-        "Estudiamos la dinámica de sistemas cuánticos en interacción con su entorno, incluyendo decoherencia, disipación, no-Markovianidad y simulación de procesos cuánticos.",
-      en:
-        "We study the dynamics of quantum systems interacting with their environment, including decoherence, dissipation, non-Markovianity, and simulation of quantum processes.",
-    },
-  },
-  {
-    title: {
-      es: "Control cuántico",
-      en: "Quantum control",
-    },
-    subtitle: {
-      es: "Plataformas cuánticas",
-      en: "Quantum platforms",
-    },
-    description: {
-      es:
-        "Diseñamos estrategias para manipular, proteger y optimizar estados cuánticos en plataformas físicas relevantes para tecnologías cuánticas.",
-      en:
-        "We design strategies to manipulate, protect, and optimize quantum states in physical platforms relevant to quantum technologies.",
-    },
-  },
-  {
-    title: {
-      es: "Inteligencia artificial",
-      en: "Artificial intelligence",
-    },
-    subtitle: {
-      es: "Mecánica cuántica",
-      en: "Quantum mechanics",
-    },
-    description: {
-      es:
-        "Exploramos métodos de aprendizaje automático, optimización y modelos híbridos para resolver problemas en dinámica, control y simulación cuántica.",
-      en:
-        "We explore machine-learning methods, optimization, and hybrid models to solve problems in quantum dynamics, control, and simulation.",
-    },
-  },
-];
-
 const collaborators = [
-  { name: "Pedro Orellana", institution: "UTFSM", country: "Chile", city: "Valparaíso", lat: -33.05, lon: -71.62 },
-  { name: "Nicolás Viaux", institution: "UTFSM", country: "Chile", city: "Valparaíso", lat: -33.05, lon: -71.62 },
-  { name: "Guillermo Romero", institution: "USACH", country: "Chile", city: "Santiago", lat: -33.45, lon: -70.66 },
-  { name: "Francisco Albarrán", institution: "USACH", country: "Chile", city: "Santiago", lat: -33.45, lon: -70.66 },
-  { name: "Jerónimo Maze", institution: "PUC", country: "Chile", city: "Santiago", lat: -33.45, lon: -70.66 },
-  { name: "Dardo Goyeneche", institution: "PUC", country: "Chile", city: "Santiago", lat: -33.45, lon: -70.66 },
-  { name: "Marco Bianchi", institution: "USS", country: "Chile", city: "Santiago", lat: -33.45, lon: -70.66 },
-  { name: "Cristian Susa", institution: "Universidad de Córdoba", country: "Colombia", city: "Montería", lat: 8.75, lon: -75.88 },
-  { name: "Felipe Fanchini", institution: "UNESP", country: { es: "Brasil", en: "Brazil" }, city: "São Paulo", lat: -23.55, lon: -46.63 },
-  { name: "Massimiliano Di Ventra", institution: "University of California", country: "USA", city: "California", lat: 32.88, lon: -117.23 },
-  { name: "Shimon Kolkowitz", institution: "University of California", country: "USA", city: "California", lat: 37.87, lon: -122.27 },
+  {
+    name: "Pedro Orellana",
+    institution: "UTFSM",
+    countryEs: "Chile",
+    countryEn: "Chile",
+    city: "Valparaíso",
+    lat: -33.05,
+    lon: -71.62,
+  },
+  {
+    name: "Nicolás Viaux",
+    institution: "UTFSM",
+    countryEs: "Chile",
+    countryEn: "Chile",
+    city: "Valparaíso",
+    lat: -33.05,
+    lon: -71.62,
+  },
+  {
+    name: "Guillermo Romero",
+    institution: "USACH",
+    countryEs: "Chile",
+    countryEn: "Chile",
+    city: "Santiago",
+    lat: -33.45,
+    lon: -70.66,
+  },
+  {
+    name: "Francisco Albarrán",
+    institution: "USACH",
+    countryEs: "Chile",
+    countryEn: "Chile",
+    city: "Santiago",
+    lat: -33.45,
+    lon: -70.66,
+  },
+  {
+    name: "Jerónimo Maze",
+    institution: "PUC",
+    countryEs: "Chile",
+    countryEn: "Chile",
+    city: "Santiago",
+    lat: -33.45,
+    lon: -70.66,
+  },
+  {
+    name: "Dardo Goyeneche",
+    institution: "PUC",
+    countryEs: "Chile",
+    countryEn: "Chile",
+    city: "Santiago",
+    lat: -33.45,
+    lon: -70.66,
+  },
+  {
+    name: "Marco Bianchi",
+    institution: "USS",
+    countryEs: "Chile",
+    countryEn: "Chile",
+    city: "Santiago",
+    lat: -33.45,
+    lon: -70.66,
+  },
+  {
+    name: "Cristian Susa",
+    institution: "Universidad de Córdoba",
+    countryEs: "Colombia",
+    countryEn: "Colombia",
+    city: "Montería",
+    lat: 8.75,
+    lon: -75.88,
+  },
+  {
+    name: "Felipe Fanchini",
+    institution: "UNESP",
+    countryEs: "Brasil",
+    countryEn: "Brazil",
+    city: "São Paulo",
+    lat: -23.55,
+    lon: -46.63,
+  },
+  {
+    name: "Massimiliano Di Ventra",
+    institution: "University of California",
+    countryEs: "USA",
+    countryEn: "USA",
+    city: "California",
+    lat: 32.88,
+    lon: -117.23,
+  },
+  {
+    name: "Shimon Kolkowitz",
+    institution: "University of California",
+    countryEs: "USA",
+    countryEn: "USA",
+    city: "California",
+    lat: 37.87,
+    lon: -122.27,
+  },
 ];
 
 const projects = [
   {
     title: "Fondecyt Regular No. 1251131",
-    funding: {
-      es: "Proyecto de investigación",
-      en: "Research project",
-    },
     members: ["Karime Cerón", "Francisco Ahumada"],
   },
   {
     title: "Fondecyt Exploración No. 13250014",
-    funding: {
-      es: "Proyecto de investigación",
-      en: "Research project",
-    },
     members: ["Diego Montero"],
   },
   {
     title: "Anillo Temático ATE 250066",
-    funding: {
-      es: "Proyecto de investigación",
-      en: "Research project",
-    },
     members: [
       "Alexis Legón",
       "Alonso Recabarren",
@@ -284,11 +444,9 @@ const publications = [
       "Quantum Magic Reveals CP Phases Invisible to Entanglement in Spin-0 Decays",
     authors: "Nicolas Viaux, Ariel Norambuena, and Pedro Orellana",
     venue: "arXiv:2605.19117 (2026)",
-    type: {
-      es: "Preprint",
-      en: "Preprint",
-    },
-    topic: "Quantum magic · CP phases · Quantum information",
+    type: "preprint",
+    topicEs: "Quantum magic · fases CP · información cuántica",
+    topicEn: "Quantum magic · CP phases · quantum information",
     url: "https://arxiv.org/abs/2605.19117",
   },
   {
@@ -296,14 +454,9 @@ const publications = [
     authors:
       "Hachisko Tapia-Maureira, Bing He, Massimiliano Di Ventra, and Ariel Norambuena",
     venue: "Physical Review Applied 25, 044083 (2026)",
-    type: {
-      es: "Artículo",
-      en: "Article",
-    },
-    topic: {
-      es: "Optomecánica · Memoria · Tecnologías cuánticas",
-      en: "Optomechanics · Memory · Quantum technologies",
-    },
+    type: "article",
+    topicEs: "Optomecánica · memoria · tecnologías cuánticas",
+    topicEn: "Optomechanics · memory · quantum technologies",
     url: "https://journals.aps.org/prapplied/abstract/10.1103/mxbn-15ry",
   },
   {
@@ -311,14 +464,9 @@ const publications = [
     authors:
       "Felipe Peleteiro, João Victor Shiguetsugo Kawanami Lima, Pedro Marcelo Prado, Felipe Fernandes Fanchini, and Ariel Norambuena",
     venue: "arXiv:2602.24056 (2026)",
-    type: {
-      es: "Preprint",
-      en: "Preprint",
-    },
-    topic: {
-      es: "Sistemas abiertos · Inteligencia artificial",
-      en: "Open systems · Artificial intelligence",
-    },
+    type: "preprint",
+    topicEs: "Sistemas abiertos · inteligencia artificial",
+    topicEn: "Open systems · artificial intelligence",
     url: "https://arxiv.org/abs/2602.24056",
   },
   {
@@ -327,14 +475,9 @@ const publications = [
     authors:
       "Alexis R. Legón, Mario Miranda Rojas, Pedro Orellana, and Ariel Norambuena",
     venue: "arXiv:2602.23082 (2026)",
-    type: {
-      es: "Preprint",
-      en: "Preprint",
-    },
-    topic: {
-      es: "Entrelazamiento · Giant atoms · BICs",
-      en: "Entanglement · Giant atoms · BICs",
-    },
+    type: "preprint",
+    topicEs: "Entrelazamiento · giant atoms · BICs",
+    topicEn: "Entanglement · giant atoms · BICs",
     url: "https://arxiv.org/abs/2602.23082",
   },
   {
@@ -342,14 +485,9 @@ const publications = [
     authors:
       "Ariel Norambuena, Diego Tancara, Vicente F. Chomalí-Castro, and Daniel Castillo",
     venue: "Quantum Science and Technology 10, 045001 (2025)",
-    type: {
-      es: "Artículo",
-      en: "Article",
-    },
-    topic: {
-      es: "Sistemas abiertos · Fonones · Espines sólidos",
-      en: "Open systems · Phonons · Solid-state spins",
-    },
+    type: "article",
+    topicEs: "Sistemas abiertos · fonones · espines sólidos",
+    topicEn: "Open systems · phonons · solid-state spins",
     url: "https://iopscience.iop.org/article/10.1088/2058-9565/adf092/meta",
   },
   {
@@ -357,14 +495,9 @@ const publications = [
     authors:
       "Italo Salas, Francisca Guzmán-Lastra, Denisse Pastén, and Ariel Norambuena",
     venue: "Physical Review E 112, 045409 (2025)",
-    type: {
-      es: "Artículo",
-      en: "Article",
-    },
-    topic: {
-      es: "Materia activa · Redes complejas",
-      en: "Active matter · Complex networks",
-    },
+    type: "article",
+    topicEs: "Materia activa · redes complejas",
+    topicEn: "Active matter · complex networks",
     url: "https://journals.aps.org/pre/abstract/10.1103/t3k6-hcmr",
   },
   {
@@ -373,168 +506,10 @@ const publications = [
     authors:
       "Bastian Castorene, Francisco J. Peña, Ariel Norambuena, Sergio E. Ulloa, Cristobal Araya, and Patricio Vargas",
     venue: "Physical Review E 111, 034118 (2025)",
-    type: {
-      es: "Artículo",
-      en: "Article",
-    },
-    topic: {
-      es: "Entrelazamiento · Termodinámica cuántica",
-      en: "Entanglement · Quantum thermodynamics",
-    },
+    type: "article",
+    topicEs: "Entrelazamiento · termodinámica cuántica",
+    topicEn: "Entanglement · quantum thermodynamics",
     url: "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.111.034118",
-  },
-];
-
-const newsItems = [
-  {
-    date: {
-      es: "Miércoles 27 de mayo · 16:10 hrs",
-      en: "Wednesday, May 27 · 16:10",
-    },
-    title: {
-      es:
-        "Charla regular QState: Implementación del algoritmo de Laporta para la reducción de integrales multiloop",
-      en:
-        "QState regular talk: Implementation of the Laporta algorithm for multiloop integral reduction",
-    },
-    speaker: {
-      es: "Presenta: Diego Montero",
-      en: "Speaker: Diego Montero",
-    },
-    location: {
-      es: "Sala de reuniones DFIS",
-      en: "DFIS meeting room",
-    },
-    description: {
-      es:
-        "La charla abordará una implementación del algoritmo de Laporta para la reducción de integrales multiloop. Se introducirá el rol de estas integrales en procesos de dispersión de partículas, la relación con diagramas de Feynman y el uso de relaciones IBP.",
-      en:
-        "The talk will discuss an implementation of the Laporta algorithm for the reduction of multiloop integrals. It will introduce the role of these integrals in particle-scattering processes, their connection with Feynman diagrams, and the use of IBP relations.",
-    },
-    image: "laporta-talk.jpg",
-  },
-  {
-    date: "2026",
-    title: {
-      es: "Lanzamiento de QState",
-      en: "Launch of QState",
-    },
-    speaker: {
-      es: "Comunidad QState",
-      en: "QState community",
-    },
-    location: {
-      es: "Departamento de Física · Campus San Joaquín",
-      en: "Department of Physics · San Joaquín Campus",
-    },
-    description: {
-      es:
-        "QState abre sus canales oficiales para compartir investigación, formación, actividades académicas y divulgación científica.",
-      en:
-        "QState opens its official channels to share research, training, academic activities, and scientific outreach.",
-    },
-  },
-  {
-    date: "2026",
-    title: {
-      es: "Proyectos activos de investigación",
-      en: "Active research projects",
-    },
-    speaker: "QState",
-    location: "USM",
-    description: {
-      es:
-        "El grupo participa en proyectos Fondecyt Regular, Fondecyt Exploración y Anillo Temático, fortaleciendo líneas en sistemas abiertos, control, simulación e inteligencia artificial.",
-      en:
-        "The group participates in Fondecyt Regular, Fondecyt Exploración, and Anillo Temático projects, strengthening research lines in open systems, control, simulation, and artificial intelligence.",
-    },
-  },
-];
-
-const members = [
-  {
-    name: "Ariel Norambuena",
-    role: {
-      es: "Doctor en Física · Líder de QState",
-      en: "PhD in Physics · QState leader",
-    },
-  },
-  {
-    name: "Alexis Legón",
-    role: {
-      es: "Doctor en Física",
-      en: "PhD in Physics",
-    },
-  },
-  {
-    name: "Diego Montero",
-    role: {
-      es: "Estudiante de Magíster USM",
-      en: "USM Master's student",
-    },
-  },
-  {
-    name: "Karime Cerón",
-    role: {
-      es: "Estudiante de Licenciatura en Física",
-      en: "Undergraduate student in Physics",
-    },
-  },
-  {
-    name: "Alonso Recabarren",
-    role: {
-      es: "Estudiante de Licenciatura en Física",
-      en: "Undergraduate student in Physics",
-    },
-  },
-  {
-    name: "Francisco Ahumada",
-    role: {
-      es: "Estudiante de Licenciatura en Física",
-      en: "Undergraduate student in Physics",
-    },
-  },
-  {
-    name: "Iñaki Bermeo",
-    role: {
-      es: "Estudiante de Licenciatura en Astrofísica",
-      en: "Undergraduate student in Astrophysics",
-    },
-  },
-  {
-    name: "Ignacio Reyes",
-    role: {
-      es: "Estudiante de Ingeniería Civil Física",
-      en: "Engineering Physics student",
-    },
-  },
-  {
-    name: "Rafael Reveco",
-    role: {
-      es: "Estudiante de Licenciatura en Física",
-      en: "Undergraduate student in Physics",
-    },
-  },
-  {
-    name: "Eduardo Novoa",
-    role: {
-      es: "Ingeniero Civil Telemático",
-      en: "Telematics Civil Engineer",
-    },
-  },
-  {
-    name: "Ignacio Farías",
-    role: {
-      es: "Estudiante de Ingeniería Civil Física",
-      en: "Engineering Physics student",
-    },
-  },
-  {
-    name: "Clemente Velasco",
-    role: {
-      es: "Licenciado en Física",
-      en: "BSc in Physics",
-    },
   },
 ];
 
@@ -549,9 +524,8 @@ function mapPosition(lat, lon) {
   };
 }
 
-function localize(value, language) {
-  if (typeof value === "string") return value;
-  return value?.[language] ?? value?.es ?? "";
+function countryName(collaborator, language) {
+  return language === "es" ? collaborator.countryEs : collaborator.countryEn;
 }
 
 function Logo({ className = "h-14 w-14" }) {
@@ -586,16 +560,16 @@ function SectionHeading({ eyebrow, title, description }) {
 
 function LanguageToggle({ language, setLanguage }) {
   return (
-    <div className="flex rounded-full border border-white/10 bg-white/[0.04] p-1">
+    <div className="flex rounded-full border border-white/10 bg-slate-900 p-1 text-xs font-semibold text-slate-300">
       {["es", "en"].map((lang) => (
         <button
           key={lang}
           type="button"
           onClick={() => setLanguage(lang)}
-          className={`rounded-full px-3 py-1.5 text-sm font-semibold transition ${
+          className={`rounded-full px-3 py-2 transition ${
             language === lang
               ? "bg-cyan-200 text-slate-950"
-              : "text-slate-300 hover:bg-white/10 hover:text-cyan-100"
+              : "hover:bg-white/10 hover:text-cyan-200"
           }`}
           aria-label={lang === "es" ? "Cambiar a español" : "Switch to English"}
         >
@@ -609,7 +583,7 @@ function LanguageToggle({ language, setLanguage }) {
 function Header({ activeSection, onNavigate, language, setLanguage, text }) {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-6 py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
         <button
           type="button"
           onClick={() => onNavigate("inicio")}
@@ -625,8 +599,8 @@ function Header({ activeSection, onNavigate, language, setLanguage, text }) {
           </div>
         </button>
 
-        <div className="hidden items-center gap-4 xl:flex">
-          <nav className="flex flex-wrap justify-end gap-x-4 gap-y-2 text-base font-medium text-slate-300">
+        <div className="flex items-center gap-3">
+          <nav className="hidden flex-wrap justify-end gap-x-3 gap-y-2 text-base font-medium text-slate-300 xl:flex">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -642,15 +616,11 @@ function Header({ activeSection, onNavigate, language, setLanguage, text }) {
               </button>
             ))}
           </nav>
-          <LanguageToggle language={language} setLanguage={setLanguage} />
-        </div>
 
-        <div className="flex items-center gap-2 xl:hidden">
-          <LanguageToggle language={language} setLanguage={setLanguage} />
           <select
             value={activeSection}
             onChange={(event) => onNavigate(event.target.value)}
-            className="max-w-[170px] rounded-full border border-white/10 bg-slate-900 px-3 py-2 text-sm text-white outline-none sm:max-w-[220px] sm:px-4"
+            className="max-w-[185px] rounded-full border border-white/10 bg-slate-900 px-4 py-2 text-sm text-white outline-none xl:hidden"
             aria-label={
               language === "es" ? "Seleccionar sección" : "Select section"
             }
@@ -661,13 +631,15 @@ function Header({ activeSection, onNavigate, language, setLanguage, text }) {
               </option>
             ))}
           </select>
+
+          <LanguageToggle language={language} setLanguage={setLanguage} />
         </div>
       </div>
     </header>
   );
 }
 
-function OpenQuantumAnimation() {
+function OpenQuantumAnimation({ text }) {
   return (
     <div className="relative mx-auto flex aspect-[1.35/1] w-full max-w-7xl items-center justify-center overflow-hidden rounded-[2rem] border border-cyan-200/20 bg-slate-950/70 shadow-2xl shadow-cyan-950/50 backdrop-blur sm:aspect-[2.2/1] md:rounded-[2.75rem] lg:aspect-[2.9/1]">
       <style>{`
@@ -684,9 +656,16 @@ function OpenQuantumAnimation() {
           45% { opacity: 0.9; }
           100% { stroke-dashoffset: 0; opacity: 0.15; }
         }
+        @keyframes qstate-density-matrix {
+          0%, 100% { transform: translate3d(-210px, -46px, 0) rotate(-4deg); opacity: 0.20; }
+          35% { opacity: 0.95; }
+          50% { transform: translate3d(0px, 28px, 0) rotate(3deg); opacity: 0.90; }
+          100% { transform: translate3d(220px, -52px, 0) rotate(-5deg); opacity: 0.20; }
+        }
         .q-breathe { animation: qstate-breathe 5.5s ease-in-out infinite; }
         .q-drift { animation: qstate-drift 7s ease-in-out infinite; }
         .q-flow { stroke-dasharray: 18 18; animation: qstate-pulse-flow 5s linear infinite; }
+        .q-density-matrix { animation: qstate-density-matrix 9s ease-in-out infinite; }
       `}</style>
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,211,238,0.20),transparent_32%),radial-gradient(circle_at_70%_28%,rgba(168,85,247,0.20),transparent_24%),radial-gradient(circle_at_20%_78%,rgba(59,130,246,0.18),transparent_22%)]" />
@@ -748,49 +727,28 @@ function OpenQuantumAnimation() {
           strokeOpacity="0.10"
         />
 
-        <circle
-          className="q-drift"
-          cx="145"
-          cy="95"
-          r="6"
-          fill="#67e8f9"
-          opacity="0.75"
-        />
-        <circle
-          className="q-drift"
-          cx="845"
-          cy="120"
-          r="5"
-          fill="#c4b5fd"
-          opacity="0.65"
-          style={{ animationDelay: "-2s" }}
-        />
-        <circle
-          className="q-drift"
-          cx="790"
-          cy="260"
-          r="5"
-          fill="#93c5fd"
-          opacity="0.65"
-          style={{ animationDelay: "-4s" }}
-        />
-        <circle
-          className="q-drift"
-          cx="235"
-          cy="250"
-          r="4"
-          fill="#cffafe"
-          opacity="0.70"
-          style={{ animationDelay: "-5s" }}
-        />
+        <circle className="q-drift" cx="145" cy="95" r="6" fill="#67e8f9" opacity="0.75" />
+        <circle className="q-drift" cx="845" cy="120" r="5" fill="#c4b5fd" opacity="0.65" style={{ animationDelay: "-2s" }} />
+        <circle className="q-drift" cx="790" cy="260" r="5" fill="#93c5fd" opacity="0.65" style={{ animationDelay: "-4s" }} />
+        <circle className="q-drift" cx="235" cy="250" r="4" fill="#cffafe" opacity="0.70" style={{ animationDelay: "-5s" }} />
       </svg>
 
       <div className="absolute h-40 w-40 rounded-full bg-cyan-300/20 blur-3xl q-breathe" />
-      <div className="relative z-10 h-20 w-20 rounded-full border border-cyan-100/50 bg-cyan-100/80 shadow-2xl shadow-cyan-300/50 md:h-24 md:w-24" />
+      <div className="relative z-10 flex h-20 w-20 items-center justify-center rounded-full border border-cyan-100/50 bg-cyan-100/80 text-4xl font-semibold text-slate-950 shadow-2xl shadow-cyan-300/50 md:h-24 md:w-24 md:text-5xl">
+        𝓗
+      </div>
+
+      <div className="q-density-matrix pointer-events-none absolute left-1/2 top-1/2 z-20 hidden -translate-x-1/2 -translate-y-1/2 rounded-2xl border border-cyan-200/30 bg-slate-950/80 px-4 py-3 font-mono text-xs leading-5 text-cyan-100 shadow-xl shadow-cyan-950/40 backdrop-blur sm:block">
+        <p className="mb-1 text-[10px] uppercase tracking-[0.25em] text-cyan-300/80">
+          density matrix
+        </p>
+        <p>ρ(t) = [ ρ₀₀&nbsp;&nbsp;ρ₀₁ ]</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ ρ₁₀&nbsp;&nbsp;ρ₁₁ ]</p>
+      </div>
 
       <div className="absolute bottom-4 left-4 rounded-2xl border border-white/10 bg-slate-950/70 px-3 py-2 text-[11px] text-slate-300 backdrop-blur sm:bottom-6 sm:left-6 sm:px-4 sm:py-3 sm:text-xs">
-        <p className="font-semibold text-cyan-100">open quantum dynamics</p>
-        <p className="mt-1 text-slate-400">system · environment · control</p>
+        <p className="font-semibold text-cyan-100">{text.animationTitle}</p>
+        <p className="mt-1 text-slate-400">{text.animationSubtitle}</p>
       </div>
     </div>
   );
@@ -799,7 +757,7 @@ function OpenQuantumAnimation() {
 function HomeGroupSection({ onNavigate, text }) {
   return (
     <section className="relative overflow-hidden px-4 py-10 sm:px-6 md:py-16">
-      <OpenQuantumAnimation />
+      <OpenQuantumAnimation text={text.home} />
 
       <div className="mx-auto mt-10 grid max-w-7xl gap-10 lg:mt-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
         <div>
@@ -822,33 +780,20 @@ function HomeGroupSection({ onNavigate, text }) {
             />
           </div>
 
-          <p className="mt-8 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg md:text-xl md:leading-9">
-            {text.home.description}
-          </p>
-
-          <div className="mt-8 rounded-[2rem] border border-cyan-200/20 bg-cyan-300/10 p-5 shadow-xl shadow-cyan-950/20 sm:p-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
-              {text.home.achievementEyebrow}
-            </p>
-            <p className="mt-3 text-base leading-8 text-slate-200 sm:text-lg">
-              {text.home.achievement}
-            </p>
-          </div>
-
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <button
               type="button"
               onClick={() => onNavigate("investigacion")}
               className="rounded-full bg-cyan-200 px-6 py-3 text-center font-semibold text-slate-950 transition hover:bg-white"
             >
-              {text.home.ctaResearch}
+              {text.home.exploreResearch}
             </button>
             <button
               type="button"
               onClick={() => onNavigate("proyectos")}
               className="rounded-full border border-white/15 px-6 py-3 text-center font-semibold text-white transition hover:bg-white/10"
             >
-              {text.home.ctaPublications}
+              {text.home.seePublications}
             </button>
           </div>
         </div>
@@ -874,7 +819,7 @@ function HomeGroupSection({ onNavigate, text }) {
   );
 }
 
-function ResearchSection({ language, text }) {
+function ResearchSection({ text }) {
   return (
     <section className="px-4 py-16 sm:px-6 md:py-28">
       <div className="mx-auto max-w-7xl">
@@ -885,20 +830,20 @@ function ResearchSection({ language, text }) {
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {researchLines.map((line) => (
+          {text.research.lines.map((line) => (
             <article
-              key={localize(line.title, "es")}
+              key={line.title}
               className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 shadow-xl shadow-slate-950/30 transition hover:-translate-y-1 hover:border-cyan-200/40 hover:bg-white/[0.07]"
             >
               <div className="mb-6 text-4xl">⚛️</div>
               <h3 className="text-2xl font-semibold text-white">
-                {localize(line.title, language)}
+                {line.title}
               </h3>
               <p className="mt-1 text-sm font-medium uppercase tracking-[0.2em] text-cyan-200/70">
-                {localize(line.subtitle, language)}
+                {line.subtitle}
               </p>
               <p className="mt-5 leading-8 text-slate-300">
-                {localize(line.description, language)}
+                {line.description}
               </p>
             </article>
           ))}
@@ -908,7 +853,7 @@ function ResearchSection({ language, text }) {
   );
 }
 
-function CollaboratorsSection({ language, text }) {
+function CollaboratorsSection({ text, language }) {
   const [selectedCollaborator, setSelectedCollaborator] = useState(
     collaborators[0]
   );
@@ -925,7 +870,7 @@ function CollaboratorsSection({ language, text }) {
         <div className="mt-14 overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-950/80 p-3 shadow-2xl shadow-cyan-950/30 sm:p-5">
           <div className="relative aspect-[1.25/1] overflow-hidden rounded-[2rem] border border-cyan-200/10 bg-slate-900/70 sm:aspect-[1.9/1] lg:aspect-[2.3/1]">
             <div
-              aria-label="Mapa mundial digital de colaboradores QState"
+              aria-label={text.collaborators.mapLabel}
               className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100"
               style={{
                 backgroundImage: `url("${assetPath("qstate-world-map.png")}")`,
@@ -963,10 +908,7 @@ function CollaboratorsSection({ language, text }) {
             </svg>
 
             {collaborators.map((collaborator, index) => {
-              const position = mapPosition(
-                collaborator.lat,
-                collaborator.lon
-              );
+              const position = mapPosition(collaborator.lat, collaborator.lon);
               const selected =
                 selectedCollaborator.name === collaborator.name;
 
@@ -983,7 +925,9 @@ function CollaboratorsSection({ language, text }) {
                     marginLeft: `${(index % 3) * 8}px`,
                     marginTop: `${(index % 2) * 6}px`,
                   }}
-                  aria-label={`Ver colaborador ${collaborator.name}`}
+                  aria-label={`${
+                    language === "es" ? "Ver colaborador" : "View collaborator"
+                  } ${collaborator.name}`}
                 >
                   <span
                     className={`block h-4 w-4 rounded-full border-2 border-slate-950 shadow-lg ${
@@ -1025,7 +969,7 @@ function CollaboratorsSection({ language, text }) {
 
             <p className="text-slate-400">
               {selectedCollaborator.city},{" "}
-              {localize(selectedCollaborator.country, language)}
+              {countryName(selectedCollaborator, language)}
             </p>
           </div>
         </div>
@@ -1044,8 +988,7 @@ function CollaboratorsSection({ language, text }) {
             >
               <span className="block font-semibold">{collaborator.name}</span>
               <span className="mt-1 block text-sm text-slate-400">
-                {collaborator.institution} ·{" "}
-                {localize(collaborator.country, language)}
+                {collaborator.institution} · {countryName(collaborator, language)}
               </span>
             </button>
           ))}
@@ -1055,14 +998,14 @@ function CollaboratorsSection({ language, text }) {
   );
 }
 
-function ProjectsPublicationsSection({ language, text }) {
+function ProjectsPublicationsSection({ text, language }) {
   return (
     <section className="px-4 py-16 sm:px-6 md:py-28">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow={text.projectsPublications.eyebrow}
-          title={text.projectsPublications.title}
-          description={text.projectsPublications.description}
+          eyebrow={text.projects.eyebrow}
+          title={text.projects.title}
+          description={text.projects.description}
         />
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -1072,7 +1015,7 @@ function ProjectsPublicationsSection({ language, text }) {
               className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 shadow-xl shadow-slate-950/30 transition hover:-translate-y-1 hover:border-cyan-200/40 hover:bg-white/[0.07]"
             >
               <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-cyan-200/70">
-                {localize(project.funding, language)}
+                {text.projects.projectFunding}
               </p>
               <h3 className="text-2xl font-semibold text-white">
                 {project.title}
@@ -1093,9 +1036,9 @@ function ProjectsPublicationsSection({ language, text }) {
 
         <div className="mt-20">
           <SectionHeading
-            eyebrow={text.projectsPublications.publicationsEyebrow}
-            title={text.projectsPublications.publicationsTitle}
-            description={text.projectsPublications.publicationsDescription}
+            eyebrow={text.projects.publicationEyebrow}
+            title={text.projects.publicationTitle}
+            description={text.projects.publicationDescription}
           />
 
           <div className="mt-14 grid gap-6 lg:grid-cols-2">
@@ -1106,10 +1049,12 @@ function ProjectsPublicationsSection({ language, text }) {
               >
                 <div className="mb-4 flex flex-wrap items-center gap-3">
                   <span className="rounded-full border border-cyan-200/20 bg-cyan-200/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200">
-                    {localize(paper.type, language)}
+                    {paper.type === "article"
+                      ? text.projects.article
+                      : text.projects.preprint}
                   </span>
                   <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-300">
-                    {localize(paper.topic, language)}
+                    {language === "es" ? paper.topicEs : paper.topicEn}
                   </span>
                 </div>
 
@@ -1140,7 +1085,7 @@ function ProjectsPublicationsSection({ language, text }) {
   );
 }
 
-function NewsSection({ language, text }) {
+function NewsSection({ text }) {
   return (
     <section className="px-4 py-16 sm:px-6 md:py-28">
       <div className="mx-auto max-w-7xl">
@@ -1151,16 +1096,16 @@ function NewsSection({ language, text }) {
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {newsItems.map((item) => (
+          {text.news.items.map((item) => (
             <article
-              key={localize(item.title, "es")}
+              key={item.title}
               className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-slate-950/30 transition hover:-translate-y-1 hover:border-cyan-200/40 hover:bg-white/[0.07]"
             >
               {item.image && (
                 <div className="border-b border-white/10 bg-slate-900">
                   <img
                     src={assetPath(item.image)}
-                    alt={localize(item.title, language)}
+                    alt={item.title}
                     className="h-72 w-full object-cover object-top"
                   />
                 </div>
@@ -1168,20 +1113,29 @@ function NewsSection({ language, text }) {
 
               <div className="p-7">
                 <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200/70">
-                  {localize(item.date, language)}
+                  {item.date}
                 </p>
                 <h3 className="text-2xl font-semibold text-white">
-                  {localize(item.title, language)}
+                  {item.title}
                 </h3>
                 <p className="mt-3 font-semibold text-cyan-100">
-                  {localize(item.speaker, language)}
+                  {item.speaker}
                 </p>
-                <p className="mt-1 text-sm text-slate-400">
-                  {localize(item.location, language)}
-                </p>
+                <p className="mt-1 text-sm text-slate-400">{item.location}</p>
                 <p className="mt-5 leading-8 text-slate-300">
-                  {localize(item.description, language)}
+                  {item.description}
                 </p>
+
+                {item.url && (
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-6 inline-flex rounded-full border border-cyan-200/30 px-5 py-2 text-sm font-semibold text-cyan-100 transition hover:bg-cyan-200 hover:text-slate-950"
+                  >
+                    {text.common.readMore}
+                  </a>
+                )}
               </div>
             </article>
           ))}
@@ -1191,7 +1145,7 @@ function NewsSection({ language, text }) {
   );
 }
 
-function TeamSection({ language, text }) {
+function TeamSection({ text }) {
   return (
     <section className="px-4 py-16 sm:px-6 md:py-28">
       <div className="mx-auto max-w-7xl">
@@ -1202,12 +1156,12 @@ function TeamSection({ language, text }) {
         />
 
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {members.map((member, index) => {
+          {text.team.members.map(([name, role], index) => {
             const isLeader = index === 0;
 
             return (
               <article
-                key={member.name}
+                key={name}
                 className={`rounded-3xl border p-5 transition ${
                   isLeader
                     ? "border-cyan-200/40 bg-cyan-200/10 shadow-xl shadow-cyan-950/30 sm:col-span-2 lg:col-span-3"
@@ -1215,7 +1169,7 @@ function TeamSection({ language, text }) {
                 }`}
               >
                 <p className="font-semibold text-white">
-                  {member.name}
+                  {name}
                   {isLeader && (
                     <span className="ml-3 rounded-full bg-cyan-200 px-3 py-1 text-xs font-semibold text-slate-950">
                       {text.common.leader}
@@ -1223,7 +1177,7 @@ function TeamSection({ language, text }) {
                   )}
                 </p>
                 <p className="mt-1 text-sm leading-6 text-slate-400">
-                  {localize(member.role, language)}
+                  {role}
                 </p>
               </article>
             );
@@ -1258,10 +1212,10 @@ function ContactSection({ text }) {
             {text.common.instagram}
           </a>
           <a
-            href="mailto:qstate.socials@gmail.com"
+            href={`mailto:${text.contact.email}`}
             className="rounded-full border border-white/15 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
           >
-            qstate.socials@gmail.com
+            {text.contact.email}
           </a>
         </div>
 
@@ -1273,20 +1227,22 @@ function ContactSection({ text }) {
   );
 }
 
-function ActiveSection({ activeSection, onNavigate, language, text }) {
+function ActiveSection({ activeSection, onNavigate, text, language }) {
   switch (activeSection) {
     case "inicio":
       return <HomeGroupSection onNavigate={onNavigate} text={text} />;
     case "investigacion":
-      return <ResearchSection language={language} text={text} />;
+      return <ResearchSection text={text} />;
     case "colaboradores":
-      return <CollaboratorsSection language={language} text={text} />;
+      return <CollaboratorsSection text={text} language={language} />;
     case "proyectos":
-      return <ProjectsPublicationsSection language={language} text={text} />;
+      return (
+        <ProjectsPublicationsSection text={text} language={language} />
+      );
     case "noticias":
-      return <NewsSection language={language} text={text} />;
+      return <NewsSection text={text} />;
     case "integrantes":
-      return <TeamSection language={language} text={text} />;
+      return <TeamSection text={text} />;
     case "contacto":
       return <ContactSection text={text} />;
     default:
@@ -1297,7 +1253,7 @@ function ActiveSection({ activeSection, onNavigate, language, text }) {
 export default function App() {
   const [activeSection, setActiveSection] = useState("inicio");
   const [language, setLanguage] = useState("es");
-  const text = copy[language];
+  const text = translations[language];
 
   const handleNavigate = (sectionId) => {
     setActiveSection(sectionId);
@@ -1322,8 +1278,8 @@ export default function App() {
       <ActiveSection
         activeSection={activeSection}
         onNavigate={handleNavigate}
-        language={language}
         text={text}
+        language={language}
       />
 
       <footer className="border-t border-white/10 px-4 py-10 sm:px-6">
