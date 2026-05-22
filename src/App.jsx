@@ -687,30 +687,6 @@ function OutreachSection() {
   );
 }
 
-function SupportSection() {
-  return (
-    <section className="px-4 py-16 sm:px-6 md:py-28">
-      <div className="mx-auto max-w-7xl">
-        <SectionHeading
-          eyebrow="Apoyo"
-          title="Apoyo institucional y estratégico"
-          description="El desarrollo de QState se fortalece mediante apoyo científico, institucional y tecnológico."
-        />
-
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
-          {supportItems.map((item) => (
-            <article key={item.name} className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 shadow-xl shadow-slate-950/30 transition hover:-translate-y-1 hover:border-cyan-200/40 hover:bg-white/[0.07]">
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200/70">{item.role}</p>
-              <h3 className="text-3xl font-semibold text-white">{item.name}</h3>
-              <p className="mt-5 leading-8 text-slate-300">{item.description}</p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function TeamSection() {
   return (
     <section className="px-4 py-16 sm:px-6 md:py-28">
@@ -781,8 +757,6 @@ function ActiveSection({ activeSection, onNavigate }) {
       return <NewsSection />;
     case "vinculacion":
       return <OutreachSection />;
-    case "apoyo":
-      return <SupportSection />;
     case "integrantes":
       return <TeamSection />;
     case "contacto":
@@ -820,6 +794,9 @@ export default function App() {
           </button>
           <p className="text-sm text-slate-500">
             © 2026 QState · Universidad Técnica Federico Santa María · Departamento de Física · Campus San Joaquín
+          </p>
+          <p className="mt-2 text-xs text-slate-600">
+            Con el apoyo de ANID Chile y colaboración de CoreDevX.
           </p>
         </div>
       </footer>
