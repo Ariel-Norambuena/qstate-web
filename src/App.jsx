@@ -143,7 +143,7 @@ const translations = {
         ["Francisco Ahumada", "Estudiante de Licenciatura en Física"],
         ["Iñaki Bermeo", "Estudiante de Licenciatura en Astrofísica"],
         ["Ignacio Reyes", "Estudiante de Ingeniería Civil Física"],
-        ["Rafael Reveco", "Estudiante de Licenciatura en Física"],
+        ["Rafael Reveco", "Estudiante de Licenciatura en Astrofísica"],
         ["Eduardo Novoa", "Ingeniero Civil Telemático"],
         ["Ignacio Farías", "Estudiante de Ingeniería Civil Física"],
         ["Clemente Velasco", "Licenciado en Física"],
@@ -295,7 +295,7 @@ const translations = {
         ["Francisco Ahumada", "BSc Physics student"],
         ["Iñaki Bermeo", "BSc Astrophysics student"],
         ["Ignacio Reyes", "Engineering Physics student"],
-        ["Rafael Reveco", "BSc Physics student"],
+        ["Rafael Reveco", "BSc Astrophysics student"],
         ["Eduardo Novoa", "Telematics Civil Engineer"],
         ["Ignacio Farías", "Engineering Physics student"],
         ["Clemente Velasco", "BSc in Physics"],
@@ -513,6 +513,19 @@ const publications = [
   },
 ];
 
+const researchVisuals = {
+  es: [
+    { variant: "open" },
+    { variant: "control" },
+    { variant: "ai" },
+  ],
+  en: [
+    { variant: "open" },
+    { variant: "control" },
+    { variant: "ai" },
+  ],
+};
+
 function assetPath(fileName) {
   return `${import.meta.env.BASE_URL}${fileName}`;
 }
@@ -544,15 +557,15 @@ function Logo({ className = "h-14 w-14" }) {
 
 function SectionHeading({ eyebrow, title, description }) {
   return (
-    <div className="mx-auto max-w-3xl text-center">
-      <p className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300/80">
+    <div className="mx-auto max-w-4xl text-center">
+      <p className="mb-3 text-sm font-semibold uppercase tracking-[0.4em] text-cyan-300/80">
         {eyebrow}
       </p>
-      <h2 className="text-3xl font-semibold tracking-tight text-white md:text-5xl">
+      <h2 className="text-3xl font-semibold tracking-[-0.02em] text-white md:text-5xl">
         {title}
       </h2>
       {description && (
-        <p className="mt-5 text-lg leading-8 text-slate-300">{description}</p>
+        <p className="mt-5 text-lg leading-8 text-slate-300/90">{description}</p>
       )}
     </div>
   );
@@ -568,7 +581,7 @@ function LanguageToggle({ language, setLanguage }) {
           onClick={() => setLanguage(lang)}
           className={`rounded-full px-3 py-2 transition ${
             language === lang
-              ? "bg-cyan-200 text-slate-950"
+              ? "bg-cyan-200 text-slate-950 shadow-lg shadow-cyan-400/10"
               : "hover:bg-white/10 hover:text-cyan-200"
           }`}
           aria-label={lang === "es" ? "Cambiar a español" : "Switch to English"}
@@ -582,7 +595,7 @@ function LanguageToggle({ language, setLanguage }) {
 
 function Header({ activeSection, onNavigate, language, setLanguage, text }) {
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-2xl supports-[backdrop-filter]:bg-slate-950/70">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
         <button
           type="button"
@@ -608,8 +621,8 @@ function Header({ activeSection, onNavigate, language, setLanguage, text }) {
                 onClick={() => onNavigate(item.id)}
                 className={`rounded-full px-3 py-2 transition ${
                   activeSection === item.id
-                    ? "bg-cyan-200 text-slate-950"
-                    : "hover:bg-white/10 hover:text-cyan-200"
+                    ? "bg-cyan-200 text-slate-950 shadow-lg shadow-cyan-400/10"
+                    : "border border-transparent hover:border-white/10 hover:bg-white/8 hover:text-cyan-200"
                 }`}
               >
                 {text.nav[item.labelKey]}
@@ -841,7 +854,7 @@ function HomeGroupSection({ onNavigate, text }) {
           </div>
         </div>
 
-        <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-slate-950/40 sm:p-8">
+        <div className="rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03))] p-6 shadow-[0_24px_70px_rgba(2,6,23,0.42)] backdrop-blur-sm sm:p-8">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-300/80">
             {text.home.aboutEyebrow}
           </p>
@@ -862,7 +875,147 @@ function HomeGroupSection({ onNavigate, text }) {
   );
 }
 
-function ResearchSection({ text }) {
+function ResearchPrimaryIcon({ variant }) {
+  const shell = "h-20 w-20 md:h-24 md:w-24";
+
+  if (variant === "open") {
+    return (
+      <svg viewBox="0 0 72 72" className={shell} aria-hidden="true">
+        <defs>
+          <linearGradient id="openStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#67e8f9" />
+            <stop offset="100%" stopColor="#c4b5fd" />
+          </linearGradient>
+        </defs>
+        <circle cx="36" cy="36" r="8" fill="#e0f2fe" fillOpacity="0.95" />
+        <circle cx="36" cy="36" r="17" fill="none" stroke="url(#openStroke)" strokeWidth="1.4" strokeOpacity="0.9" strokeDasharray="4 3" />
+        <path d="M21 18c7-7 23-9 31-1" fill="none" stroke="#67e8f9" strokeWidth="1.6" strokeLinecap="round" strokeOpacity="0.8" />
+        <path d="M18 48c2 8 10 15 21 17" fill="none" stroke="#93c5fd" strokeWidth="1.6" strokeLinecap="round" strokeOpacity="0.8" />
+        <path d="M54 24c6 7 7 18 2 27" fill="none" stroke="#c4b5fd" strokeWidth="1.6" strokeLinecap="round" strokeOpacity="0.8" />
+        <circle cx="52" cy="18" r="3.5" fill="#67e8f9" fillOpacity="0.95" />
+        <circle cx="17" cy="47" r="3.2" fill="#93c5fd" fillOpacity="0.9" />
+        <circle cx="40" cy="63" r="3.2" fill="#c4b5fd" fillOpacity="0.9" />
+      </svg>
+    );
+  }
+
+  if (variant === "control") {
+    return (
+      <svg viewBox="0 0 72 72" className={shell} aria-hidden="true">
+        <defs>
+          <linearGradient id="controlStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#67e8f9" />
+            <stop offset="100%" stopColor="#93c5fd" />
+          </linearGradient>
+        </defs>
+        <circle cx="36" cy="36" r="19" fill="none" stroke="url(#controlStroke)" strokeWidth="1.6" strokeOpacity="0.9" />
+        <ellipse cx="36" cy="36" rx="19" ry="8.5" fill="none" stroke="#c4b5fd" strokeWidth="1.2" strokeOpacity="0.6" />
+        <path d="M17 40c6-8 12 8 18 0s12-8 20 0" fill="none" stroke="#67e8f9" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M47 15l7 2-2 7" fill="none" stroke="#e0f2fe" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M52 17c-4 4-8 8-12 12" fill="none" stroke="#e0f2fe" strokeWidth="1.6" strokeLinecap="round" />
+        <circle cx="36" cy="36" r="4" fill="#e0f2fe" fillOpacity="0.95" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 72 72" className={shell} aria-hidden="true">
+      <defs>
+        <linearGradient id="aiStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#67e8f9" />
+          <stop offset="100%" stopColor="#c4b5fd" />
+        </linearGradient>
+      </defs>
+      <rect x="18" y="18" width="36" height="36" rx="9" fill="none" stroke="url(#aiStroke)" strokeWidth="1.6" strokeOpacity="0.95" />
+      <path d="M28 36h16" stroke="#e0f2fe" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M36 28v16" stroke="#e0f2fe" strokeWidth="1.5" strokeLinecap="round" />
+      <circle cx="28" cy="28" r="3.2" fill="#67e8f9" fillOpacity="0.95" />
+      <circle cx="44" cy="28" r="3.2" fill="#c4b5fd" fillOpacity="0.95" />
+      <circle cx="28" cy="44" r="3.2" fill="#93c5fd" fillOpacity="0.95" />
+      <circle cx="44" cy="44" r="3.2" fill="#bfdbfe" fillOpacity="0.95" />
+      <path d="M18 30h-6M18 42h-6M54 30h6M54 42h6M30 18v-6M42 18v-6M30 54v6M42 54v6" stroke="#94a3b8" strokeOpacity="0.65" strokeWidth="1.3" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function ResearchChipIcon({ variant, index }) {
+  const common = "h-4 w-4";
+
+  if (variant === "open") {
+    if (index === 0) {
+      return (
+        <svg viewBox="0 0 24 24" className={common} aria-hidden="true">
+          <path d="M5 12a7 7 0 0111-5.7" fill="none" stroke="#67e8f9" strokeWidth="1.7" strokeLinecap="round" />
+          <path d="M19 12a7 7 0 01-11 5.7" fill="none" stroke="#c4b5fd" strokeWidth="1.7" strokeLinecap="round" />
+        </svg>
+      );
+    }
+    if (index === 1) {
+      return (
+        <svg viewBox="0 0 24 24" className={common} aria-hidden="true">
+          <path d="M6 8c2 3 3 5 6 5s4 2 6 5" fill="none" stroke="#93c5fd" strokeWidth="1.7" strokeLinecap="round" />
+        </svg>
+      );
+    }
+    return (
+      <svg viewBox="0 0 24 24" className={common} aria-hidden="true">
+        <path d="M4 12c3-4 5-4 8 0s5 4 8 0" fill="none" stroke="#e0f2fe" strokeWidth="1.7" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  if (variant === "control") {
+    if (index === 0) {
+      return (
+        <svg viewBox="0 0 24 24" className={common} aria-hidden="true">
+          <path d="M4 12h4l2-5 4 10 2-5h4" fill="none" stroke="#67e8f9" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+    }
+    if (index === 1) {
+      return (
+        <svg viewBox="0 0 24 24" className={common} aria-hidden="true">
+          <circle cx="12" cy="12" r="6" fill="none" stroke="#93c5fd" strokeWidth="1.7" />
+          <circle cx="12" cy="12" r="2.4" fill="#93c5fd" />
+        </svg>
+      );
+    }
+    return (
+      <svg viewBox="0 0 24 24" className={common} aria-hidden="true">
+        <path d="M6 18l6-12 6 12" fill="none" stroke="#c4b5fd" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    );
+  }
+
+  if (index === 0) {
+    return (
+      <svg viewBox="0 0 24 24" className={common} aria-hidden="true">
+        <circle cx="7" cy="12" r="2.2" fill="#67e8f9" />
+        <circle cx="12" cy="7" r="2.2" fill="#c4b5fd" />
+        <circle cx="17" cy="12" r="2.2" fill="#93c5fd" />
+        <path d="M9 11l2-2M13 9l2 2" stroke="#e0f2fe" strokeWidth="1.4" strokeLinecap="round" />
+      </svg>
+    );
+  }
+  if (index === 1) {
+    return (
+      <svg viewBox="0 0 24 24" className={common} aria-hidden="true">
+        <rect x="5" y="6" width="14" height="12" rx="3" fill="none" stroke="#93c5fd" strokeWidth="1.5" />
+        <path d="M9 12h6" stroke="#e0f2fe" strokeWidth="1.4" strokeLinecap="round" />
+      </svg>
+    );
+  }
+  return (
+    <svg viewBox="0 0 24 24" className={common} aria-hidden="true">
+      <path d="M6 17l4-4 3 2 5-7" fill="none" stroke="#c4b5fd" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+
+function ResearchSection({ text, language }) {
+  const visuals = researchVisuals[language];
+
   return (
     <section className="px-4 py-16 sm:px-6 md:py-28">
       <div className="mx-auto max-w-7xl">
@@ -872,24 +1025,38 @@ function ResearchSection({ text }) {
           description={text.research.description}
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {text.research.lines.map((line) => (
-            <article
-              key={line.title}
-              className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 shadow-xl shadow-slate-950/30 transition hover:-translate-y-1 hover:border-cyan-200/40 hover:bg-white/[0.07]"
-            >
-              <div className="mb-6 text-4xl">⚛️</div>
-              <h3 className="text-2xl font-semibold text-white">
-                {line.title}
-              </h3>
-              <p className="mt-1 text-sm font-medium uppercase tracking-[0.2em] text-cyan-200/70">
-                {line.subtitle}
-              </p>
-              <p className="mt-5 leading-8 text-slate-300">
-                {line.description}
-              </p>
-            </article>
-          ))}
+        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+          {text.research.lines.map((line, index) => {
+            const visual = visuals[index];
+
+            return (
+              <article
+                key={line.title}
+                className="group h-full rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0.03))] p-7 shadow-[0_24px_70px_rgba(2,6,23,0.42)] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-cyan-200/35 hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.04))]"
+              >
+                <div className="relative mb-7 overflow-hidden rounded-[1.65rem] border border-white/10 bg-[#020617] p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_24%_25%,rgba(34,211,238,0.14),transparent_32%),radial-gradient(circle_at_78%_28%,rgba(168,85,247,0.12),transparent_30%),linear-gradient(180deg,rgba(15,23,42,0.92),rgba(2,6,23,0.98))]" />
+                  <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:32px_32px] opacity-35" />
+
+                  <div className="relative flex items-center justify-center">
+                    <div className="flex h-28 w-28 items-center justify-center rounded-[1.5rem] border border-cyan-200/10 bg-slate-950/75 shadow-[0_0_0_1px_rgba(255,255,255,0.02)]">
+                      <ResearchPrimaryIcon variant={visual.variant} />
+                    </div>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-semibold text-white">
+                  {line.title}
+                </h3>
+                <p className="mt-1 text-sm font-medium uppercase tracking-[0.22em] text-cyan-200/70">
+                  {line.subtitle}
+                </p>
+                <p className="mt-5 leading-8 text-slate-300/95">
+                  {line.description}
+                </p>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -1205,7 +1372,7 @@ function TeamSection({ text }) {
             return (
               <article
                 key={name}
-                className={`rounded-3xl border p-5 transition ${
+                className={`rounded-3xl border p-5 backdrop-blur-sm transition duration-300 ${
                   isLeader
                     ? "border-cyan-200/40 bg-cyan-200/10 shadow-xl shadow-cyan-950/30 sm:col-span-2 lg:col-span-3"
                     : "border-white/10 bg-white/[0.035] hover:border-cyan-200/30 hover:bg-white/[0.06]"
@@ -1275,7 +1442,7 @@ function ActiveSection({ activeSection, onNavigate, text, language }) {
     case "inicio":
       return <HomeGroupSection onNavigate={onNavigate} text={text} />;
     case "investigacion":
-      return <ResearchSection text={text} />;
+      return <ResearchSection text={text} language={language} />;
     case "colaboradores":
       return <CollaboratorsSection text={text} language={language} />;
     case "proyectos":
