@@ -135,7 +135,11 @@ const translations = {
       description:
         "Un grupo en crecimiento, compuesto por investigadores, estudiantes y colaboradores con intereses en física cuántica, simulación y tecnologías emergentes.",
       members: [
-        ["Ariel Norambuena", "Doctor en Física · Líder de QState"],
+        [
+  "Ariel Norambuena",
+  "Doctor en Física · Líder de QState",
+  "https://scholar.google.com/citations?user=LCy8r2wAAAAJ&hl=en",
+],     
         ["Alexis Legón", "Doctor en Física"],
         ["Diego Montero", "Estudiante de Magíster USM"],
         ["Karime Cerón", "Estudiante de Licenciatura en Física"],
@@ -287,7 +291,11 @@ const translations = {
       description:
         "A growing group of researchers, students, and collaborators interested in quantum physics, simulation, and emerging technologies.",
       members: [
-        ["Ariel Norambuena", "PhD in Physics · QState leader"],
+        [
+  "Ariel Norambuena",
+  "PhD in Physics · QState Leader",
+  "https://scholar.google.com/citations?user=LCy8r2wAAAAJ&hl=en",
+],
         ["Alexis Legón", "PhD in Physics"],
         ["Diego Montero", "MSc student at USM"],
         ["Karime Cerón", "BSc Physics student"],
