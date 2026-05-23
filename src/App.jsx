@@ -64,7 +64,7 @@ const translations = {
           title: "Control cuántico",
           subtitle: "Plataformas cuánticas",
           description:
-            "Diseñamos estrategias para manipular, proteger y optimizar estados cuánticos en plataformas físicas relevantes para tecnologías cuánticas.",
+            "Diseñamos estrategias para manipular, proteger y optimizar recursos cuánticos en plataformas físicas relevantes para tecnologías cuánticas.",
         },
         {
           title: "Inteligencia artificial",
@@ -216,7 +216,7 @@ const translations = {
           title: "Quantum control",
           subtitle: "Quantum platforms",
           description:
-            "We design strategies to manipulate, protect, and optimize quantum states in physical platforms relevant for quantum technologies.",
+            "We design strategies to manipulate, protect, and optimize quantum resources in physical platforms relevant for quantum technologies.",
         },
         {
           title: "Artificial intelligence",
