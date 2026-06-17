@@ -627,6 +627,12 @@ const team = [
     image: "diego-montero.webp",
   },
   {
+    name: "Diego Yáñez",
+    es: "Estudiante de Ingeniería Civil Física",
+    en: "Engineering Physics student",
+    image: "diego-yanez.webp",
+  },
+  {
     name: "Karime Cerón",
     es: "Estudiante de Licenciatura en Física",
     en: "BSc Physics student",
