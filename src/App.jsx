@@ -27,7 +27,7 @@ const asset = (path) =>
 
 const scholarUrl =
   "https://scholar.google.cl/citations?user=LCy8r2wAAAAJ&hl=es";
-const instagramUrl = "https://www.instagram.com/qstate.group/";
+const instagramUrl = "https://www.instagram.com/qstate_usm";
 const salmonPostUrl =
   "https://www.linkedin.com/posts/ariel-norambuena-80622275_inteligenciaartificial-computervision-yolo-activity-7467260165256474625-6ENg";
 
@@ -39,6 +39,7 @@ const navItems = [
   { id: "proyectos", es: "Proyectos", en: "Projects" },
   { id: "publicaciones", es: "Publicaciones", en: "Publications" },
   { id: "equipo", es: "Equipo", en: "People" },
+  { id: "contacto", es: "Contacto", en: "Contact" },
 ];
 
 const copy = {
@@ -120,6 +121,13 @@ const copy = {
     contactTitle: "Construyamos la próxima colaboración cuántica.",
     contactDescription:
       "Recibimos propuestas científicas, proyectos tecnológicos y consultas de estudiantes interesados en teoría y tecnologías cuánticas.",
+    contactLead:
+      "Escríbenos para conversar sobre colaboraciones científicas, proyectos aplicados, seminarios, tesis o pasantías en QState.",
+    contactEmailLabel: "Correo",
+    contactInstagramLabel: "Instagram",
+    contactLocationLabel: "Institución",
+    contactLocation:
+      "Universidad Técnica Federico Santa María · Departamento de Física",
     email: "Escribir a QState",
     follow: "Seguir en Instagram",
     footer: "QState · Quantum Systems Theory and Technology",
@@ -202,6 +210,13 @@ const copy = {
     contactTitle: "Let’s build the next quantum collaboration.",
     contactDescription:
       "We welcome scientific proposals, technology projects, and students interested in quantum theory and technologies.",
+    contactLead:
+      "Write to us about scientific collaborations, applied projects, seminars, theses, or internships at QState.",
+    contactEmailLabel: "Email",
+    contactInstagramLabel: "Instagram",
+    contactLocationLabel: "Institution",
+    contactLocation:
+      "Universidad Técnica Federico Santa María · Department of Physics",
     email: "Email QState",
     follow: "Follow on Instagram",
     footer: "QState · Quantum Systems Theory and Technology",
@@ -1249,6 +1264,69 @@ function TeamView({ text, language }) {
   );
 }
 
+function ContactView({ text }) {
+  return (
+    <section className="page-shell py-14 sm:py-20">
+      <SectionHeading
+        eyebrow={text.contactEyebrow}
+        title={text.contactTitle}
+        description={text.contactDescription}
+      />
+      <div className="mt-12 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+        <article className="rounded-lg border border-cyan-300/25 bg-cyan-300/[0.08] p-6 sm:p-8">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-cyan-300">
+            QState
+          </p>
+          <h2 className="mt-4 text-3xl font-semibold leading-tight text-white">
+            {text.contactLead}
+          </h2>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="mailto:qstate.socials@gmail.com"
+              className="inline-flex items-center gap-2 rounded-md bg-cyan-300 px-5 py-3 text-base font-bold text-slate-950 shadow-lg shadow-cyan-950/20 transition hover:bg-white"
+            >
+              <Mail size={18} />
+              {text.email}
+            </a>
+            <a
+              href={instagramUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-md border border-white/20 px-5 py-3 text-base font-bold text-white transition hover:bg-white/10"
+            >
+              <Camera size={18} />
+              {text.follow}
+            </a>
+          </div>
+        </article>
+
+        <div className="grid gap-4">
+          {[
+            [Mail, text.contactEmailLabel, "qstate.socials@gmail.com"],
+            [Camera, text.contactInstagramLabel, "@qstate_usm"],
+            [Globe2, text.contactLocationLabel, text.contactLocation],
+          ].map(([Icon, label, value]) => (
+            <article
+              key={label}
+              className="flex gap-4 rounded-lg border border-white/10 bg-white/[0.04] p-5"
+            >
+              <div className="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-cyan-300/10 text-cyan-300">
+                <Icon size={20} />
+              </div>
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.14em] text-slate-500">
+                  {label}
+                </p>
+                <p className="mt-2 leading-6 text-white">{value}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ActiveView({ activeSection, text, language, onNavigate }) {
   switch (activeSection) {
     case "investigacion":
@@ -1263,6 +1341,8 @@ function ActiveView({ activeSection, text, language, onNavigate }) {
       return <PublicationsView text={text} />;
     case "equipo":
       return <TeamView text={text} language={language} />;
+    case "contacto":
+      return <ContactView text={text} />;
     default:
       return <HomeView text={text} onNavigate={onNavigate} />;
   }
