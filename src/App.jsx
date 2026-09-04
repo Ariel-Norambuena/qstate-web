@@ -337,7 +337,7 @@ const researchLines = [
       description:
         "Estudiamos recursos cuánticos, criticidad, transporte y dispositivos de pocos cuerpos para entender cómo convertir estructura cuántica en desempeño operativo.",
       works: [
-        "Quantum Magic Reveals CP Phases Invisible to Entanglement (2026)",
+        "Quantum nonstabilizer probes reveal CP phases invisible to entanglement (2026)",
         "Three-qubit thermal machines near quantum criticality (2024–2025)",
         "Polariton-based quantum memristors (2022)",
       ],
@@ -348,7 +348,7 @@ const researchLines = [
       description:
         "We study quantum resources, criticality, transport, and few-body devices to understand how quantum structure can be converted into operational performance.",
       works: [
-        "Quantum Magic Reveals CP Phases Invisible to Entanglement (2026)",
+        "Quantum nonstabilizer probes reveal CP phases invisible to entanglement (2026)",
         "Three-qubit thermal machines near quantum criticality (2024–2025)",
         "Polariton-based quantum memristors (2022)",
       ],
@@ -426,7 +426,7 @@ const projects = [
   {
     years: "2025–2028",
     role: "co",
-    code: "FONDECYT REGULAR 1251132",
+    code: "FONDECYT EXPLORACIÓN 13250014",
     title:
       "QASAR: Quantum Algorithms for simplifying and accelerating reductions in high energy physics",
     institution: "Universidad Técnica Federico Santa María",
@@ -466,10 +466,10 @@ const projects = [
 const publications = [
   {
     year: "2026",
-    title: "Quantum Magic Reveals CP Phases Invisible to Entanglement in Spin-0 Decays",
+    title: "Quantum nonstabilizer probes reveal CP phases invisible to entanglement in spin-0 decays",
     authors: "N. Viaux, A. Norambuena, P. Orellana",
-    venue: "arXiv:2605.19117",
-    url: "https://arxiv.org/abs/2605.19117",
+    venue: "Physical Review D 114, 036027",
+    url: "https://journals.aps.org/prd/abstract/10.1103/6n4g-7rh3",
   },
   {
     year: "2026",
@@ -686,6 +686,16 @@ const team = [
     en: "BSc in Physics",
     image: "clemente-velasco.webp",
   },
+  {
+    name: "Mario Soto",
+    es: "Ingeniería Civil Física",
+    en: "Engineering Physics",
+  },
+  {
+    name: "Joaquín Figueroa",
+    es: "Estudiante de Magíster en Física UTFSM",
+    en: "MSc Physics student at UTFSM",
+  },
 ];
 
 const collaborators = [
@@ -719,6 +729,15 @@ function SectionHeading({ eyebrow, title, description, centered = false }) {
     </div>
   );
 }
+
+const getInitials = (name) =>
+  name
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase();
 
 function OpenQuantumAnimation({ text }) {
   return (
@@ -997,6 +1016,7 @@ function TechnologyView({ text }) {
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 rounded-md bg-white px-5 py-3 text-sm font-bold text-slate-950 hover:bg-cyan-100"
+          style={{ color: "#020617" }}
         >
           {text.technologyLink}
           <ExternalLink size={16} />
@@ -1200,12 +1220,20 @@ function TeamView({ text, language }) {
         {team.map((member) => {
           const content = (
             <>
-              <img
-                src={asset(`team/${member.image}`)}
-                alt={member.name}
-                className="aspect-square w-full object-cover object-top"
-                loading="lazy"
-              />
+              {member.image ? (
+                <img
+                  src={asset(`team/${member.image}`)}
+                  alt={member.name}
+                  className="aspect-square w-full object-cover object-top"
+                  loading="lazy"
+                />
+              ) : (
+                <div className="grid aspect-square w-full place-items-center bg-[radial-gradient(circle_at_35%_25%,rgba(103,232,249,0.24),transparent_34%),linear-gradient(135deg,#0f172a,#020617)]">
+                  <div className="grid h-24 w-24 place-items-center rounded-full border border-cyan-300/40 bg-slate-950/70 text-3xl font-bold text-cyan-200 shadow-2xl shadow-cyan-950/50">
+                    {getInitials(member.name)}
+                  </div>
+                </div>
+              )}
               <div className="p-4">
                 <h2 className="font-semibold text-white">{member.name}</h2>
                 <p className="mt-1 text-sm leading-5 text-slate-400">
