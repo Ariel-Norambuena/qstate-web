@@ -1,0 +1,281 @@
+[
+  {
+    "id": "18113056808245470",
+    "date": "2026-11-08",
+    "image": "/news/18113056808245470.webp",
+    "video": "/news/18115652825170198.mp4",
+    "captions": [
+      {
+        "language": "en",
+        "label": "English",
+        "file": "/news/18115652825170198.en.vtt"
+      }
+    ],
+    "url": "https://qollab.xyz/explore/hackathon-2026/global-results#3rd-place-optogenetic-quantum-brain",
+    "title": {
+      "es": "Quantum Rangers alcanza el podio mundial",
+      "en": "Quantum Rangers places third worldwide"
+    },
+    "summary": {
+      "es": "El equipo ganó el nodo Córdoba y obtuvo el tercer lugar global en la Qollab × IonQ Global Quantum Hackathon 2026. Herbert Díaz, Joaquín Molina, Julián Stiefkens e Iñaki Bermeo, integrante de QState, desarrollaron Optogenetic Quantum Brain, una aplicación que usa circuitos cuánticos para explorar la propagación de señales en la red neuronal de C. elegans.",
+      "en": "The team won the Córdoba regional event and placed third globally in the 2026 Qollab × IonQ Global Quantum Hackathon. Herbert Díaz, Joaquín Molina, Julián Stiefkens, and QState member Iñaki Bermeo developed Optogenetic Quantum Brain, an app that uses quantum circuits to explore how signals propagate through the neural network of C. elegans."
+    }
+  },
+  {
+    "id": "18166138276489772",
+    "date": "2026-11-02",
+    "image": "/news/18166138276489772.webp",
+    "url": "https://www2.udec.cl/~estesepulveda/workshop/",
+    "title": {
+      "es": "Diego Montero gana el premio al mejor póster en la UdeC",
+      "en": "Diego Montero wins best poster at the University of Concepción"
+    },
+    "summary": {
+      "es": "QState participó en el primer Workshop en Información Cuántica y Aplicaciones del Anillo Q-Con, realizado el 22 y 23 de octubre. Francisco Ahumada, Karime Cerón, Alonso Recabarren y Diego Montero presentaron sus investigaciones de tesis. Diego obtuvo el premio al mejor póster y Ariel Norambuena dio una charla invitada sobre control de sistemas cuánticos abiertos.",
+      "en": "QState took part in Q-Con’s first Workshop on Quantum Information and Applications on October 22–23. Francisco Ahumada, Karime Cerón, Alonso Recabarren, and Diego Montero presented their thesis research. Diego won the best poster award, and Ariel Norambuena gave an invited talk on control of open quantum systems."
+    }
+  },
+  {
+    "id": "18025812023715763",
+    "date": "2026-10-19",
+    "image": "/news/18025812023715763.webp",
+    "url": "https://usm.cl/eventos/perspectivas-2026/",
+    "title": {
+      "es": "Diego Montero presenta su tesis en Perspectivas 2026",
+      "en": "Diego Montero presents his thesis research at Perspectivas 2026"
+    },
+    "summary": {
+      "es": "En el encuentro del Magíster en Física de la USM en Valparaíso, Diego presentó una forma de plantear la reducción gaussiana del algoritmo de Laporta como problemas de optimización para la computación cuántica adiabática. Compartió avances de simulación con técnicas de control cuántico.",
+      "en": "At the USM physics master’s meeting in Valparaíso, Diego presented an approach to expressing Gaussian reduction in the Laporta algorithm as optimization problems for adiabatic quantum computing. He shared simulation results using quantum control techniques."
+    }
+  },
+  {
+    "id": "18111095969011723",
+    "date": "2026-09-09",
+    "image": "/news/18111095969011723.webp",
+    "title": {
+      "es": "Amazing Quantum vuelve a visitar QState",
+      "en": "Amazing Quantum returns to QState"
+    },
+    "summary": {
+      "es": "El 4 de septiembre, QState recibió a Amazing Quantum en el campus San Joaquín. Nikolas Naranjo, Helena Hagen y Karime Cerón compartieron sus investigaciones. Karime presentó avances sobre cómo dirigir excitaciones en sistemas cuánticos de muchos cuerpos mediante ingeniería de Floquet.",
+      "en": "QState hosted Amazing Quantum at the San Joaquín campus on September 4. Nikolas Naranjo, Helena Hagen, and Karime Cerón presented their research. Karime shared progress on routing excitations in many-body quantum systems using Floquet engineering."
+    }
+  },
+  {
+    "id": "17894653077668539",
+    "date": "2026-08-25",
+    "image": "/news/17894653077668539.webp",
+    "url": "https://journals.aps.org/prd/abstract/10.1103/6n4g-7rh3",
+    "title": {
+      "es": "La magia cuántica revela una fase en desintegraciones del Higgs",
+      "en": "Quantum magic reveals a phase in Higgs decays"
+    },
+    "summary": {
+      "es": "Nicolás Viaux, Ariel Norambuena y Pedro Orellana estudiaron la desintegración del bosón de Higgs en dos leptones tau. El artículo en Physical Review D muestra cómo observables basados en correlaciones de espín pueden distinguir una fase de mezcla CP que las medidas de entrelazamiento dejan sin resolver.",
+      "en": "Nicolás Viaux, Ariel Norambuena, and Pedro Orellana studied the decay of a Higgs boson into two tau leptons. Their Physical Review D paper shows how spin-correlation observables can distinguish a CP-mixing phase that entanglement measures leave unresolved."
+    }
+  },
+  {
+    "id": "17870882994635094",
+    "date": "2026-08-22",
+    "image": "/news/17870882994635094.webp",
+    "video": "/news/17870882994635094.mp4",
+    "title": {
+      "es": "Cómo QuAntü usa luz para enfriar átomos",
+      "en": "How QuAntü uses light to cool atoms"
+    },
+    "summary": {
+      "es": "El reel explica cómo una trampa magneto-óptica usa luz y campos magnéticos para frenar, enfriar y confinar átomos de rubidio-87. QState lidera el trabajo teórico de QuAntü, una colaboración entre la UC y la USM para desarrollar computación cuántica con átomos neutros.",
+      "en": "The reel shows how a magneto-optical trap uses light and magnetic fields to slow, cool, and confine rubidium-87 atoms. QState leads the theory work for QuAntü, a collaboration between UC and USM to develop neutral-atom quantum computing."
+    }
+  },
+  {
+    "id": "17928690660370110",
+    "date": "2026-08-04",
+    "image": "/news/17928690660370110.webp",
+    "url": "https://doi.org/10.1103/bqw4-317c",
+    "title": {
+      "es": "IA para reconstruir entornos cuánticos a partir de sus huellas",
+      "en": "Using AI to reconstruct quantum environments from their signatures"
+    },
+    "summary": {
+      "es": "Felipe Peleteiro y sus coautores desarrollaron un método que combina restricciones físicas y aprendizaje automático para recuperar densidades espectrales a partir de señales temporales simuladas. El trabajo, publicado en Physical Review A, estudia la estabilidad de la reconstrucción ante ruido estocástico.",
+      "en": "Felipe Peleteiro and coauthors developed a method that combines physical constraints and machine learning to recover spectral densities from simulated time-series data. Published in Physical Review A, the work studies how stable the reconstruction is under stochastic noise."
+    }
+  },
+  {
+    "id": "17936964168331358",
+    "date": "2026-07-23",
+    "image": "/news/17936964168331358.webp",
+    "title": {
+      "es": "QState recibe a Amazing Quantum en la USM",
+      "en": "QState hosts Amazing Quantum at USM"
+    },
+    "summary": {
+      "es": "El Departamento de Física de la USM recibió al grupo Amazing Quantum, liderado por Carla Hermann. Ambos equipos compartieron avances de sus proyectos y exploraron oportunidades de colaboración.",
+      "en": "The USM Department of Physics welcomed Carla Hermann’s Amazing Quantum group. Both teams shared updates on their projects and explored opportunities to work together."
+    }
+  },
+  {
+    "id": "17859907749659999",
+    "date": "2026-07-04",
+    "image": "/news/17859907749659999.webp",
+    "title": {
+      "es": "Primer encuentro entre QState y Amazing Quantum",
+      "en": "QState and Amazing Quantum hold their first meeting"
+    },
+    "summary": {
+      "es": "Los grupos de Ariel Norambuena y Carla Hermann se reunieron el 26 de junio y visitaron el Laboratorio de Óptica Cuántica de la Universidad de Chile. El encuentro abrió conversaciones sobre proyectos conjuntos en óptica y control cuántico.",
+      "en": "Ariel Norambuena’s and Carla Hermann’s groups met on June 26 and visited the Quantum Optics Laboratory at the University of Chile. The meeting opened discussions about joint projects in quantum optics and control."
+    }
+  },
+  {
+    "id": "17979484998015391",
+    "date": "2026-06-26",
+    "image": "/news/17979484998015391.webp",
+    "title": {
+      "es": "Investigación en tres minutos con Vicente Chomalí",
+      "en": "Research in three minutes with Vicente Chomalí"
+    },
+    "summary": {
+      "es": "En la sesión del 17 de junio, Vicente Chomalí presentó su trabajo sobre difusión BDNK con redes neuronales informadas por la física. La actividad de QState ofrece un espacio breve para conversar sobre avances y preguntas de investigación.",
+      "en": "At the June 17 session, Vicente Chomalí presented his work on BDNK diffusion using physics-informed neural networks. QState’s short-talk format gives researchers a place to discuss work in progress and open questions."
+    }
+  },
+  {
+    "id": "18060180617541033",
+    "date": "2026-06-18",
+    "image": "/news/18060180617541033.webp",
+    "url": "https://iopscience.iop.org/article/10.1088/2058-9565/adf092",
+    "title": {
+      "es": "Vibraciones de la red y memoria cuántica en un defecto de diamante",
+      "en": "Lattice vibrations and quantum memory in a diamond defect"
+    },
+    "summary": {
+      "es": "Ariel Norambuena, Diego Tancara, Vicente Chomalí-Castro y Daniel Castillo estudiaron la dinámica fuera del equilibrio de un centro silicio-vacante en diamante. El trabajo en Quantum Science and Technology analiza cómo los fonones, los campos magnéticos y la temperatura influyen en los efectos no markovianos.",
+      "en": "Ariel Norambuena, Diego Tancara, Vicente Chomalí-Castro, and Daniel Castillo studied the nonequilibrium dynamics of a silicon-vacancy center in diamond. Their Quantum Science and Technology paper examines how phonons, magnetic fields, and temperature influence non-Markovian effects."
+    }
+  },
+  {
+    "id": "17971058280076846",
+    "date": "2026-06-15",
+    "image": "/news/17971058280076846.webp",
+    "title": {
+      "es": "QuAntü comparte avances y suma dos investigadores posdoctorales",
+      "en": "QuAntü shares progress and welcomes two postdoctoral researchers"
+    },
+    "summary": {
+      "es": "El 5 de junio, el equipo de QuAntü se reunió en el campus San Joaquín de la USM. Alexis Legón presentó los avances del grupo teórico. El proyecto dio la bienvenida a Alexis Legón y Andreas Mathwieser, quienes se integraron a los equipos teórico y experimental, respectivamente.",
+      "en": "The QuAntü team met at the USM San Joaquín campus on June 5. Alexis Legón presented the theory group’s progress. The project welcomed Alexis Legón and Andreas Mathwieser to the theory and experimental teams, respectively."
+    }
+  },
+  {
+    "id": "18121328620739334",
+    "date": "2026-06-11",
+    "image": "/news/18121328620739334.webp",
+    "url": "https://journals.aps.org/prapplied/abstract/10.1103/mxbn-15ry",
+    "title": {
+      "es": "Pulsos de luz inducen memoria en un sistema optomecánico",
+      "en": "Light pulses induce memory in an optomechanical system"
+    },
+    "summary": {
+      "es": "Hachisko Tapia-Maureira, Bing He, Massimiliano Di Ventra y Ariel Norambuena mostraron cómo un sistema optomecánico conserva una huella de su excitación previa. El estudio en Physical Review Applied describe la histéresis dinámica y examina cómo diseñar pulsos para reforzar los efectos de memoria.",
+      "en": "Hachisko Tapia-Maureira, Bing He, Massimiliano Di Ventra, and Ariel Norambuena showed how an optomechanical system retains a signature of earlier excitation. Their Physical Review Applied study describes dynamic hysteresis and examines how pulse design can enhance memory effects."
+    }
+  },
+  {
+    "id": "18109223401934347",
+    "date": "2026-06-03",
+    "image": "/news/18109223401934347.webp",
+    "url": "https://fisica.uc.cl/2026/05/08/encuentro-quantu-conecta-la-ciencia-el-liderazgo-femenino-y-el-mundo-empresarial-para-impulsar-el-futuro-cuantico-de-chile/",
+    "title": {
+      "es": "Alonso Recabarren presenta avances de QuAntü en la UC",
+      "en": "Alonso Recabarren presents QuAntü progress at UC"
+    },
+    "summary": {
+      "es": "En un encuentro en el Instituto de Física UC, Alonso Recabarren, estudiante de Licenciatura en Física de la USM, presentó el trabajo del grupo teórico de QuAntü en computación cuántica con átomos neutros.",
+      "en": "At an event at the UC Institute of Physics, USM physics student Alonso Recabarren presented the QuAntü theory group’s work on neutral-atom quantum computing."
+    }
+  },
+  {
+    "id": "18103983635091133",
+    "date": "2026-06-02",
+    "image": "/news/18103983635091133.webp",
+    "title": {
+      "es": "Una tesis conecta el algoritmo de Laporta con la computación cuántica",
+      "en": "Thesis research connects the Laporta algorithm with quantum computing"
+    },
+    "summary": {
+      "es": "Diego Montero presentó avances de su tesis de magíster sobre el algoritmo de Laporta, usado para reducir integrales de Feynman de varios lazos. El proyecto explora cómo expresar parte de este procedimiento en términos de algoritmos cuánticos para sistemas lineales.",
+      "en": "Diego Montero presented progress on his master’s thesis on the Laporta algorithm, used to reduce multiloop Feynman integrals. The project explores how to express part of the procedure using quantum algorithms for linear systems."
+    }
+  },
+  {
+    "id": "18050702600772836",
+    "date": "2026-05-30",
+    "image": "/news/18050702600772836.webp",
+    "title": {
+      "es": "Qué investiga QState",
+      "en": "What QState researches"
+    },
+    "summary": {
+      "es": "QState presentó sus líneas de trabajo en sistemas cuánticos abiertos, control cuántico y algoritmos. El grupo desarrolla herramientas teóricas y computacionales para entender cómo se comportan los sistemas cuánticos reales y contribuir al diseño de tecnologías cuánticas.",
+      "en": "QState introduced its research on open quantum systems, quantum control, and algorithms. The group develops theoretical and computational tools to understand how real quantum systems behave and inform the design of quantum technologies."
+    }
+  },
+  {
+    "id": "17865629613562245",
+    "date": "2026-05-26",
+    "image": "/news/17865629613562245.webp",
+    "title": {
+      "es": "Conoce al equipo de QState",
+      "en": "Meet the QState team"
+    },
+    "summary": {
+      "es": "El grupo presentó a sus integrantes en Instagram. El equipo de la USM combina investigación en física fundamental, formación de estudiantes y desarrollo de tecnologías cuánticas.",
+      "en": "The group introduced its members on Instagram. The USM team brings together fundamental physics research, student training, and the development of quantum technologies."
+    }
+  },
+  {
+    "id": "17999419994943408",
+    "date": "2026-05-25",
+    "image": "/news/17999419994943408.webp",
+    "video": "/news/17999419994943408.mp4",
+    "url": "https://fisica.usm.cl/evento/la-red-cosmica-y-la-evolucion-de-galaxias-del-ambiente-en-gran-escala-a-la-fisica-barionica/",
+    "title": {
+      "es": "Coloquio sobre la red cósmica y la evolución de galaxias",
+      "en": "Colloquium on the cosmic web and galaxy evolution"
+    },
+    "summary": {
+      "es": "QState difundió la invitación al coloquio del astrónomo Germán Alfaro sobre el papel del entorno a gran escala y la física bariónica en la evolución de galaxias. El Departamento de Física de la USM programó la actividad para el 26 de mayo en el campus San Joaquín.",
+      "en": "QState shared the invitation to astronomer Germán Alfaro’s colloquium on how the large-scale environment and baryonic physics shape galaxy evolution. The USM Department of Physics scheduled the event for May 26 at the San Joaquín campus."
+    }
+  },
+  {
+    "id": "18065942471694582",
+    "date": "2026-05-19",
+    "image": "/news/18065942471694582.webp",
+    "title": {
+      "es": "Una introducción al grupo QState",
+      "en": "An introduction to QState"
+    },
+    "summary": {
+      "es": "QState compartió una presentación de su equipo y sus líneas de investigación en tecnologías cuánticas desde la Universidad Técnica Federico Santa María.",
+      "en": "QState shared an introduction to its team and its quantum technology research at Universidad Técnica Federico Santa María."
+    }
+  },
+  {
+    "id": "18032844305812635",
+    "date": "2026-05-15",
+    "image": "/news/18032844305812635.webp",
+    "title": {
+      "es": "QState abre su canal de Instagram",
+      "en": "QState launches its Instagram channel"
+    },
+    "summary": {
+      "es": "El grupo de investigación de la USM abrió un canal para compartir noticias, publicaciones, actividades, oportunidades y contenidos de divulgación sobre sistemas y tecnologías cuánticas.",
+      "en": "The USM research group opened a channel to share news, publications, events, opportunities, and outreach on quantum systems and technologies."
+    }
+  }
+]
