@@ -19,7 +19,8 @@
     "summary": {
       "es": "El equipo ganó el nodo Córdoba y obtuvo el tercer lugar global en la Qollab × IonQ Global Quantum Hackathon 2026. Herbert Díaz, Joaquín Molina, Julián Stiefkens e Iñaki Bermeo, integrante de QState, desarrollaron Optogenetic Quantum Brain, una aplicación que usa circuitos cuánticos para explorar la propagación de señales en la red neuronal de C. elegans.",
       "en": "The team won the Córdoba regional event and placed third globally in the 2026 Qollab × IonQ Global Quantum Hackathon. Herbert Díaz, Joaquín Molina, Julián Stiefkens, and QState member Iñaki Bermeo developed Optogenetic Quantum Brain, an app that uses quantum circuits to explore how signals propagate through the neural network of C. elegans."
-    }
+    },
+    "caption": "¡Quantum Rangers en el podio mundial! Un logro de equipo que celebramos desde QSTATE. 🌎⚛️\n\nEl equipo obtuvo el primer lugar en el nodo Córdoba y el tercer lugar global en la Qollab × IonQ Global Quantum Hackathon 2026, con su proyecto Optogenetic Quantum Brain, inspirado en el Premio Nobel de Fisiología o Medicina 2026 🏆\n\nDetrás de este reconocimiento están Herbert Díaz y Joaquín Molina @joaquin_molinaaaa, de la Pontificia Universidad Católica de Chile (grupo @qudit.cl); Julián Stiefkens @juli_stiefkens, de la Universidad de Buenos Aires; e Iñaki Bermeo @super.iby, estudiante de Licenciatura en Astrofísica de la UTFSM (@fisicautfsm) e integrante de QSTATE.\n\nCuatro personas, tres universidades y una idea compartida: convertir conceptos cuánticos en una experiencia que otras personas puedan explorar.\n\n¿Su propuesta? Una aplicación interactiva que conecta computación cuántica y neurociencia, utilizando circuitos cuánticos para modelar la propagación de señales sobre la red de conexiones neuronales del pequeño gusano C. elegans.\n\nEn lugar de representar toda la red en un único circuito, el proyecto utiliza una secuencia de circuitos de 10 qubits, que permiten explorar la propagación paso a paso. Una manera creativa de aprender, experimentar y acercar estas disciplinas a públicos no especializados.\n\nDesde QSTATE nos alegra ver a Iñaki crecer junto a este equipo y celebrar un reconocimiento que pertenece a los cuatro. El premio es colectivo, y también lo son las ideas, el esfuerzo y los aprendizajes que lo hicieron posible.\n\n¡Felicitaciones, Herbert, Joaquín, Julián e Iñaki! 👏\n\nCuando compartimos lo que sabemos, podemos construir algo que ninguno habría creado por separado.\n\nDesliza para conocer el proyecto y mira el video que explica la propuesta. 👉\n\n#QuantumRangers #ComputaciónCuántica #ColaboraciónCientífica #PremioNobelMedicina"
   },
   {
     "id": "18166138276489772",
@@ -33,7 +34,8 @@
     "summary": {
       "es": "QState participó en el primer Workshop en Información Cuántica y Aplicaciones del Anillo Q-Con, realizado el 22 y 23 de octubre. Francisco Ahumada, Karime Cerón, Alonso Recabarren y Diego Montero presentaron sus investigaciones de tesis. Diego obtuvo el premio al mejor póster y Ariel Norambuena dio una charla invitada sobre control de sistemas cuánticos abiertos.",
       "en": "QState took part in Q-Con’s first Workshop on Quantum Information and Applications on October 22–23. Francisco Ahumada, Karime Cerón, Alonso Recabarren, and Diego Montero presented their thesis research. Diego won the best poster award, and Ariel Norambuena gave an invited talk on control of open quantum systems."
-    }
+    },
+    "caption": "Compartir ciencia, crecer como equipo y celebrar el trabajo de quienes están comenzando a construir su camino. Así vivimos este encuentro en Concepción. \n\nLos días 22 y 23 de octubre, QSTATE participó en el primer Workshop en Información Cuántica y Aplicaciones, organizado por el Anillo Temático Q-Con en la Facultad de Ciencias Físicas y Matemáticas de la Universidad de Concepción.\n\nFrancisco Ahumada, Karime Cerón, Alonso Recabarren y Diego Montero compartieron sus investigaciones de tesis en formato póster. Una oportunidad para presentar sus avances, conversar con la comunidad y abrir sus ideas a nuevas miradas.\n\nY tuvimos una alegría especial: ¡Diego Montero recibió el premio al mejor póster del encuentro! 🏆 La elección se realizó mediante una votación a través de un código QR.\n\n¡Felicitaciones, Diego! Nos alegra ver reconocido tu trabajo y compartir contigo este logro. Detrás de un póster hay mucho más que una presentación: hay preguntas, cálculos, dificultades y la perseverancia de seguir buscando respuestas.\n\nPor su parte, Ariel Norambuena, quien lidera QSTATE, ofreció la charla invitada “Quantum control in open quantum systems”. Durante 40 minutos, compartió avances de las investigaciones del grupo en control cuántico y tecnologías cuánticas.\n\nNos enorgullece el reconocimiento a Diego, pero también la participación de todo el equipo. Formar investigadores e investigadoras significa acompañarles para que sus ideas encuentren una voz propia y un lugar en la comunidad científica.\n\nGracias al Anillo Temático Q-Con y a la Universidad de Concepción por la invitación y por generar este espacio de encuentro.\n\nLa ciencia que queremos construir no solo busca nuevos resultados: también busca que crezcamos juntos.\n\n#QSTATE  #InformaciónCuántica #TecnologíasCuánticas #UdeC #UTFSM"
   },
   {
     "id": "18025812023715763",
@@ -47,7 +49,8 @@
     "summary": {
       "es": "En el encuentro del Magíster en Física de la USM en Valparaíso, Diego presentó una forma de plantear la reducción gaussiana del algoritmo de Laporta como problemas de optimización para la computación cuántica adiabática. Compartió avances de simulación con técnicas de control cuántico.",
       "en": "At the USM physics master’s meeting in Valparaíso, Diego presented an approach to expressing Gaussian reduction in the Laporta algorithm as optimization problems for adiabatic quantum computing. He shared simulation results using quantum control techniques."
-    }
+    },
+    "caption": "Este lunes 19 de octubre, Diego Montero (@diego_m0nter0) presentó sus avances de investigación en Perspectivas 2026, encuentro que reúne a las y los estudiantes del Magíster en Ciencias, mención Física de la USM, en Casa Central, Valparaíso.\n\nSu presentación, “Gaussian reduction in the Laporta algorithm using adiabatic quantum computing”, conecta dos mundos: física de partículas y computación cuántica.\n\n¿La pregunta de fondo? ¿Podemos utilizar herramientas cuánticas para abordar cálculos complejos de la física de partículas?\n\nDiego presentó una propuesta para reformular la reducción gaussiana —una paso clave para simplificar sistemas de ecuaciones dentro del algoritmo de Laporta— como problemas de optimización abordables mediante computación cuántica adiabática. Compartió, además, avances obtenidos mediante simulaciones que incorporan técnicas de control cuántico.\n\nEl trabajo cuenta con Ariel Norambuena (USM) como tutor de tesis y Marco S. Bianchi (USS) como cotutor. Además, este proyecto cuenta con la colaboración de Guillermo Romero, Francisco Albarrán-Arriagada y Joaquín Molina, en el marco del proyecto Fondecyt Exploración N.º 13250014.\n\nDesde QSTATE, nos alegra acompañar este proceso y ver a Diego compartir sus ideas con la comunidad del Magíster. Detrás de una presentación hay preguntas, cálculos, intentos y aprendizajes que merecen ser compartidos.\n\n¡Felicitaciones, Diego! 👏 Gracias al @fisicautfsm y a la organización de Perspectivas 2026 por abrir estos espacios de encuentro y formación.\n\nCompartir una investigación no es solo mostrar hasta dónde hemos llegado: también es descubrir, junto a otros, hacia dónde podemos seguir.\n\n#QSTATE #Perspectivas2026 #ComputaciónCuántica #Ciencia"
   },
   {
     "id": "18111095969011723",
@@ -60,7 +63,8 @@
     "summary": {
       "es": "El 4 de septiembre, QState recibió a Amazing Quantum en el campus San Joaquín. Nikolas Naranjo, Helena Hagen y Karime Cerón compartieron sus investigaciones. Karime presentó avances sobre cómo dirigir excitaciones en sistemas cuánticos de muchos cuerpos mediante ingeniería de Floquet.",
       "en": "QState hosted Amazing Quantum at the San Joaquín campus on September 4. Nikolas Naranjo, Helena Hagen, and Karime Cerón presented their research. Karime shared progress on routing excitations in many-body quantum systems using Floquet engineering."
-    }
+    },
+    "caption": "La ciencia crece cuando compartimos algo más que resultados: nuestras preguntas, nuestros desafíos y las ganas de descubrir juntos. \n\nEl pasado viernes 4 de septiembre recibimos nuevamente al grupo Amazing Quantum, liderado por Carla Hermann ( @quantumcarla ), en el Departamento de Física de la USM ( @fisicautfsm ), Campus San Joaquín, Santiago.\n\nEn esta ocasión, Nikolas Naranjo y Helena Hagen, de Amazing Quantum, y Karime Cerón, de QSTATE, compartieron sus investigaciones. Tres miradas que nos reunieron alrededor de una misma motivación: comprender y controlar el mundo cuántico.\n\nDesde QSTATE queremos destacar la presentación de Karime:\n\n“Many-body quantum control for excitation routing via Floquet engineering”\n\nSu trabajo aborda una pregunta fascinante: ¿cómo dirigir las excitaciones dentro de un sistema cuántico de muchas partículas? Karime presentó avances del proyecto Fondecyt Regular N.º 1251131, dirigido por Ariel Norambuena.\n\nVer estas investigaciones crecer y compartirse con otros equipos nos recuerda por qué estos encuentros importan. Presentar un avance también significa abrirlo a nuevas miradas, aprender de otras experiencias y encontrar preguntas que nos ayuden a seguir.\n\nGracias a Carla y a todo Amazing Quantum por seguir construyendo esta colaboración; a Nikolas, Helena y Karime, por compartir su trabajo; y al @fisicautfsm, por acoger estos espacios de encuentro.\n\nNos entusiasma avanzar en nuestros proyectos. Nos entusiasma aún más hacerlo construyendo comunidad.\n\n#QSTATE #AmazingQuantum #ColaboraciónCientífica #ControlCuántico #UTFSM"
   },
   {
     "id": "17894653077668539",
@@ -74,7 +78,8 @@
     "summary": {
       "es": "Nicolás Viaux, Ariel Norambuena y Pedro Orellana estudiaron la desintegración del bosón de Higgs en dos leptones tau. El artículo en Physical Review D muestra cómo observables basados en correlaciones de espín pueden distinguir una fase de mezcla CP que las medidas de entrelazamiento dejan sin resolver.",
       "en": "Nicolás Viaux, Ariel Norambuena, and Pedro Orellana studied the decay of a Higgs boson into two tau leptons. Their Physical Review D paper shows how spin-correlation observables can distinguish a CP-mixing phase that entanglement measures leave unresolved."
-    }
+    },
+    "caption": "¿Puede la magia cuántica revelar una propiedad del Higgs que el entrelazamiento no puede ver?\n\nHay colaboraciones que nacen cuando dos áreas que parecen muy lejanas deciden compartir una misma pregunta.\n\nEste trabajo surgió de una invitación del grupo @beyondparticlesutfsm, del profesor Nicolás Viaux, para construir un puente con @qstate_usm, además de sumar all profesor Pedro Orellana, dentro del propio Departamento de Física de la UTFSM, @fisicautfsm\n\nEn este trabajo estudiamos la desintegración del bosón de Higgs en dos leptones tau. En este proceso, sus espines permanecen máximamente entrelazados para cualquier posible mezcla CP. Esto produce un resultado sorprendente: las medidas tradicionales de entrelazamiento no logran distinguir la fase asociada a esa mezcla.\n\nLa información, sin embargo, no desaparece. Permanece codificada en la orientación de las correlaciones entre los espines.\n\nEn el artículo mostramos que un recurso cuántico llamado nonstabilizerness, relacionado con la llamada “magia cuántica”, puede escapar de este punto ciego. A partir de esta idea propusimos observables construidos con correlaciones de espín, uno de los cuales requiere 14,3 veces menos eventos que su contraparte cuártica y presenta potencial de descubrimiento en el escenario idealizado del HL-LHC.\n\nMás allá del resultado científico, este trabajo representa algo que nos entusiasma profundamente: una colaboración interna y muy original entre High-Energy Physics, mecánica cuántica e información cuántica.\n\nLa ciencia también avanza cuando las fronteras entre disciplinas se transforman en puntos de encuentro.\n\nTítulo:\nQuantum nonstabilizer probes reveal CP phases invisible to entanglement in spin-0 decays\n\nAutores: @nicoviaux, @ainorambuena y @pedro_orellana \n\nRevista: Physical Review D 114, 036027 (2026)\n\n#UTFSM #DFIS #HighEnergyPhysics #QuantumInformation"
   },
   {
     "id": "17870882994635094",
@@ -88,7 +93,8 @@
     "summary": {
       "es": "El reel explica cómo una trampa magneto-óptica usa luz y campos magnéticos para frenar, enfriar y confinar átomos de rubidio-87. QState lidera el trabajo teórico de QuAntü, una colaboración entre la UC y la USM para desarrollar computación cuántica con átomos neutros.",
       "en": "The reel shows how a magneto-optical trap uses light and magnetic fields to slow, cool, and confine rubidium-87 atoms. QState leads the theory work for QuAntü, a collaboration between UC and USM to develop neutral-atom quantum computing."
-    }
+    },
+    "caption": "Antes de un computador cuántico basado en átomos neutros, primero debemos aprender a detenerlos.\n\nEn este video mostramos cómo funciona una trampa magneto-óptica, una tecnología capaz de frenar, enfriar y confinar átomos de rubidio-87 utilizando luz y campos magnéticos.\n\nLos átomos se mueven constantemente. Para reducir su velocidad, se utilizan haces láser cuidadosamente ajustados cerca de una transición atómica del rubidio. Cada vez que un átomo absorbe un fotón, recibe un pequeño impulso que se opone a su movimiento. Al mismo tiempo, un campo magnético hace que el centro de la trampa sea un punto especial, generando una fuerza que empuja a los átomos de regreso cuando intentan alejarse.\n\nEl resultado es extraordinario: una nube atómica fría, localizada y fluorescente, que puede observarse y controlarse en el laboratorio.\n\nEsta es una de las bases físicas del proyecto QuAntü, nuestro proyecto de computación cuántica con átomos neutros desarrollado por la Pontificia Universidad Católica de Chile (Dardo Goyeneche y Jerónimo Maze, @fis_uc) y Universidad Técnica Federico Santa María (Ariel Norambuena, @fisicautfsm).\n\nEn @qstate_usm lideramos el equipo teórico. Durante este primer año, nuestro desafío es modelar la técnica llamada Satured Absorption Spectroscopy (SAS) desde primeros principios: describir la estructura interna de los átomos, su interacción con los láseres y campos magnéticos, su movimiento y también los procesos inevitables de emisión espontánea, disipación y decoherencia.\n\nPara ello combinamos herramientas avanzadas de física atómica y sistemas cuánticos abiertos, construyendo modelos que permitan comprender el experimento, identificar los mejores parámetros de operación y anticipar los límites de la plataforma.\n\nQuAntü comienza con una pregunta fundamental: ¿cómo podemos detener un átomo usando luz?\nEl objetivo es mucho mayor: convertir ese control en tecnología cuántica como pilar del computador cuántico basado en átomos neutros.\n\n#QuAntü #QSTATE #ComputaciónCuántica #ÁtomosNeutros Rubidio87 FísicaAtómica Sistema"
   },
   {
     "id": "17928690660370110",
@@ -102,7 +108,8 @@
     "summary": {
       "es": "Felipe Peleteiro y sus coautores desarrollaron un método que combina restricciones físicas y aprendizaje automático para recuperar densidades espectrales a partir de señales temporales simuladas. El trabajo, publicado en Physical Review A, estudia la estabilidad de la reconstrucción ante ruido estocástico.",
       "en": "Felipe Peleteiro and coauthors developed a method that combines physical constraints and machine learning to recover spectral densities from simulated time-series data. Published in Physical Review A, the work studies how stable the reconstruction is under stochastic noise."
-    }
+    },
+    "caption": "¿Podemos conocer un entorno cuántico sin observarlo directamente?\n\nAunque no podamos verlo, el entorno deja una huella en la evolución de un sistema cuántico: modifica su coherencia, produce disipación y puede limitar su funcionamiento.\n\nEn este trabajo combinamos física e inteligencia artificial para reconstruir esa huella a partir de señales temporales simuladas, incluso cuando contienen ruido estocástico. La idea no es pedirle a la IA que reemplace la física, sino enseñarle a trabajar dentro de sus reglas.\n\nEl resultado es una estrategia capaz de recuperar información sobre entornos cuánticos simples y estructurados, manteniendo propiedades físicas esenciales y mejorando la estabilidad de la reconstrucción frente al ruido. \n\nNo todo lo invisible es inaccesible: a veces basta con aprender a leer la huella que deja.\n\nEste trabajo representa un paso hacia nuevas herramientas de espectroscopía de entornos cuánticos asistida por IA. La validación con datos y ruido experimentales reales será el próximo desafío. \n\nTrabajo: Learning spectral density functions in open quantum systems\n\nAutores: Felipe Peleteiro, João Victor Shiguetsugo Kawanami Lima, Pedro Marcelo Prado, Felipe Fernandes Fanchini y Ariel Norambuena.\n\nRevista: Physical Review A 114, 022402 (2026)\n\n#QuantumPhysics #ArtificialIntelligence #MachineLearning #OpenQuantumSystems"
   },
   {
     "id": "17936964168331358",
@@ -115,7 +122,8 @@
     "summary": {
       "es": "El Departamento de Física de la USM recibió al grupo Amazing Quantum, liderado por Carla Hermann. Ambos equipos compartieron avances de sus proyectos y exploraron oportunidades de colaboración.",
       "en": "The USM Department of Physics welcomed Carla Hermann’s Amazing Quantum group. Both teams shared updates on their projects and explored opportunities to work together."
-    }
+    },
+    "caption": "La ciencia se construye en equipo y crece cuando compartimos ideas.\n\nEl pasado 26 de junio recibimos en el Departamento de Física de la UTFSM (@fisicautfsm) al grupo Amazing Quantum, liderado por Carla Herman (@quantumcarla).\n\nDurante la jornada compartimos ideas, conversamos sobre nuestros proyectos en desarrollo y exploramos nuevas oportunidades de colaboración entre Amazing Quantum y QSTATE.\n\nMuchas gracias por la visita, las conversaciones y la buena energía de todo el equipo. ¡Esperamos que este sea el comienzo de muchos proyectos juntos! \n\n#AmazingQuantum #QSTATE #UTFSM #TecnologíasCuánticas #ColaboraciónCientífica"
   },
   {
     "id": "17859907749659999",
@@ -128,7 +136,8 @@
     "summary": {
       "es": "Los grupos de Ariel Norambuena y Carla Hermann se reunieron el 26 de junio y visitaron el Laboratorio de Óptica Cuántica de la Universidad de Chile. El encuentro abrió conversaciones sobre proyectos conjuntos en óptica y control cuántico.",
       "en": "Ariel Norambuena’s and Carla Hermann’s groups met on June 26 and visited the Quantum Optics Laboratory at the University of Chile. The meeting opened discussions about joint projects in quantum optics and control."
-    }
+    },
+    "caption": "El pasado viernes 26 de junio se realizó la primera reunión entre los grupos de investigación @qstate_usm liderado por Ariel Norambuena, y Amazing Quantum, liderado por @quantumcarla\n\nLa jornada incluyó una visita al Laboratorio de Óptica Cuántica de la Facultad de Ciencias Físicas y Matemáticas de la Universidad de Chile, donde pudimos conocer de cerca parte del trabajo experimental que allí se desarrolla.\n\nDurante el encuentro conversamos sobre posibles proyectos colaborativos en torno a óptica cuántica y control cuántico, fortaleciendo vínculos entre ambos equipos de investigación.\n\nAdemás, compartimos un grato almuerzo, que esperamos sea el primero de muchos espacios de colaboración, conversación y ciencia en conjunto.\n\n#Science #Research #ScientificCollaboration#QuantumMechanics"
   },
   {
     "id": "17979484998015391",
@@ -141,7 +150,8 @@
     "summary": {
       "es": "En la sesión del 17 de junio, Vicente Chomalí presentó su trabajo sobre difusión BDNK con redes neuronales informadas por la física. La actividad de QState ofrece un espacio breve para conversar sobre avances y preguntas de investigación.",
       "en": "At the June 17 session, Vicente Chomalí presented his work on BDNK diffusion using physics-informed neural networks. QState’s short-talk format gives researchers a place to discuss work in progress and open questions."
-    }
+    },
+    "caption": "El miércoles 17 de junio realizamos una nueva edición de “Presenta tu investigación en 3 min”, una actividad pensada para compartir ideas, avances y preguntas de investigación en un formato breve y cercano.\n\nEn esta jornada nos visitó Vicente Chomalí @vicente_chomali , quien presentó el tema “Solving BDNK diffusion using Physics-Informed Neural Networks”, que recientemente publicado en la revista Physical Review D.\n\nGracias a quienes participaron y fueron parte de este espacio de conversación e intercambio de ideas.\n\n#QSTATE #Investigación #PINNs #Physics #research"
   },
   {
     "id": "18060180617541033",
@@ -155,7 +165,8 @@
     "summary": {
       "es": "Ariel Norambuena, Diego Tancara, Vicente Chomalí-Castro y Daniel Castillo estudiaron la dinámica fuera del equilibrio de un centro silicio-vacante en diamante. El trabajo en Quantum Science and Technology analiza cómo los fonones, los campos magnéticos y la temperatura influyen en los efectos no markovianos.",
       "en": "Ariel Norambuena, Diego Tancara, Vicente Chomalí-Castro, and Daniel Castillo studied the nonequilibrium dynamics of a silicon-vacancy center in diamond. Their Quantum Science and Technology paper examines how phonons, magnetic fields, and temperature influence non-Markovian effects."
-    }
+    },
+    "caption": "¿Pueden las vibraciones de una red inducir efectos no-Markovianos en un defecto de estado sólido?\n\nEn este trabajo estudiamos la dinámica fuera del equilibrio de un spin de estado sólido: el centro silicio-vacante cargado negativamente, SiV⁻, en diamante.\n\nMostramos cómo los fonones —vibraciones de la red cristalina— pueden inducir memoria dinámica en el sistema, generando un flujo de información y efectos no-Markovianos medidos mediante distancia traza y la medida BLP.\n\nEl estudio analiza el rol de un solo modo fonónico, el límite de campo medio, campos magnéticos longitudinales y transversales, reservorios fonónicos estructurados y temperatura.\n\nIdea central: mecanismos inducidos por fonones fonones, campos magnéticos y estructura del entorno permite entender y diseñar memoria no-Markoviana en dispositivos cuánticos de estado sólido.\n\nTítulo: “Phonon-induced non-equilibrium dynamics in a single solid-state spin”\n\nAutores: Ariel Norambuena, Diego Tancara @quantumdata2.0 , Vicente Chomalí-Castro @vicente_chomali y Daniel Castillo.\n\nRevista: Quantum Science and Technology\n\n#QState #QuantumPhysics #OpenQuantumSystems #NonMarkovianity #SolidStatePhysics"
   },
   {
     "id": "17971058280076846",
@@ -168,7 +179,8 @@
     "summary": {
       "es": "El 5 de junio, el equipo de QuAntü se reunió en el campus San Joaquín de la USM. Alexis Legón presentó los avances del grupo teórico. El proyecto dio la bienvenida a Alexis Legón y Andreas Mathwieser, quienes se integraron a los equipos teórico y experimental, respectivamente.",
       "en": "The QuAntü team met at the USM San Joaquín campus on June 5. Alexis Legón presented the theory group’s progress. The project welcomed Alexis Legón and Andreas Mathwieser to the theory and experimental teams, respectively."
-    }
+    },
+    "caption": "El pasado viernes 5 de junio de 2026 nos reunimos en la Universidad Técnica Federico Santa María (UTFSM), Campus San Joaquín, para compartir y discutir avances del proyecto QuAntü.\n\nEn esta instancia, Alexis Legón @aleleg9 presentó avances teóricos desarrollados por el grupo teórico, abriendo un espacio de conversación, colaboración y proyección para el desarrollo de tecnologías cuánticas.\n\nAdemás, damos una cálida bienvenida a los nuevos postdocs Alexis Legón (grupo teórico) y Andreas Mathwieser (grupo experimental), quienes se integran al proyecto para aportar nuevas ideas, experiencia y entusiasmo.\n\nGrupo teórico: Ariel Norambuena, QState (UTFSM)\nGrupo algoritmos: Dardo Goyeneche, Qudit, @qudit.cl (UC)\nGrupo experimental: Jerónimo Maze (UC)\n\nAgradecimientos al proyecto Anillo Temático ATE 250066 \n\n¡Seguimos construyendo comunidad cuántica desde Chile! \n\n#QuAntü #QuantumTechnologies #QuantumPhysics #NeutralAtoms"
   },
   {
     "id": "18121328620739334",
@@ -182,7 +194,8 @@
     "summary": {
       "es": "Hachisko Tapia-Maureira, Bing He, Massimiliano Di Ventra y Ariel Norambuena mostraron cómo un sistema optomecánico conserva una huella de su excitación previa. El estudio en Physical Review Applied describe la histéresis dinámica y examina cómo diseñar pulsos para reforzar los efectos de memoria.",
       "en": "Hachisko Tapia-Maureira, Bing He, Massimiliano Di Ventra, and Ariel Norambuena showed how an optomechanical system retains a signature of earlier excitation. Their Physical Review Applied study describes dynamic hysteresis and examines how pulse design can enhance memory effects."
-    }
+    },
+    "caption": "¿Puede la luz inducir memoria dinámica?\n\nEn este trabajo publicado por integrantes del grupo QState del @fisicautfsm mostramos que un sistema optomecánico —donde la luz interactúa con un oscilador mecánico— puede “recordar” cómo fue excitado mediante un láser pulsado.\n\nEsta memoria aparece como una respuesta no local en el tiempo: la dinámica actual del sistema depende de su historia. En particular, se manifiesta como histéresis dinámica entre la entrada óptica —la amplitud del campo pulsado— y la respuesta del sistema, medida a través de observables físicos como el número medio de fotones y fonones.\n\nLa física del sistema es no lineal: los fotones dentro de la cavidad ejercen presión de radiación sobre el modo mecánico, mientras que el movimiento mecánico modifica a su vez la dinámica óptica. Esta retroalimentación luz–movimiento permite inducir respuestas con memoria cuando el sistema es excitado con pulsos adecuados.\n\nEl estudio muestra que distintos tipos de pulsos, como trenes gaussianos y formas sinusoidales, permiten generar una variedad de respuestas dinámicas. Además, estos pulsos pueden diseñarse y optimizarse para maximizar los efectos de memoria.\n\nTrabajo: “Memory effects in pulsed optomechanical systems”\n\nAutores: Hachisko Tapia-Maureira, Bing He, Massimiliano Di Ventra y Ariel Norambuena.\n\nRevista: Physical Review Applied\n\nColaboradores: @cmf_umayor (B. He & H. Tapia), University of California (M. Di Ventra) \n\nPaper completo en el link de la bio.\n\n#QState #QuantumPhysics #Optomechanics #QuantumTechnologies #Photonics QuantumMemory CienciaChilena USM"
   },
   {
     "id": "18109223401934347",
@@ -196,7 +209,8 @@
     "summary": {
       "es": "En un encuentro en el Instituto de Física UC, Alonso Recabarren, estudiante de Licenciatura en Física de la USM, presentó el trabajo del grupo teórico de QuAntü en computación cuántica con átomos neutros.",
       "en": "At an event at the UC Institute of Physics, USM physics student Alonso Recabarren presented the QuAntü theory group’s work on neutral-atom quantum computing."
-    }
+    },
+    "caption": "Encuentro QuAntü\n\nNuestro estudiante Alonso Recabarrén, del programa de Licenciatura en Física del @fisicautfsm, presentó avances del proyecto QuAntü durante el encuentro realizado en el Instituto de Física UC.\n\nEn su presentación compartió parte del trabajo que se está desarrollando en torno a computación cuántica basada en átomos neutros, junto con avances y proyecciones del grupo teórico liderado por el académico Ariel Norambuena.\n\nMás información sobre el evento en:\n\nfisica.uc.cl/2026/05/08/encuentro-quantu-conecta-la-ciencia-el-liderazgo-femenino-y-el-mundo-empresarial-para-impulsar-el-futuro-cuantico-de-chile/\n\n#QSTATE #QuAntü #QuantumPhysics #QuantumTechnologies #NeutralAtoms"
   },
   {
     "id": "18103983635091133",
@@ -209,7 +223,8 @@
     "summary": {
       "es": "Diego Montero presentó avances de su tesis de magíster sobre el algoritmo de Laporta, usado para reducir integrales de Feynman de varios lazos. El proyecto explora cómo expresar parte de este procedimiento en términos de algoritmos cuánticos para sistemas lineales.",
       "en": "Diego Montero presented progress on his master’s thesis on the Laporta algorithm, used to reduce multiloop Feynman integrals. The project explores how to express part of the procedure using quantum algorithms for linear systems."
-    }
+    },
+    "caption": "Diego Montero presentó avances de su trabajo de tesis de magíster en torno al algoritmo de Laporta para la reducción de integrales de Feynman multiloop y su posible implementación en computación cuántica.\n\nEl proyecto busca estudiar el formalismo matemático detrás de la reducción de integrales multiloop de Feynman y explorar posibles mapeos hacia algoritmos cuánticos basados en sistemas lineales.\n\nEstas instancias son parte del trabajo formativo y colaborativo que impulsamos en QSTATE, donde estudiantes e investigadores comparten ideas, preguntas y avances en torno a sistemas cuánticos, teoría y tecnología.\n\n¡Muchas gracias a los académicos Marco Bianchi (USS, co-guía) y York Schröder (U. del Bío-Bío) por conectarse online!\n\nAgradecemos el financiamiento del proyecto Fondecyt Exploración Nº 13250014.\n\n#QSTATE #QuantumPhysics #QuantumComputing #FeynmanIntegrals #LaportaAlgorithm"
   },
   {
     "id": "18050702600772836",
@@ -222,7 +237,8 @@
     "summary": {
       "es": "QState presentó sus líneas de trabajo en sistemas cuánticos abiertos, control cuántico y algoritmos. El grupo desarrolla herramientas teóricas y computacionales para entender cómo se comportan los sistemas cuánticos reales y contribuir al diseño de tecnologías cuánticas.",
       "en": "QState introduced its research on open quantum systems, quantum control, and algorithms. The group develops theoretical and computational tools to understand how real quantum systems behave and inform the design of quantum technologies."
-    }
+    },
+    "caption": "¿Qué estamos investigando actualmente en QSTATE?\n\nActualmente estamos desarrollando distintas líneas de investigación en torno a sistemas cuánticos abiertos, control cuántico y algoritmos.\n\nNuestro objetivo es construir y aplicar herramientas teóricas y computacionales para entender mejor los sistemas cuánticos reales y contribuir al desarrollo de tecnologías cuánticas.\n\nEn QSTATE creemos que la ciencia se construye con diálogo, nuevas ideas, trabajo en equipo y colaboración entre instituciones.\n\n#QSTATE #QuantumPhysics #OpenQuantumSystems #QuantumControl #QuantumTechnologies"
   },
   {
     "id": "17865629613562245",
@@ -235,7 +251,8 @@
     "summary": {
       "es": "El grupo presentó a sus integrantes en Instagram. El equipo de la USM combina investigación en física fundamental, formación de estudiantes y desarrollo de tecnologías cuánticas.",
       "en": "The group introduced its members on Instagram. The USM team brings together fundamental physics research, student training, and the development of quantum technologies."
-    }
+    },
+    "caption": "⚛️ Conoce al equipo QSTATE\n\nHoy presentamos a quienes forman parte de QSTATE.\n\nDesde la física fundamental hasta las aplicaciones emergentes, trabajamos para formar nuevas generaciones, desarrollar investigación de frontera y aportar al avance de las tecnologías cuánticas desde la USM.\n\nDesliza para conocer al equipo ➡️\n\n#QSTATE #UTFSM #FísicaUSM #TecnologíasCuánticas #CienciaChile"
   },
   {
     "id": "17999419994943408",
@@ -250,7 +267,8 @@
     "summary": {
       "es": "QState difundió la invitación al coloquio del astrónomo Germán Alfaro sobre el papel del entorno a gran escala y la física bariónica en la evolución de galaxias. El Departamento de Física de la USM programó la actividad para el 26 de mayo en el campus San Joaquín.",
       "en": "QState shared the invitation to astronomer Germán Alfaro’s colloquium on how the large-scale environment and baryonic physics shape galaxy evolution. The USM Department of Physics scheduled the event for May 26 at the San Joaquín campus."
-    }
+    },
+    "caption": "Mañana martes 26 de mayo a las 12:30 hrs se viene un interesante coloquio en el @fisicautfsm, campus San Jjoaquín. No se lo pierdan!!\n\n#Ciencia#RedCósmica#EvoluciónGalaxios"
   },
   {
     "id": "18065942471694582",
@@ -263,7 +281,8 @@
     "summary": {
       "es": "QState compartió una presentación de su equipo y sus líneas de investigación en tecnologías cuánticas desde la Universidad Técnica Federico Santa María.",
       "en": "QState shared an introduction to its team and its quantum technology research at Universidad Técnica Federico Santa María."
-    }
+    },
+    "caption": "​⚛️ ¡Bienvenidos a QSTATE! ⚛️ \n\nSomos un grupo de investigación en tecnologías cuánticas de la USM.\n\n​Desliza para conocernos, saber qué investigamos y ver nuestro equipo. \n\n👉 Síguenos para más novedades y eventos.\n\n​#QSTATE #USM #FisicaCuantica #TecnologiasCuanticas #Chile"
   },
   {
     "id": "18032844305812635",
@@ -276,6 +295,7 @@
     "summary": {
       "es": "El grupo de investigación de la USM abrió un canal para compartir noticias, publicaciones, actividades, oportunidades y contenidos de divulgación sobre sistemas y tecnologías cuánticas.",
       "en": "The USM research group opened a channel to share news, publications, events, opportunities, and outreach on quantum systems and technologies."
-    }
+    },
+    "caption": "⚛️ Bienvenidos a QState\n\nQuantum Systems, Theory And TEchnology es un grupo de investigación de la Universidad Técnica Federico Santa María enfocado en el estudio de sistemas cuánticos, teoría, simulación y tecnologías cuánticas.\n\nDesde aquí compartiremos nuestras noticias, publicaciones, actividades, oportunidades y contenidos de divulgación científica.\n\nSíguenos para conocer más sobre el mundo cuántico desde la USM.\n\n#QState #chile #QuantumTechnologies #OpenQuantumSystems #QuantumPhysics"
   }
 ]
