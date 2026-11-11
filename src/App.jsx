@@ -480,10 +480,31 @@ const projects = [
 const publications = [
   {
     year: "2026",
+    title: "High-fidelity quantum gate learning via physics-informed neural networks",
+    authors: "L. Fabra, C. E. Susa, A. Montoya, A. Norambuena",
+    venue: "arXiv:2611.03851",
+    url: "https://arxiv.org/abs/2611.03851",
+  },
+  {
+    year: "2026",
+    title: "Counterdiabatic quasi-Floquet control for the generation of entangled BICs using giant atoms",
+    authors: "A. R. Legón, P. Orellana, A. Norambuena",
+    venue: "arXiv:2609.32125",
+    url: "https://arxiv.org/abs/2609.32125",
+  },
+  {
+    year: "2026",
     title: "Quantum nonstabilizer probes reveal CP phases invisible to entanglement in spin-0 decays",
     authors: "N. Viaux, A. Norambuena, P. Orellana",
     venue: "Physical Review D 114, 036027",
     url: "https://journals.aps.org/prd/abstract/10.1103/6n4g-7rh3",
+  },
+  {
+    year: "2026",
+    title: "Learning spectral density functions in open quantum systems",
+    authors: "F. Peleteiro, J. V. S. K. Lima, P. M. Prado, F. F. Fanchini, A. Norambuena",
+    venue: "Physical Review A 114, 022402",
+    url: "https://journals.aps.org/pra/abstract/10.1103/bqw4-317c",
   },
   {
     year: "2026",
@@ -494,22 +515,15 @@ const publications = [
   },
   {
     year: "2026",
-    title: "Learning spectral density functions in open quantum systems",
-    authors: "F. Peleteiro, J. V. S. K. Lima, P. M. Prado, F. F. Fanchini, A. Norambuena",
-    venue: "arXiv:2602.24056",
-    url: "https://arxiv.org/abs/2602.24056",
-  },
-  {
-    year: "2026",
     title: "Geometric control of maximal entanglement via bound states in the continuum",
-    authors: "A. R. Legón, M. M. Rojas, P. Orellana, A. Norambuena",
+    authors: "A. R. Legón, M. Miranda Rojas, P. Orellana, A. Norambuena",
     venue: "arXiv:2602.23082",
     url: "https://arxiv.org/abs/2602.23082",
   },
   {
     year: "2025",
     title: "Phonon-induced non-equilibrium dynamics in a single solid-state spin",
-    authors: "A. Norambuena, D. Tancara, V. F. Chomalí-Castro, D. Castillo",
+    authors: "A. Norambuena, D. Tancara, V. Chomalí-Castro, D. Castillo",
     venue: "Quantum Science and Technology 10, 045001",
     url: "https://iopscience.iop.org/article/10.1088/2058-9565/adf092",
   },
@@ -536,17 +550,17 @@ const publications = [
   },
   {
     year: "2024",
-    title: "Magnetic susceptibility and entanglement of three interacting qubits under magnetic field and anisotropy",
-    authors: "B. Castorene, F. J. Peña, A. Norambuena, S. E. Ulloa, C. Araya, P. Vargas",
-    venue: "arXiv:2410.16133",
-    url: "https://arxiv.org/abs/2410.16133",
-  },
-  {
-    year: "2024",
     title: "Quantum kernels for classifying dynamical singularities in a multiqubit system",
     authors: "D. Tancara, J. Fredes, A. Norambuena",
     venue: "Quantum Science and Technology 9, 035046",
-    url: "https://scholar.google.cl/citations?view_op=view_citation&hl=es&user=LCy8r2wAAAAJ&citation_for_view=LCy8r2wAAAAJ:hFOr9nPyWt4C",
+    url: "https://doi.org/10.1088/2058-9565/ad5228",
+  },
+  {
+    year: "2024",
+    title: "Emerging double power-law through dynamical complex networks in motility-induced phase separation in Active Brownian Particles",
+    authors: "I. Salas, F. Guzmán-Lastra, D. Pastén, A. Norambuena",
+    venue: "arXiv:2402.03228",
+    url: "https://arxiv.org/abs/2402.03228",
   },
   {
     year: "2024",
@@ -560,7 +574,7 @@ const publications = [
     title: "Estimating the degree of non-Markovianity using variational quantum circuits",
     authors: "H. T. Dinani, D. Tancara, F. F. Fanchini, A. Norambuena, R. Coto",
     venue: "Quantum Machine Intelligence 5, 29",
-    url: "https://link.springer.com/article/10.1007/s42484-023-00113-6",
+    url: "https://link.springer.com/article/10.1007/s42484-023-00120-5",
   },
   {
     year: "2023",
@@ -595,7 +609,7 @@ const publications = [
     title: "Engineering non-Markovianity from defect-phonon interactions",
     authors: "F. J. González, D. Tancara, H. T. Dinani, R. Coto, A. Norambuena",
     venue: "New Journal of Physics 25, 043004",
-    url: "https://scholar.google.cl/citations?view_op=view_citation&hl=es&user=LCy8r2wAAAAJ&citation_for_view=LCy8r2wAAAAJ:dhFuZR0502QC",
+    url: "https://doi.org/10.1088/1367-2630/acc7bf",
   },
   {
     year: "2023",
