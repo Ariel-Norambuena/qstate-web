@@ -48,6 +48,22 @@ const newsByDate = [...news].sort((first, second) =>
   second.date.localeCompare(first.date),
 );
 
+function newsParams(params, language, storyId, showList = false) {
+  params.delete("noticia");
+  if (params.get("seccion") === "noticias") params.delete("seccion");
+  if (storyId) params.set("noticia", storyId);
+  else if (showList) params.set("seccion", "noticias");
+  if (language === "en") params.set("lang", "en");
+  else params.delete("lang");
+  return params;
+}
+
+function replaceNewsLocation(language, storyId, showList) {
+  const url = new URL(window.location.href);
+  newsParams(url.searchParams, language, storyId, showList);
+  window.history.replaceState(window.history.state, "", url);
+}
+
 const copy = {
   es: {
     menu: "Abrir menú",
@@ -121,6 +137,10 @@ const copy = {
     newsTitle: "Noticias de QState",
     newsDescription: "Actividades, resultados y novedades del grupo de investigación.",
     newsSource: "Consultar fuente",
+    newsRead: "Leer noticia",
+    newsNewTab: "Abre en una pestaña nueva",
+    newsBack: "Volver a Noticias",
+    newsCaption: "Descripción original de Instagram",
     newsEmpty: "Pronto publicaremos novedades del grupo.",
     teamEyebrow: "Personas",
     teamTitle: "Equipo QState",
@@ -214,6 +234,10 @@ const copy = {
     newsTitle: "QState News",
     newsDescription: "Activities, results, and updates from the research group.",
     newsSource: "View source",
+    newsRead: "Read story",
+    newsNewTab: "Opens in a new tab",
+    newsBack: "Back to News",
+    newsCaption: "Original Instagram caption (Spanish)",
     newsEmpty: "Group updates will be published here soon.",
     teamEyebrow: "People",
     teamTitle: "The QState team",
@@ -1328,12 +1352,75 @@ function TeamView({ text, language }) {
   );
 }
 
-function NewsView({ text, language }) {
+function NewsDate({ date, language }) {
   const dateFormatter = new Intl.DateTimeFormat(language === "es" ? "es-CL" : "en", {
     dateStyle: "long",
     timeZone: "UTC",
   });
 
+  return (
+    <time dateTime={date} className="text-sm font-medium text-cyan-200">
+      {dateFormatter.format(new Date(date))}
+    </time>
+  );
+}
+
+function NewsMedia({ story, language, className = "" }) {
+  const { captions, image, imageAlt, title, video } = story;
+  if (!image && !video) return null;
+
+  return (
+    <div className={`relative aspect-[4/3] overflow-hidden bg-slate-950 ${className}`}>
+      {video ? (
+        <video
+          src={asset(video)}
+          poster={image ? asset(image) : undefined}
+          aria-label={title[language]}
+          className="absolute inset-0 z-10 h-full w-full object-contain"
+          controls
+          playsInline
+          preload="none"
+        >
+          {captions?.map((track) => (
+            <track
+              key={track.language}
+              kind="captions"
+              src={asset(track.file)}
+              srcLang={track.language}
+              label={track.label}
+            />
+          ))}
+        </video>
+      ) : (
+        <img
+          src={asset(image)}
+          alt={imageAlt?.[language] ?? ""}
+          className="absolute inset-0 h-full w-full object-contain"
+          loading="lazy"
+        />
+      )}
+    </div>
+  );
+}
+
+function NewsSource({ story, text, language }) {
+  if (!story.url) return null;
+
+  return (
+    <a
+      href={story.url}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={`${text.newsSource} — ${story.title[language]}`}
+      className="relative z-10 inline-flex w-fit items-center gap-2 rounded-sm text-sm font-semibold text-cyan-300 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+    >
+      {text.newsSource}
+      <ExternalLink size={15} aria-hidden="true" />
+    </a>
+  );
+}
+
+function NewsView({ text, language }) {
   return (
     <section className="page-shell py-14 sm:py-20">
       <div className="flex flex-wrap items-end justify-between gap-5">
@@ -1351,63 +1438,33 @@ function NewsView({ text, language }) {
       </div>
       {newsByDate.length ? (
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {newsByDate.map(({ captions, date, id, image, imageAlt, summary, title, url, video }) => (
-            <li key={id}>
-              <article className="flex h-full flex-col overflow-hidden rounded-lg border border-white/10 bg-white/[0.04]">
-                {(image || video) && (
-                  <div className="relative aspect-[4/3] overflow-hidden bg-slate-950">
-                    {video ? (
-                      <video
-                        src={asset(video)}
-                        poster={image ? asset(image) : undefined}
-                        aria-label={title[language]}
-                        className="absolute inset-0 h-full w-full object-contain"
-                        controls
-                        playsInline
-                        preload="none"
-                      >
-                        {captions?.map((track) => (
-                          <track
-                            key={track.language}
-                            kind="captions"
-                            src={asset(track.file)}
-                            srcLang={track.language}
-                            label={track.label}
-                          />
-                        ))}
-                      </video>
-                    ) : (
-                      <img
-                        src={asset(image)}
-                        alt={imageAlt?.[language] ?? ""}
-                        className="absolute inset-0 h-full w-full object-contain"
-                        loading="lazy"
-                      />
-                    )}
-                  </div>
-                )}
+          {newsByDate.map((story) => (
+            <li key={story.id}>
+              <article className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] transition hover:border-cyan-300/45">
+                <NewsMedia story={story} language={language} />
                 <div className="flex flex-1 flex-col p-5 sm:p-6">
-                  <time dateTime={date} className="text-sm font-medium text-cyan-200">
-                    {dateFormatter.format(new Date(date))}
-                  </time>
+                  <NewsDate date={story.date} language={language} />
                   <h2 className="mt-3 text-xl font-semibold leading-snug text-white">
-                    {title[language]}
+                    <a
+                      href={`?${newsParams(new URLSearchParams(), language, story.id)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${text.newsRead} — ${story.title[language]} (${text.newsNewTab})`}
+                      className="after:absolute after:inset-0 after:z-[1] after:rounded-lg hover:text-cyan-200 focus-visible:outline-none focus-visible:after:ring-2 focus-visible:after:ring-inset focus-visible:after:ring-cyan-300"
+                    >
+                      {story.title[language]}
+                    </a>
                   </h2>
                   <p className="mt-3 flex-1 leading-7 text-slate-300">
-                    {summary[language]}
+                    {story.summary[language]}
                   </p>
-                  {url && (
-                    <a
-                      href={url}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label={`${text.newsSource} — ${title[language]}`}
-                      className="mt-5 inline-flex w-fit items-center gap-2 rounded-sm text-sm font-semibold text-cyan-300 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
-                    >
-                      {text.newsSource}
+                  <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
+                    <span aria-hidden="true" className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 group-hover:text-white">
+                      {text.newsRead}
                       <ExternalLink size={15} aria-hidden="true" />
-                    </a>
-                  )}
+                    </span>
+                    <NewsSource story={story} text={text} language={language} />
+                  </div>
                 </div>
               </article>
             </li>
@@ -1417,6 +1474,48 @@ function NewsView({ text, language }) {
         <p className="mt-8 text-slate-300">{text.newsEmpty}</p>
       )}
     </section>
+  );
+}
+
+function NewsDetail({ story, text, language, onNavigate }) {
+  return (
+    <article className="page-shell py-10 sm:py-16">
+      <button
+        type="button"
+        onClick={() => onNavigate("noticias")}
+        className="inline-flex items-center gap-2 rounded-sm text-sm font-semibold text-cyan-300 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+      >
+        <ArrowRight size={17} className="rotate-180" aria-hidden="true" />
+        {text.newsBack}
+      </button>
+      <header className="mt-8 max-w-4xl">
+        <NewsDate date={story.date} language={language} />
+        <h1 className="mt-3 text-4xl font-semibold leading-tight text-white sm:text-5xl">
+          {story.title[language]}
+        </h1>
+        {language === "en" && story.caption && (
+          <p className="mt-4 max-w-3xl text-lg leading-7 text-slate-300">{story.summary.en}</p>
+        )}
+      </header>
+      <div className="mt-8 grid items-start gap-8 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-12">
+        <div>
+          {story.caption ? (
+            <>
+              <h2 className="mb-4 text-base font-semibold text-cyan-200">{text.newsCaption}</h2>
+              <p lang="es" className="whitespace-pre-wrap [overflow-wrap:anywhere] text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">{story.caption}</p>
+            </>
+          ) : (
+            <p className="text-lg leading-8 text-slate-200">{story.summary[language]}</p>
+          )}
+          {story.url && (
+            <div className="mt-6">
+              <NewsSource story={story} text={text} language={language} />
+            </div>
+          )}
+        </div>
+        <NewsMedia story={story} language={language} className="rounded-lg border border-white/10" />
+      </div>
+    </article>
   );
 }
 
@@ -1507,10 +1606,20 @@ function ActiveView({ activeSection, text, language, onNavigate }) {
 }
 
 function App() {
-  const [language, setLanguage] = useState("es");
-  const [activeSection, setActiveSection] = useState("inicio");
+  const [page, setPage] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return {
+      language: params.get("lang") === "en" ? "en" : "es",
+      activeSection: params.has("noticia") || params.get("seccion") === "noticias"
+        ? "noticias"
+        : "inicio",
+      storyId: params.get("noticia"),
+    };
+  });
   const [menuOpen, setMenuOpen] = useState(false);
+  const { activeSection, language, storyId } = page;
   const text = copy[language];
+  const story = newsByDate.find((entry) => entry.id === storyId);
 
   useEffect(() => {
     document.documentElement.lang = language;
@@ -1519,14 +1628,22 @@ function App() {
 
   useEffect(() => {
     const current = navItems.find((item) => item.id === activeSection);
-    document.title = `${current?.[language] ?? "QState"} | QState`;
-  }, [activeSection, language]);
+    document.title = `${story?.title[language] ?? current?.[language] ?? "QState"} | QState`;
+  }, [activeSection, language, story]);
 
   const navigate = (id) => {
-    setActiveSection(id);
+    if (activeSection === "noticias" || id === "noticias") {
+      replaceNewsLocation(language, null, id === "noticias");
+    }
+    setPage({ language, activeSection: id, storyId: null });
     setMenuOpen(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
     trackEvent("navigation", { section: id, language });
+  };
+
+  const selectLanguage = (nextLanguage) => {
+    replaceNewsLocation(nextLanguage, story?.id, activeSection === "noticias");
+    setPage({ ...page, language: nextLanguage });
   };
 
   return (
@@ -1579,7 +1696,7 @@ function App() {
                 <button
                   type="button"
                   key={item}
-                  onClick={() => setLanguage(item)}
+                  onClick={() => selectLanguage(item)}
                   className={`rounded px-3 py-1.5 text-xs font-bold uppercase transition ${
                     language === item
                       ? "bg-white text-slate-950"
@@ -1625,12 +1742,16 @@ function App() {
       </header>
 
       <main aria-live="polite">
-        <ActiveView
-          activeSection={activeSection}
-          text={text}
-          language={language}
-          onNavigate={navigate}
-        />
+        {story ? (
+          <NewsDetail story={story} text={text} language={language} onNavigate={navigate} />
+        ) : (
+          <ActiveView
+            activeSection={activeSection}
+            text={text}
+            language={language}
+            onNavigate={navigate}
+          />
+        )}
       </main>
 
       <section className="border-t border-white/10 bg-cyan-300 text-slate-950">
