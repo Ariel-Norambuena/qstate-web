@@ -21,6 +21,7 @@ import {
   X,
 } from "lucide-react";
 import { initAnalytics, trackEvent } from "./analytics.js";
+import news from "./data/news.json";
 
 const asset = (path) =>
   `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
@@ -38,9 +39,14 @@ const navItems = [
   { id: "metodologia", es: "Metodología", en: "Method" },
   { id: "proyectos", es: "Proyectos", en: "Projects" },
   { id: "publicaciones", es: "Publicaciones", en: "Publications" },
+  { id: "noticias", es: "Noticias", en: "News" },
   { id: "equipo", es: "Equipo", en: "People" },
   { id: "contacto", es: "Contacto", en: "Contact" },
 ];
+
+const newsByDate = [...news].sort((first, second) =>
+  second.date.localeCompare(first.date),
+);
 
 const copy = {
   es: {
@@ -112,6 +118,10 @@ const copy = {
       "Trabajos registrados en Google Scholar durante los últimos cuatro años completos y el año en curso. Se muestra una sola versión de cada trabajo cuando existe un preprint y una publicación final.",
     allYears: "Todos",
     openPaper: "Abrir paper",
+    newsTitle: "Noticias de QState",
+    newsDescription: "Actividades, resultados y novedades del grupo de investigación.",
+    newsSource: "Consultar fuente",
+    newsEmpty: "Pronto publicaremos novedades del grupo.",
     teamEyebrow: "Personas",
     teamTitle: "Equipo QState",
     teamDescription:
@@ -201,6 +211,10 @@ const copy = {
       "Works listed on Google Scholar during the previous four complete years and the current year. Only one version is shown when both a preprint and final publication exist.",
     allYears: "All",
     openPaper: "Open paper",
+    newsTitle: "QState News",
+    newsDescription: "Activities, results, and updates from the research group.",
+    newsSource: "View source",
+    newsEmpty: "Group updates will be published here soon.",
     teamEyebrow: "People",
     teamTitle: "The QState team",
     teamDescription:
@@ -715,10 +729,12 @@ const collaborators = [
 function SectionHeading({ eyebrow, title, description, centered = false }) {
   return (
     <div className={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
-      <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">
-        {eyebrow}
-      </p>
-      <h1 className="mt-4 text-4xl font-semibold leading-tight text-white sm:text-5xl">
+      {eyebrow && (
+        <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">
+          {eyebrow}
+        </p>
+      )}
+      <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl">
         {title}
       </h1>
       {description && (
@@ -1298,6 +1314,98 @@ function TeamView({ text, language }) {
   );
 }
 
+function NewsView({ text, language }) {
+  const dateFormatter = new Intl.DateTimeFormat(language === "es" ? "es-CL" : "en", {
+    dateStyle: "long",
+    timeZone: "UTC",
+  });
+
+  return (
+    <section className="page-shell py-14 sm:py-20">
+      <div className="flex flex-wrap items-end justify-between gap-5">
+        <SectionHeading title={text.newsTitle} description={text.newsDescription} />
+        <a
+          href={instagramUrl}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`${text.follow} @qstate_usm`}
+          className="inline-flex items-center gap-2 rounded-md border border-white/20 px-4 py-3 text-sm font-semibold text-cyan-200 transition hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+        >
+          <Camera size={17} aria-hidden="true" />
+          @qstate_usm
+        </a>
+      </div>
+      {newsByDate.length ? (
+        <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {newsByDate.map(({ captions, date, id, image, imageAlt, summary, title, url, video }) => (
+            <li key={id}>
+              <article className="flex h-full flex-col overflow-hidden rounded-lg border border-white/10 bg-white/[0.04]">
+                {(image || video) && (
+                  <div className="relative aspect-[4/3] overflow-hidden bg-slate-950">
+                    {video ? (
+                      <video
+                        src={asset(video)}
+                        poster={image ? asset(image) : undefined}
+                        aria-label={title[language]}
+                        className="absolute inset-0 h-full w-full object-contain"
+                        controls
+                        playsInline
+                        preload="none"
+                      >
+                        {captions?.map((track) => (
+                          <track
+                            key={track.language}
+                            kind="captions"
+                            src={asset(track.file)}
+                            srcLang={track.language}
+                            label={track.label}
+                          />
+                        ))}
+                      </video>
+                    ) : (
+                      <img
+                        src={asset(image)}
+                        alt={imageAlt?.[language] ?? ""}
+                        className="absolute inset-0 h-full w-full object-contain"
+                        loading="lazy"
+                      />
+                    )}
+                  </div>
+                )}
+                <div className="flex flex-1 flex-col p-5 sm:p-6">
+                  <time dateTime={date} className="text-sm font-medium text-cyan-200">
+                    {dateFormatter.format(new Date(date))}
+                  </time>
+                  <h2 className="mt-3 text-xl font-semibold leading-snug text-white">
+                    {title[language]}
+                  </h2>
+                  <p className="mt-3 flex-1 leading-7 text-slate-300">
+                    {summary[language]}
+                  </p>
+                  {url && (
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${text.newsSource} — ${title[language]}`}
+                      className="mt-5 inline-flex w-fit items-center gap-2 rounded-sm text-sm font-semibold text-cyan-300 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+                    >
+                      {text.newsSource}
+                      <ExternalLink size={15} aria-hidden="true" />
+                    </a>
+                  )}
+                </div>
+              </article>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="mt-8 text-slate-300">{text.newsEmpty}</p>
+      )}
+    </section>
+  );
+}
+
 function ContactView({ text }) {
   return (
     <section className="page-shell py-14 sm:py-20">
@@ -1373,6 +1481,8 @@ function ActiveView({ activeSection, text, language, onNavigate }) {
       return <ProjectsView text={text} language={language} />;
     case "publicaciones":
       return <PublicationsView text={text} />;
+    case "noticias":
+      return <NewsView text={text} language={language} />;
     case "equipo":
       return <TeamView text={text} language={language} />;
     case "contacto":

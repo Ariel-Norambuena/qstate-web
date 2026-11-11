@@ -1,0 +1,101 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:04.761
+In 2026, the Nobel Prize in
+Medicine went to a simple,
+
+2
+00:00:04.761 --> 00:00:11.001
+beautiful that light can switch
+on a single neuron.
+
+3
+00:00:11.701 --> 00:00:16.121
+It's called optogenetics and
+one of the first animals it
+
+4
+00:00:16.121 --> 00:00:21.241
+ever moved was this worm. C.
+elegans, one millimeter long,
+
+5
+00:00:21.241 --> 00:00:25.481
+302 neurons. Every connection
+mapped under the electron
+
+6
+00:00:25.481 --> 00:00:29.401
+microscope. So we asked a
+question, what if every neuron
+
+7
+00:00:29.401 --> 00:00:35.141
+were a qubit? This is
+Optogenetic Quantum Brain, a
+
+8
+00:00:35.141 --> 00:00:39.221
+real brain wired neuron by
+neuron where every spike is
+
+9
+00:00:39.221 --> 00:00:44.421
+decided by a quantum computer.
+Pick a neuron, hold to charge
+
+10
+00:00:44.421 --> 00:00:48.021
+the laser. The charge is the
+dose. A rotation on that
+
+11
+00:00:48.021 --> 00:00:52.181
+neuron's qubit Rₓ(θ). The
+longer you hold, the more
+
+12
+00:00:52.181 --> 00:00:58.281
+likely it fires. Release. The
+excitation doesn't take one
+
+13
+00:00:58.281 --> 00:01:02.361
+path. It moves as a quantum
+walk. Every synapse is a
+
+14
+00:01:02.361 --> 00:01:06.041
+coupling in an XY Hamiltonian.
+It passes the excitation from
+
+15
+00:01:06.041 --> 00:01:09.801
+neuron to neuron but never
+creates or destroys it. For a
+
+16
+00:01:09.801 --> 00:01:13.961
+moment, the excitation is in
+superposition on 10 neurons at
+
+17
+00:01:13.961 --> 00:01:18.041
+once, each with its own
+amplitude. Paths add up, paths
+
+18
+00:01:18.041 --> 00:01:22.521
+cancel. Then, we measure and
+the superposition collapses. 10
+
+19
+00:01:22.521 --> 00:01:26.761
+possibilities become one neuron
+picked at random with odds the
+
+20
+00:01:26.761 --> 00:01:31.961
+circuit predicts. That neuron
+fires and it light
